@@ -1,0 +1,39 @@
+title: H-Factor
+body: >-
+  *H-Factor* produces audio/visual content, award shows, outside broadcasts,
+  gala dinners, conferences, in-store activations, year-end functions, AGMs,
+  road shows and more. View the website at
+  [hfactor.co.za](http://www.hfactor.co.za).
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://hfactor-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://hfactor-ccr2008.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Photo (Castrol Chicken Run 2008)
+  - uri: 'public://hfactor-rbmobile.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Video (Red Bull Mobile launch)
+  - uri: 'public://hfactor-projects.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Project selection
+header:
+  - uri: 'public://hfactor-header.png'
+tags:
+  - Design
+  - Dev
+metatags:
+  description: Website for event agency.

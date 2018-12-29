@@ -1,0 +1,43 @@
+title: Capitec iCreate Magic Photos
+body: >-
+  Website for sharing photos taken at corporate workshops and training sessions
+  of *Capitec Bank*.
+
+
+  ### Credits
+
+  Design, dev: netbek. ID: Agency.
+media:
+  - uri: 'public://capitec-icreate-magic-photos-landing-1600x900.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://capitec-icreate-magic-photos-landing-320x480.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Landing page (phone)
+  - uri: 'public://capitec-icreate-magic-photos-albums-320x480.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Albums (phone)
+  - uri: 'public://capitec-icreate-magic-photos-photo-1600x900.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Photo
+  - uri: 'public://capitec-icreate-magic-photos-photo-320x480.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Photo (phone)
+header:
+  - uri: 'public://capitec-icreate-magic-photos-header.png'
+tags:
+  - Design
+  - Dev
+  - Kohana
+metatags:
+  description: Website for sharing photos taken at corporate events.

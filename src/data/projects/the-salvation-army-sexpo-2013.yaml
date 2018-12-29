@@ -1,0 +1,31 @@
+title: The Salvation Army Sexpo 2013
+body: >-
+  Electronic petition at *The Salvation Army*'s stall at Sexpo 2013. Visitors
+  were invited to add their name in support of the fight against human
+  trafficking.
+
+
+  ### Credits
+
+  Dev: netbek. Font: Agency.
+media:
+  - uri: 'youtube://v/7n4SHHraXRA'
+    layout:
+      columns: 4
+    artist: Hein Bekker
+    title: Petition
+    width: 1280
+    height: 720
+  - uri: 'public://the-salvation-army-sexpo-2013-font.png'
+    layout:
+      columns: 2
+    title: Body font
+header:
+  - uri: 'public://the-salvation-army-sexpo-2013-header.png'
+    layout:
+      columns: 4
+    title: the-salvation-army-sexpo-2013-header
+tags:
+  - Dev
+metatags:
+  description: Electronic petition against human trafficking.

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>{{ page.title }}</title>
+    <script src="/vendor/modernizr/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/vendor/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="/css/app.min.css"/>
+    <script>
+      document.createElement('picture');
+    </script>
+    <script src="/vendor/picturefill/dist/picturefill.min.js" async></script>
+  </head>
+  <body class="nb-page--{{ page.slug }}">
+    <main>
+      {{ page.content|safe }}
+    </main>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>

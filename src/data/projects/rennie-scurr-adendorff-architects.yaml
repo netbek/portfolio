@@ -1,0 +1,43 @@
+title: Rennie Scurr Adendorff Architects
+body: >-
+  *Rennie Scurr Adendorff Architects* specialises in the conservation and
+  restoration of historic buildings and precincts. View the website at
+  [archrsa.com](http://archrsa.com/).
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://rennie-scurr-adendorff-architects-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://rennie-scurr-adendorff-architects-project.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Projects
+  - uri: 'public://rennie-scurr-adendorff-architects-services.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Services
+  - uri: 'public://rennie-scurr-adendorff-architects-studio.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: About the studio
+  - uri: 'public://rennie-scurr-adendorff-architects-contact.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Contact
+header:
+  - uri: 'public://rennie-scurr-adendorff-architects-header.png'
+tags:
+  - Design
+  - Dev
+metatags:
+  description: Website for architecture firm.

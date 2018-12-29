@@ -1,0 +1,30 @@
+title: Dandelion
+body: >-
+  An informal, open research project of *[Liquid Fridge](/work/liquid-fridge)*
+  that aims to bring together activists, volunteers and communities for
+  meaningful dialogue and civic engagement. View the website at
+  [dandelion.liquidfridge.co.za](http://dandelion.liquidfridge.co.za).
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://dandelion-landing-1600x900.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://dandelion-notes-1600x900.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Notes
+header:
+  - uri: 'public://dandelion-header.png'
+tags:
+  - Design
+  - Dev
+  - Drupal
+metatags:
+  description: Imagining a discussion club for concerned citizens.

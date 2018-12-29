@@ -1,0 +1,27 @@
+title: Capitec Hello
+body: >-
+  Adobe AIR app for projection at corporate events of *Capitec Bank*. Photos can
+  be added and removed during the event as they are shot without interrupting
+  the animation.
+
+
+  ### Credits
+
+  Dev: netbek. Design: Agency.
+media:
+  - uri: 'youtube://v/wzM-uzsMhdU'
+    layout:
+      columns: 4
+    artist: Hein Bekker
+    title: >-
+      Note: playback is smoother in the live output than in this screen captured
+      recording
+    width: 640
+    height: 360
+header:
+  - uri: 'public://capitec-hello-header.png'
+    title: capitec-hello-header
+tags:
+  - Dev
+metatags:
+  description: Adobe AIR app for projection at corporate events.

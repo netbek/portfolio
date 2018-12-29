@@ -1,0 +1,127 @@
+title: Info
+headline: What I do
+body: >-
+  Front-end developer at [Siyavula Education](http://siyavula.com).
+
+
+  I build websites: back- to front-end. I turn an idea into a website that
+  functions in the most efficient way possible through smart application design
+  and programming. Occasionally, I advise on creative strategy, design graphics,
+  and do light animation. When not wrangling code, I [think about civic
+  engagement](/work/dandelion), and [arrange challenging music in a tasteful
+  manner](/work/liquid-fridge). Many moons ago, I [organised creative
+  swapmeets](/work/liquid-fridge-2003-2010) that combined academia, art and free
+  culture.
+
+
+  ### Languages and frameworks
+
+
+  * PHP
+
+  * Drupal
+
+  * Kohana
+
+  * JavaScript
+
+  * AngularJS
+
+  * Node.js
+
+  * Flash
+
+  * ActionScript
+
+
+  ## Open source software
+
+
+  A few of my projects that you are free to use or improve upon.
+
+
+  ### AngularJS
+
+
+  * [Responsive image maps with editable
+  overlays](https://github.com/netbek/nb-picture-map-editor)
+
+  * [Scalable icons (SVG with PNG fallback)](https://github.com/netbek/nb-icon)
+
+
+  ### Drupal
+
+
+  * [Bower integration for modules and
+  themes](https://www.drupal.org/sandbox/netbek/2460163)
+
+  * [Prerender integration to serve JavaScript-rendered pages as
+  HTML](https://www.drupal.org/sandbox/netbek/2421967)
+
+  * [Bulk generation of image
+  styles](https://www.drupal.org/sandbox/netbek/2444745)
+
+
+  View my profiles on [GitHub](https://github.com/netbek) and
+  [Drupal.org](https://www.drupal.org/user/636644) for more projects.
+
+
+  ## Reading list
+
+
+  * [24 ways](https://24ways.org/) (front-end)
+
+  * [A List Apart](http://alistapart.com/) (front-end)
+
+  * [Ben Nadel](http://www.bennadel.com/blog/) (front-end)
+
+  * [Brand New](http://www.underconsideration.com/brandnew) (identity design)
+
+  * [Bruce Schneier](https://www.schneier.com/) (security)
+
+  * [CSS-Tricks](http://css-tricks.com/) (front-end)
+
+  * [David Walsh](http://davidwalsh.name/) (front-end)
+
+  * [Electronic Frontier Foundation](https://www.eff.org/deeplinks) (civil
+  liberties)
+
+  * [Filament Group](http://filamentgroup.com/lab) (front-end)
+
+  * [Hacker News](https://news.ycombinator.com/) (announcements)
+
+  * [LWN](https://lwn.net/) (Linux)
+
+  * [Open Rights Group](https://www.openrightsgroup.org/blog/) (civil liberties)
+
+  * [PHP Weekly](http://www.phpweekly.com/) (PHP)
+
+  * [Responsive Web Design Podcast](http://responsivewebdesign.com/podcast/)
+  (front-end)
+
+
+  ## About the site
+
+
+  Under the hood, everything is neatly tied together with
+  [Kohana](http://kohanaframework.org/). Content is written in [GitHub Flavored
+  Markdown](https://help.github.com/articles/github-flavored-markdown) and
+  presented using [AnimationFrame](https://github.com/kof/animation-frame),
+  [canvgc](https://github.com/nathan-muir/canvgc), [Grunt](http://gruntjs.com/),
+  [Modernizr](http://modernizr.com/),
+  [Normalize.css](https://github.com/necolas/normalize.css),
+  [Picturefill](https://github.com/scottjehl/picturefill),
+  [Respond.js](https://github.com/scottjehl/Respond),
+  [ScrollUp](https://github.com/markgoodyear/scrollup),
+  [Selectivizr](http://selectivizr.com/),
+  [svg2png](https://github.com/dbushell/grunt-svg2png) and
+  [svgstore](https://github.com/FWeinb/grunt-svgstore). Screen capture videos
+  were created with [VirtualDub](http://www.virtualdub.org/),
+  [UScreenCapture](http://www.umediaserver.net/umediaserver/download.html) and
+  [Ut video codec](http://umezawa.dyndns.info/archive/utvideo/).
+
+
+  Heading typeface is [Titillium](http://www.campivisivi.net/titillium/) by
+  Campi Visivi.
+metatags:
+  description: Hein Bekker is a web developer with 14 years of experience.

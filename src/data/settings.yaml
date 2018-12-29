@@ -1,0 +1,24 @@
+site:
+  name: netbek
+  slogan: Web Developer
+  mail: hein@netbek.co.za
+  url: https://www.netbek.co.za
+metatags:
+  copyright: '(cc) Hein Bekker http://creativecommons.org/licenses/by-sa/4.0/'
+  description: Hein Bekker is a web developer with 14 years of experience.
+  keywords:
+    - web developer
+    - angular
+    - drupal
+    - kohana
+    - liquid fridge
+    - south africa
+opengraph:
+  type: website
+  image: /opengraph-1200x630.png
+googleanalytics:
+  enabled: true
+  id: UA-2254733-1
+googlewebmastertools:
+  enabled: true
+  id: kKXwBSu8r1b+90XmTJ/XKxRtEg6nS6y+DME7omfJaZs=

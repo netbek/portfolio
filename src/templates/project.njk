@@ -1,0 +1,69 @@
+<article>
+	<header>
+		<h1 class="field-title">{{ page.title }}</h1>
+	</header>
+
+  {% if page.body %}
+    <div class="field-body">{{ page.body|markdown|safe }}</div>
+  {% endif %}
+
+  {% if page.media|length %}
+    {% set items_count = page.media|length %}
+
+    {% set cols_count = 0 %}
+    {% for item in page.media %}
+      {% set cols_count = cols_count + item.layout.columns %}
+    {% endfor %}
+
+    {% set cols_used = 0 %}
+
+    <ul id="lightbox" class="clearfix cols-{{ cols_count }}" data-cols="{{ cols_count }}">
+      {% for item in page.media %}
+        <li
+          class="cols-{{ item.layout.columns }} {% if cols_used % 4 == 0 %}cols-row-start{% endif %} {% if loop.index0 == items_count - 1 %}cols-end{% endif %} {% if item.layout.frame %}frame frame-{{ item.layout.frame }}{% endif %}"
+          data-frame="{{ item.layout.frame }}"
+          data-columns="{{ item.layout.columns }}"
+          data-scheme="{{ item.scheme }}"
+          data-type="{{ item.type }}"
+        >
+					<figure>
+						<div>
+              {% if item.scheme == 'vimeo' %}
+              {% elif item.scheme == 'youtube' %}
+                <iframe
+                  width="{{ item.width }}"
+                  height="{{ item.height }}"
+                  src="https://www.youtube-nocookie.com/embed/{{ item.uri|youtube_id }}?autoplay=0&origin={{ data.settings.site.url }}"
+                  frameborder="0"
+                  allow="encrypted-media"
+                  allowfullscreen></iframe>
+              {% elif item.scheme == 'public' %}
+                {% if item.type == 'video' %}
+                {% elif item.type == 'image' %}
+                  <img srcset="{{ item.uri|style_url(480) }} 1x, {{ item.uri|style_url(960) }} 2x" alt="">
+{#
+                  <picture>
+                    <source srcset="{{ item.uri|style_url(960) }}" media="(min-width: 960px)">
+                    <source srcset="{{ item.uri|style_url(960) }}" media="(min-width: 480px) and (min-device-pixel-ratio: 2.0)">
+                    <source srcset="{{ item.uri|style_url(480) }}" media="(min-width: 480px)">
+                    <img srcset="{{ item.uri|style_url(240) }}" alt="">
+                  </picture>
+#}
+                  {% if item.layout.frame %}
+                  {% else %}
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+
+              {% if item.title %}
+                <figcaption>{{ item.title }}</figcaption>
+              {% endif %}
+            </div>
+          </figure>
+
+          {% set cols_used = cols_used + item.layout.columns %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
