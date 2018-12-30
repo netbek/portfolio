@@ -14,7 +14,6 @@ const buildModernizr = require('./gulp/utils/buildModernizr');
 const copyVendor = require('./gulp/utils/copyVendor');
 const loadData = require('./gulp/utils/loadData');
 const renderPage = require('./gulp/utils/renderPage');
-const renderPromise = require('./gulp/utils/renderPromise');
 const startWatch = require('./gulp/utils/startWatch');
 
 Promise.promisifyAll(fs);

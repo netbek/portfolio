@@ -3,11 +3,10 @@ const modernizr = require('modernizr');
 const path = require('path');
 const Promise = require('bluebird');
 const buildJs = require('./buildJs');
-
-Promise.promisifyAll(fs);
-
 const gulpConfig = require('../config');
 const webpackConfigProd = require('../../webpack.config.prod');
+
+Promise.promisifyAll(fs);
 
 module.exports = () =>
   new Promise(function(resolve) {

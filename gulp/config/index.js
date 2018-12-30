@@ -122,6 +122,14 @@ module.exports = {
     js: 'src/js/',
     templates: 'src/templates/'
   },
+  vendor: {
+    modulePaths: [
+      'FitVids.js/jquery.fitvids.js',
+      'jquery/dist/jquery.slim.min.js',
+      'normalize-css/normalize.css',
+      'picturefill/dist/picturefill.min.js'
+    ]
+  },
   webserver: {
     host: 'localhost',
     port: 8000,
