@@ -18,12 +18,13 @@
   {% endfor %}
 </style>
 
-{% for tag in data.tags %}
-  {# <input id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" checked /> #}
-  <input class="visuallyhidden" id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" {% if loop.index > 2 %} checked {% endif %} />
-{% endfor %}
-
+{# Menu toggle checkbox #}
 <input class="visuallyhidden" id="menu" type="checkbox" />
+
+{# Filters checkboxes #}
+{% for tag in data.tags %}
+  <input class="visuallyhidden" id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" checked />
+{% endfor %}
 
 <header>
   <div class="masthead-wrapper">
