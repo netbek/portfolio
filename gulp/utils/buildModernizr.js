@@ -35,4 +35,9 @@ module.exports = () =>
           path: path.resolve(gulpConfig.dist.vendor, 'modernizr')
         }
       })
+    )
+    .then(() =>
+      fs.removeAsync(
+        path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js')
+      )
     );
