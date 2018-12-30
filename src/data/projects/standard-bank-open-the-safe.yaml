@@ -20,23 +20,23 @@ media:
     title: Landing page animation
     width: 1280
     height: 720
-  - uri: 'public://standard-bank-open-the-safe-landing.png'
+  - uri: 'public://work/standard-bank-open-the-safe-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://standard-bank-open-the-safe-profile.png'
+  - uri: 'public://work/standard-bank-open-the-safe-profile.png'
     layout:
       frame: desktop
       columns: 2
     title: Contestant profile
-  - uri: 'public://standard-bank-open-the-safe-video.png'
+  - uri: 'public://work/standard-bank-open-the-safe-video.png'
     layout:
       frame: desktop
       columns: 2
     title: Contestant video
 header:
-  - uri: 'public://standard-bank-open-the-safe-header.png'
+  - uri: 'public://work/standard-bank-open-the-safe-header.png'
 tags:
   - Dev
 metatags:

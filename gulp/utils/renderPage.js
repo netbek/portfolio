@@ -3,24 +3,36 @@ const fs = require('fs-extra');
 const path = require('path');
 const Promise = require('bluebird');
 const renderPromise = require('./renderPromise');
+const gulpConfig = require('../config');
 
 Promise.promisifyAll(fs);
 
-module.exports = (context, slug, dir) => {
-  const template = path.join('src/templates', 'base.njk');
+module.exports = (template, uri, context = {}) => {
+  const pageTemplate = path.join('src/templates', 'base.njk');
+  const uriSegments = uri.split(path.sep);
+  const slug = _.last(uriSegments);
+  const isFront = ~['front', 'home', 'index'].indexOf(slug);
+  const url = '/' + _.trim(slug, '/');
 
-  const destParts = ['public'];
-  if (!_.isUndefined(dir)) {
-    destParts.push(dir);
+  let pathSegments = [gulpConfig.dist.base];
+  if (uriSegments.length > 1) {
+    pathSegments = pathSegments.concat(uriSegments.slice(0, -1));
   }
-
-  if (!~['front', 'home', 'index'].indexOf(slug)) {
-    destParts.push(slug);
+  if (!isFront) {
+    pathSegments.push(slug);
   }
-  destParts.push('index.html');
-  const dest = path.join(...destParts);
+  pathSegments.push('index.html');
 
-  return renderPromise(template, context).then(html =>
-    fs.outputFileAsync(dest, html, 'utf-8')
+  const dest = path.join(...pathSegments);
+  const {page} = context;
+
+  return renderPromise(template, {
+    ...context,
+    page: {...page, slug, url, isFront}
+  }).then(content =>
+    renderPromise(pageTemplate, {
+      ...context,
+      page: {...page, slug, url, isFront, content}
+    }).then(html => fs.outputFileAsync(dest, html, 'utf-8'))
   );
 };

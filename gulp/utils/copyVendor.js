@@ -12,15 +12,13 @@ const gulpConfig = require('../config');
  */
 module.exports = () => {
   const modulePaths = [
+    'FitVids.js/jquery.fitvids.js',
+    'jquery/dist/jquery.slim.min.js',
     // 'lodash/lodash.min.js',
     'normalize-css',
     'picturefill/dist/picturefill.min.js'
-    // 'prism-themes/themes',
     // 'react/umd',
     // 'react-dom/umd',
-    // 'vega/build',
-    // 'vega-embed/build',
-    // 'vega-lite/build'
   ];
 
   return fs.removeAsync(path.join(gulpConfig.dist.vendor)).then(() =>

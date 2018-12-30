@@ -9,36 +9,36 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://blue-cow-logo.png'
+  - uri: 'public://work/blue-cow-logo.png'
     layout:
       columns: 2
     title: Logo
-  - uri: 'public://blue-cow-card.png'
+  - uri: 'public://work/blue-cow-card.png'
     layout:
       columns: 2
     title: Business card
-  - uri: 'public://blue-cow-landing.png'
+  - uri: 'public://work/blue-cow-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://blue-cow-news-post.png'
+  - uri: 'public://work/blue-cow-news-post.png'
     layout:
       frame: desktop
       columns: 2
     title: News post
-  - uri: 'public://blue-cow-showcase.png'
+  - uri: 'public://work/blue-cow-showcase.png'
     layout:
       frame: desktop
       columns: 2
     title: Projects
-  - uri: 'public://blue-cow-project.png'
+  - uri: 'public://work/blue-cow-project.png'
     layout:
       frame: desktop
       columns: 2
     title: Project
 header:
-  - uri: 'public://blue-cow-header.png'
+  - uri: 'public://work/blue-cow-header.png'
 tags:
   - Design
   - Dev

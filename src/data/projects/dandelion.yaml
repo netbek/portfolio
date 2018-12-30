@@ -10,18 +10,18 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://dandelion-landing-1600x900.png'
+  - uri: 'public://work/dandelion-landing-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://dandelion-notes-1600x900.png'
+  - uri: 'public://work/dandelion-notes-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Notes
 header:
-  - uri: 'public://dandelion-header.png'
+  - uri: 'public://work/dandelion-header.png'
 tags:
   - Design
   - Dev

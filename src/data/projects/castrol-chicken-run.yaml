@@ -13,45 +13,45 @@ body: >-
   [H-Factor](http://www.hfactor.co.za), [TMGS
   Creative](http://www.tmgscreative.com).
 media:
-  - uri: 'public://castrol-chicken-run-2008-landing.png'
+  - uri: 'public://work/castrol-chicken-run-2008-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://castrol-chicken-run-2008-blog.png'
+  - uri: 'public://work/castrol-chicken-run-2008-blog.png'
     layout:
       frame: desktop
       columns: 2
     title: Blog
-  - uri: 'public://castrol-chicken-run-2008-magnachicken.png'
+  - uri: 'public://work/castrol-chicken-run-2008-magnachicken.png'
     layout:
       frame: desktop
       columns: 2
     title: Magnachicken
-  - uri: 'public://castrol-chicken-run-2008-photo.png'
+  - uri: 'public://work/castrol-chicken-run-2008-photo.png'
     layout:
       frame: desktop
       columns: 2
     title: Video
-  - uri: 'public://castrol-chicken-run-2008-teams.png'
+  - uri: 'public://work/castrol-chicken-run-2008-teams.png'
     layout:
       frame: desktop
       columns: 2
     title: Team profile
-  - uri: 'public://castrol-chicken-run-2008-mailer-1.png'
+  - uri: 'public://work/castrol-chicken-run-2008-mailer-1.png'
     layout:
       columns: 1
     title: E-mail. Updates from the road were sent out each morning of the race.
-  - uri: 'public://castrol-chicken-run-2008-mailer-2.png'
+  - uri: 'public://work/castrol-chicken-run-2008-mailer-2.png'
     layout:
       columns: 1
     title: E-mail
-  - uri: 'public://castrol-chicken-run-2008-mailer-3.png'
+  - uri: 'public://work/castrol-chicken-run-2008-mailer-3.png'
     layout:
       columns: 1
     title: Final e-mail
 header:
-  - uri: 'public://castrol-chicken-run-2008-header.png'
+  - uri: 'public://work/castrol-chicken-run-2008-header.png'
     title: castrol-chicken-run-2008-header
 tags:
   - Dev

@@ -20,7 +20,7 @@ body: |-
   * Globecom - website for radio broadcast solutions provider (2001)
 media: []
 header:
-  - uri: 'public://other-work-header.png'
+  - uri: 'public://work/other-work-header.png'
 tags:
   - Design
   - Dev

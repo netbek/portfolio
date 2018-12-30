@@ -48,11 +48,10 @@ gulp.task('html-build-pages', () =>
     Promise.mapSeries(Object.keys(data.pages), slug => {
       const {[slug]: page} = data.pages;
       const template = path.join(gulpConfig.src.templates, slug + '.njk');
-      const context = {data: data, page: {...page, slug}};
+      const uri = path.join(slug);
+      const context = {data, page};
 
-      return renderPromise(template, context).then(content =>
-        renderPage({data: data, page: {...page, slug, content}}, slug)
-      );
+      return renderPage(template, uri, context);
     })
   )
 );
@@ -63,11 +62,10 @@ gulp.task('html-build-projects', () =>
     Promise.mapSeries(Object.keys(data.projects), slug => {
       const {[slug]: page} = data.projects;
       const template = path.join(gulpConfig.src.templates, 'project.njk');
-      const context = {data: data, page: {...page, slug}};
+      const uri = path.join('work', slug);
+      const context = {data, page};
 
-      return renderPromise(template, context).then(content =>
-        renderPage({data: data, page: {...page, slug, content}}, slug, 'work')
-      );
+      return renderPage(template, uri, context);
     })
   )
 );

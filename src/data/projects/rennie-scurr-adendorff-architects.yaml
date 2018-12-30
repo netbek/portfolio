@@ -9,33 +9,33 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://rennie-scurr-adendorff-architects-landing.png'
+  - uri: 'public://work/rennie-scurr-adendorff-architects-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://rennie-scurr-adendorff-architects-project.png'
+  - uri: 'public://work/rennie-scurr-adendorff-architects-project.png'
     layout:
       frame: desktop
       columns: 2
     title: Projects
-  - uri: 'public://rennie-scurr-adendorff-architects-services.png'
+  - uri: 'public://work/rennie-scurr-adendorff-architects-services.png'
     layout:
       frame: desktop
       columns: 2
     title: Services
-  - uri: 'public://rennie-scurr-adendorff-architects-studio.png'
+  - uri: 'public://work/rennie-scurr-adendorff-architects-studio.png'
     layout:
       frame: desktop
       columns: 2
     title: About the studio
-  - uri: 'public://rennie-scurr-adendorff-architects-contact.png'
+  - uri: 'public://work/rennie-scurr-adendorff-architects-contact.png'
     layout:
       frame: desktop
       columns: 2
     title: Contact
 header:
-  - uri: 'public://rennie-scurr-adendorff-architects-header.png'
+  - uri: 'public://work/rennie-scurr-adendorff-architects-header.png'
 tags:
   - Design
   - Dev

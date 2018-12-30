@@ -11,42 +11,42 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://liquid-fridge-logo.png'
+  - uri: 'public://work/liquid-fridge-logo.png'
     layout:
       columns: 1
     title: Logo
-  - uri: 'public://liquid-fridge-radio-320x480.png'
+  - uri: 'public://work/liquid-fridge-radio-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Landing page (phone)
-  - uri: 'public://liquid-fridge-radio-1600x900.png'
+  - uri: 'public://work/liquid-fridge-radio-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: >-
       Landing page with countdown until next broadcast. The spectrum analyser at
       the top of the page is a nod to covert shortwave radio stations.
-  - uri: 'public://liquid-fridge-radio-player-320x480.png'
+  - uri: 'public://work/liquid-fridge-radio-player-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Stream player (phone)
-  - uri: 'public://liquid-fridge-tumblr.png'
+  - uri: 'public://work/liquid-fridge-tumblr.png'
     layout:
       frame: desktop
       columns: 2
     title: Tumblr blog of notable tracks and broadcast announcements
-  - uri: 'public://liquid-fridge-radio-mailer.png'
+  - uri: 'public://work/liquid-fridge-radio-mailer.png'
     layout:
       columns: 1
     title: E-mail
-  - uri: 'public://liquid-fridge-radio-podcast.png'
+  - uri: 'public://work/liquid-fridge-radio-podcast.png'
     layout:
       columns: 2
     title: Podcast cover art (alternate designs)
 header:
-  - uri: 'public://liquid-fridge-header.png'
+  - uri: 'public://work/liquid-fridge-header.png'
 tags:
   - Design
   - Dev

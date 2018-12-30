@@ -10,43 +10,43 @@ body: >-
 
   Dev: netbek. Design: [Plan B](http://www.planbdesign.co.za).
 media:
-  - uri: 'public://tmgs-creative-home-1600x900.png'
+  - uri: 'public://work/tmgs-creative-home-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://tmgs-creative-home-320x480.png'
+  - uri: 'public://work/tmgs-creative-home-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Landing page (phone)
-  - uri: 'public://tmgs-creative-programming-320x480.png'
+  - uri: 'public://work/tmgs-creative-programming-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Projects (phone)
-  - uri: 'public://tmgs-creative-programming-1600x900.png'
+  - uri: 'public://work/tmgs-creative-programming-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Projects
-  - uri: 'public://tmgs-creative-smirnoff-320x480.png'
+  - uri: 'public://work/tmgs-creative-smirnoff-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Project (phone)
-  - uri: 'public://tmgs-creative-technology-320x480.png'
+  - uri: 'public://work/tmgs-creative-technology-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Soundboard (phone)
-  - uri: 'public://tmgs-creative-technology-1600x900.png'
+  - uri: 'public://work/tmgs-creative-technology-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Soundboard of radio promos
 header:
-  - uri: 'public://tmgs-creative-header.png'
+  - uri: 'public://work/tmgs-creative-header.png'
 tags:
   - Dev
   - Drupal

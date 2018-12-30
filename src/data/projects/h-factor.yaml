@@ -10,28 +10,28 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://hfactor-landing.png'
+  - uri: 'public://work/hfactor-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://hfactor-ccr2008.png'
+  - uri: 'public://work/hfactor-ccr2008.png'
     layout:
       frame: desktop
       columns: 2
     title: Photo (Castrol Chicken Run 2008)
-  - uri: 'public://hfactor-rbmobile.png'
+  - uri: 'public://work/hfactor-rbmobile.png'
     layout:
       frame: desktop
       columns: 2
     title: Video (Red Bull Mobile launch)
-  - uri: 'public://hfactor-projects.png'
+  - uri: 'public://work/hfactor-projects.png'
     layout:
       frame: desktop
       columns: 2
     title: Project selection
 header:
-  - uri: 'public://hfactor-header.png'
+  - uri: 'public://work/hfactor-header.png'
 tags:
   - Design
   - Dev

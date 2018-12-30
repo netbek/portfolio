@@ -36,6 +36,8 @@
     "samsung >= 5"
   ],
   "dependencies": {
+    "FitVids.js": "https://github.com/davatron5000/FitVids.js",
+    "jquery": "^3.3.1",
     "normalize-css": "^2.3.1",
     "picturefill": "^3.0.3"
   },
@@ -79,6 +81,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-webserver": "^0.9.1",
+    "html-minifier": "^3.5.21",
     "js-yaml": "^3.12.0",
     "livereload": "^0.7.0",
     "lodash": "^4.17.11",

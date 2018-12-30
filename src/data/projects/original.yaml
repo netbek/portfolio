@@ -10,52 +10,52 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://original-landing-1600x900.png'
+  - uri: 'public://work/original-landing-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://original-landing-320x480.png'
+  - uri: 'public://work/original-landing-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Landing page (phone)
-  - uri: 'public://original-portfolio-320x480.png'
+  - uri: 'public://work/original-portfolio-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Portfolio (phone)
-  - uri: 'public://original-portfolio-1600x900.png'
+  - uri: 'public://work/original-portfolio-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Portfolio
-  - uri: 'public://original-ensemble-1600x900.png'
+  - uri: 'public://work/original-ensemble-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Ensemble
-  - uri: 'public://original-ensemble-320x480.png'
+  - uri: 'public://work/original-ensemble-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Ensemble (phone)
-  - uri: 'public://original-ensemble-gallery-320x480.png'
+  - uri: 'public://work/original-ensemble-gallery-320x480.png'
     layout:
       frame: phone
       columns: 1
     title: Ensemble (phone)
-  - uri: 'public://original-contact-1600x900.png'
+  - uri: 'public://work/original-contact-1600x900.png'
     layout:
       frame: desktop
       columns: 2
     title: Contact
-  - uri: 'public://original-mailer.png'
+  - uri: 'public://work/original-mailer.png'
     layout:
       columns: 1
     title: E-mail
 header:
-  - uri: 'public://original-header-2.png'
+  - uri: 'public://work/original-header-2.png'
 tags:
   - Design
   - Dev

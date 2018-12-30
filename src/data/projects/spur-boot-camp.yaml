@@ -12,41 +12,41 @@ body: >-
   [H-Factor](http://www.hfactor.co.za), [TMGS
   Creative](http://www.tmgscreative.com).
 media:
-  - uri: 'public://spur-boot-camp-2010-landing.png'
+  - uri: 'public://work/spur-boot-camp-2010-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://spur-boot-camp-2010-region.png'
+  - uri: 'public://work/spur-boot-camp-2010-region.png'
     layout:
       frame: desktop
       columns: 2
     title: Region
-  - uri: 'public://spur-boot-camp-2010-photo.png'
+  - uri: 'public://work/spur-boot-camp-2010-photo.png'
     layout:
       frame: desktop
       columns: 2
     title: Photo
-  - uri: 'public://spur-boot-camp-2010-video.png'
+  - uri: 'public://work/spur-boot-camp-2010-video.png'
     layout:
       frame: desktop
       columns: 2
     title: Video
-  - uri: 'public://spur-boot-camp-2010-training.png'
+  - uri: 'public://work/spur-boot-camp-2010-training.png'
     layout:
       frame: desktop
       columns: 2
     title: Spur Adventure training routine
-  - uri: 'public://spur-boot-camp-2010-mailer-1.png'
+  - uri: 'public://work/spur-boot-camp-2010-mailer-1.png'
     layout:
       columns: 1
     title: E-mail. Updates were sent out before and after each event.
-  - uri: 'public://spur-boot-camp-2010-mailer-2.png'
+  - uri: 'public://work/spur-boot-camp-2010-mailer-2.png'
     layout:
       columns: 1
     title: Final e-mail
 header:
-  - uri: 'public://spur-boot-camp-2010-header.png'
+  - uri: 'public://work/spur-boot-camp-2010-header.png'
     title: spur-boot-camp-2010-header
 tags:
   - Design

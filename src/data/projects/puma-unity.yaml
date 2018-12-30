@@ -11,34 +11,34 @@ body: >-
   [H-Factor](http://www.hfactor.co.za), [TMGS
   Creative](http://www.tmgscreative.com).
 media:
-  - uri: 'public://puma-unity-landing.png'
+  - uri: 'public://work/puma-unity-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://puma-unity-what.png'
+  - uri: 'public://work/puma-unity-what.png'
     layout:
       frame: desktop
       columns: 2
     title: About the kit
-  - uri: 'public://puma-unity-photos.png'
+  - uri: 'public://work/puma-unity-photos.png'
     layout:
       frame: desktop
       columns: 2
     title: Photos
-  - uri: 'public://puma-unity-party-safari.png'
+  - uri: 'public://work/puma-unity-party-safari.png'
     layout:
       frame: desktop
       columns: 2
     title: Party Safari
-  - uri: 'public://puma-unity-kehinde-wiley.png'
+  - uri: 'public://work/puma-unity-kehinde-wiley.png'
     layout:
       frame: desktop
       columns: 2
     title: >-
       Kehinde Wiley was commissioned to paint portraits of PUMA-sponsored
       football stars Samuel Eto'o, John Mensah and Emmanuel Eboué
-  - uri: 'public://puma-unity-videos.png'
+  - uri: 'public://work/puma-unity-videos.png'
     layout:
       frame: desktop
       columns: 2
@@ -51,7 +51,7 @@ media:
     width: 0
     height: 0
 header:
-  - uri: 'public://puma-unity-header.png'
+  - uri: 'public://work/puma-unity-header.png'
     title: puma-unity-header
 tags:
   - Dev

@@ -16,12 +16,12 @@ media:
     title: Petition
     width: 1280
     height: 720
-  - uri: 'public://the-salvation-army-sexpo-2013-font.png'
+  - uri: 'public://work/the-salvation-army-sexpo-2013-font.png'
     layout:
       columns: 2
     title: Body font
 header:
-  - uri: 'public://the-salvation-army-sexpo-2013-header.png'
+  - uri: 'public://work/the-salvation-army-sexpo-2013-header.png'
     layout:
       columns: 4
     title: the-salvation-army-sexpo-2013-header

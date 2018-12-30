@@ -1,7 +1,12 @@
 <div>
-  <p>Front</p>
-
   <ul>
-    <li><a href="/info">Info</a></li>
+    {% for slug in data['projects-list'] %}
+      {% set project = data.projects[slug] %}
+
+      <li>
+        <div class="thumb"><a href="/work/{{ slug }}"><img srcset="{{ project.header[0].uri|style_url(240) }} 1x, {{ project.header[0].uri|style_url(480) }} 2x" alt="{{ project.title }}"/></a></div>
+				<div class="label">{{ project.title }}</div>
+      </li>
+    {% endfor %}
   </ul>
 </div>

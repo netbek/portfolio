@@ -19,7 +19,7 @@ media:
     width: 640
     height: 360
 header:
-  - uri: 'public://capitec-hello-header.png'
+  - uri: 'public://work/capitec-hello-header.png'
     title: capitec-hello-header
 tags:
   - Dev

@@ -10,48 +10,48 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://african-centre-for-cities-landing.png'
+  - uri: 'public://work/african-centre-for-cities-landing.png'
     layout:
       columns: 2
     title: Landing page
-  - uri: 'public://african-centre-for-cities-programme.png'
+  - uri: 'public://work/african-centre-for-cities-programme.png'
     layout:
       columns: 2
     title: Programme
-  - uri: 'public://african-centre-for-cities-planner.png'
+  - uri: 'public://work/african-centre-for-cities-planner.png'
     layout:
       columns: 2
     title: Planner
-  - uri: 'public://african-centre-for-cities-event.png'
+  - uri: 'public://work/african-centre-for-cities-event.png'
     layout:
       columns: 2
     title: Event
-  - uri: 'public://african-centre-for-cities-lectures.png'
+  - uri: 'public://work/african-centre-for-cities-lectures.png'
     layout:
       columns: 2
     title: ACC Lecture Series
-  - uri: 'public://african-centre-for-cities-media.png'
+  - uri: 'public://work/african-centre-for-cities-media.png'
     layout:
       columns: 2
     title: Media
-  - uri: 'public://african-centre-for-cities-papers.png'
+  - uri: 'public://work/african-centre-for-cities-papers.png'
     layout:
       columns: 2
     title: Papers
-  - uri: 'public://african-centre-for-cities-people.png'
+  - uri: 'public://work/african-centre-for-cities-people.png'
     layout:
       columns: 2
     title: People
-  - uri: 'public://african-centre-for-cities-profile.png'
+  - uri: 'public://work/african-centre-for-cities-profile.png'
     layout:
       columns: 2
     title: Profile
-  - uri: 'public://african-centre-for-cities-publications.png'
+  - uri: 'public://work/african-centre-for-cities-publications.png'
     layout:
       columns: 2
     title: Publications
 header:
-  - uri: 'public://african-centre-for-cities-header.png'
+  - uri: 'public://work/african-centre-for-cities-header.png'
 tags:
   - Design
   - Dev

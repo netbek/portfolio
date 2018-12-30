@@ -1,3 +1,4 @@
+const {minify} = require('html-minifier');
 const nunjucks = require('nunjucks');
 const Promise = require('bluebird');
 const Remarkable = require('remarkable');
@@ -23,7 +24,12 @@ module.exports = (template, context = {}) =>
       if (err) {
         reject(err);
       } else {
-        resolve(result);
+        resolve(
+          minify(result, {
+            collapseWhitespace: true,
+            conservativeCollapse: true
+          })
+        );
       }
     });
   });

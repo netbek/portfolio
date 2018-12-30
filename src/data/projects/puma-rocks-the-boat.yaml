@@ -10,33 +10,33 @@ body: >-
   Dev: netbek. Design: [Plan B](http://www.planbdesign.co.za). Agency: [TMGS
   Creative](http://www.tmgscreative.com).
 media:
-  - uri: 'public://puma-rocks-the-boat-landing.png'
+  - uri: 'public://work/puma-rocks-the-boat-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://puma-rocks-the-boat-radiocast.png'
+  - uri: 'public://work/puma-rocks-the-boat-radiocast.png'
     layout:
       frame: desktop
       columns: 2
     title: Radiocast
-  - uri: 'public://puma-rocks-the-boat-photos.png'
+  - uri: 'public://work/puma-rocks-the-boat-photos.png'
     layout:
       frame: desktop
       columns: 2
     title: Photos
-  - uri: 'public://puma-rocks-the-boat-blog.png'
+  - uri: 'public://work/puma-rocks-the-boat-blog.png'
     layout:
       frame: desktop
       columns: 2
     title: Blog
-  - uri: 'public://puma-rocks-the-boat-podcast.png'
+  - uri: 'public://work/puma-rocks-the-boat-podcast.png'
     layout:
       frame: desktop
       columns: 2
     title: Podcast
 header:
-  - uri: 'public://puma-rocks-the-boat-header.png'
+  - uri: 'public://work/puma-rocks-the-boat-header.png'
     title: puma-rocks-the-boat-header
 tags:
   - Dev

@@ -10,43 +10,43 @@ body: >-
 
   Dev: netbek.
 media:
-  - uri: 'public://ikamvayouth-landing.png'
+  - uri: 'public://work/ikamvayouth-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://ikamvayouth-blog.png'
+  - uri: 'public://work/ikamvayouth-blog.png'
     layout:
       frame: desktop
       columns: 2
     title: Blog
-  - uri: 'public://ikamvayouth-blog-post.png'
+  - uri: 'public://work/ikamvayouth-blog-post.png'
     layout:
       frame: desktop
       columns: 2
     title: Blog post
-  - uri: 'public://ikamvayouth-branches.png'
+  - uri: 'public://work/ikamvayouth-branches.png'
     layout:
       frame: desktop
       columns: 2
     title: Branches
-  - uri: 'public://ikamvayouth-programmes.png'
+  - uri: 'public://work/ikamvayouth-programmes.png'
     layout:
       frame: desktop
       columns: 2
     title: Programmes
-  - uri: 'public://ikamvayouth-programme.png'
+  - uri: 'public://work/ikamvayouth-programme.png'
     layout:
       frame: desktop
       columns: 2
     title: Programme
-  - uri: 'public://ikamvayouth-team.png'
+  - uri: 'public://work/ikamvayouth-team.png'
     layout:
       frame: desktop
       columns: 2
     title: Team
 header:
-  - uri: 'public://ikamvayouth-header.png'
+  - uri: 'public://work/ikamvayouth-header.png'
 tags:
   - Dev
   - Drupal

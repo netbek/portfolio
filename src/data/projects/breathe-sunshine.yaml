@@ -9,11 +9,11 @@ body: >-
   Animation, menu design: netbek. Video: softTouch. Producer: [Blue
   Cow](http://www.bluecow.co.za).
 media:
-  - uri: 'public://breathe-sunshine-menu.png'
+  - uri: 'public://work/breathe-sunshine-menu.png'
     layout:
       columns: 2
     title: Menu screen
-  - uri: 'public://breathe-sunshine-track.png'
+  - uri: 'public://work/breathe-sunshine-track.png'
     layout:
       columns: 2
     title: Track title screen
@@ -25,7 +25,7 @@ media:
     width: 640
     height: 360
 header:
-  - uri: 'public://breathe-sunshine-header.png'
+  - uri: 'public://work/breathe-sunshine-header.png'
     title: breathe-sunshine-header
 tags:
   - Design

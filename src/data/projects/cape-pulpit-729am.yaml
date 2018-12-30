@@ -9,23 +9,23 @@ body: >-
 
   Design, dev: netbek.
 media:
-  - uri: 'public://cape-pulpit-player-facebook.png'
+  - uri: 'public://work/cape-pulpit-player-facebook.png'
     layout:
       frame: desktop
       columns: 2
     title: Facebook player
-  - uri: 'public://cape-pulpit-player-phone.png'
+  - uri: 'public://work/cape-pulpit-player-phone.png'
     layout:
       frame: phone
       columns: 1
     title: Player (phone)
-  - uri: 'public://cape-pulpit-player-fallback-phone.png'
+  - uri: 'public://work/cape-pulpit-player-fallback-phone.png'
     layout:
       frame: phone
       columns: 1
     title: Fallback player (phone)
 header:
-  - uri: 'public://cape-pulpit-header.png'
+  - uri: 'public://work/cape-pulpit-header.png'
 tags:
   - Design
   - Dev

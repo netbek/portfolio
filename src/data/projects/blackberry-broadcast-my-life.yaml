@@ -11,43 +11,43 @@ body: >-
 
   Design, dev: netbek. Agency: [TMGS Creative](http://www.tmgscreative.com)
 media:
-  - uri: 'public://broadcast-my-life-ng-landing.png'
+  - uri: 'public://work/broadcast-my-life-ng-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: 'Nigeria: Landing page'
-  - uri: 'public://broadcast-my-life-za-landing-phone.png'
+  - uri: 'public://work/broadcast-my-life-za-landing-phone.png'
     layout:
       frame: phone
       columns: 1
     title: 'South Africa: Landing page (phone)'
-  - uri: 'public://broadcast-my-life-za-submission-phone.png'
+  - uri: 'public://work/broadcast-my-life-za-submission-phone.png'
     layout:
       frame: phone
       columns: 1
     title: 'South Africa: User submission (phone)'
-  - uri: 'public://broadcast-my-life-ng-onair.png'
+  - uri: 'public://work/broadcast-my-life-ng-onair.png'
     layout:
       frame: desktop
       columns: 2
     title: 'Nigeria: On air'
-  - uri: 'public://broadcast-my-life-ng-submission.png'
+  - uri: 'public://work/broadcast-my-life-ng-submission.png'
     layout:
       frame: desktop
       columns: 2
     title: 'Nigeria: User submission'
-  - uri: 'public://broadcast-my-life-za-landing.png'
+  - uri: 'public://work/broadcast-my-life-za-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: 'South Africa: Landing page'
-  - uri: 'public://broadcast-my-life-za-onair-phone.png'
+  - uri: 'public://work/broadcast-my-life-za-onair-phone.png'
     layout:
       frame: phone
       columns: 1
     title: 'South Africa: On air (phone)'
 header:
-  - uri: 'public://broadcast-my-life-header.png'
+  - uri: 'public://work/broadcast-my-life-header.png'
     title: broadcast-my-life-header
 tags:
   - Design

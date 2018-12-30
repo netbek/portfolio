@@ -8,28 +8,28 @@ body: >-
 
   Dev: netbek. Design: [Plan B](http://planbdesign.co.za/).
 media:
-  - uri: 'public://plan-b-landing.png'
+  - uri: 'public://work/plan-b-landing.png'
     layout:
       frame: desktop
       columns: 2
     title: Landing page
-  - uri: 'public://plan-b-ctwdc.png'
+  - uri: 'public://work/plan-b-ctwdc.png'
     layout:
       frame: desktop
       columns: 2
     title: Cape Town World Design Capital 2014 logo
-  - uri: 'public://plan-b-fiction.png'
+  - uri: 'public://work/plan-b-fiction.png'
     layout:
       frame: desktop
       columns: 2
     title: Fiction Icons posters abide
-  - uri: 'public://plan-b-red-bull-sessions.png'
+  - uri: 'public://work/plan-b-red-bull-sessions.png'
     layout:
       frame: desktop
       columns: 2
     title: Red Bull Studio Sessions CD
 header:
-  - uri: 'public://plan-b-header.png'
+  - uri: 'public://work/plan-b-header.png'
 tags:
   - Dev
   - Drupal
