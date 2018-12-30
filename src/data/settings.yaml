@@ -1,5 +1,5 @@
 site:
-  name: netbek
+  name: Hein Bekker
   slogan: Web Developer
   mail: hein@netbek.co.za
   url: https://www.netbek.co.za
@@ -22,3 +22,10 @@ googleanalytics:
 googlewebmastertools:
   enabled: true
   id: kKXwBSu8r1b+90XmTJ/XKxRtEg6nS6y+DME7omfJaZs=
+style:
+  color:
+    black: '#222'
+    white: '#FFF'
+    yellow: '#FFE900'
+    pink: '#F9274B'
+    grey: '#9C9C9C'

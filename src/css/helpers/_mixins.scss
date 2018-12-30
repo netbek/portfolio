@@ -1,0 +1,12 @@
+// https://github.com/h5bp/html5-boilerplate/blob/e1e7277024e7897d4baf06c476ed71acbc59e749/dist/css/main.css#L141
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

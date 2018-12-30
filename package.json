@@ -57,6 +57,7 @@
     "bluebird": "^3.5.3",
     "bourbon": "^5.1.0",
     "breakpoint-sass": "^2.7.1",
+    "cheerio": "^1.0.0-rc.2",
     "eslint": "^5.11.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -94,6 +95,7 @@
     "pkg-dir": "^3.0.0",
     "prettier": "^1.15.3",
     "remarkable": "^1.7.1",
+    "svgo": "^1.1.1",
     "uglifyjs-webpack-plugin": "^1",
     "webpack": "^3"
   }

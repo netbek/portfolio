@@ -1,4 +1,6 @@
 @import 'helpers';
+@import 'components/accordion';
+@import 'components/checkbox';
 
 @font-face {
   font-family: 'Titillium Web';
@@ -28,9 +30,45 @@ body {
   background-image: radial-gradient(ellipse, #fff, #ccc);
 }
 
+a {
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.icon {
+  display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	text-transform: none;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+  height: 1em; // Prevents FOUC of SVG
+  max-width: none;
+
+  &:before {
+    display: none;
+  }
+}
+
+.visuallyhidden {
+  @include visuallyhidden;
+}
+
 main {
   margin: auto;
-  padding: 5em 5%;
+  padding: 1em 5%;
 }
 
 @include breakpoint($screen-large) {

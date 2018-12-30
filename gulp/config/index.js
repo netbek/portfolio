@@ -127,6 +127,7 @@ module.exports = {
     data: 'src/data/',
     fonts: 'src/fonts/',
     js: 'src/js/',
+    svg: 'src/svg/',
     templates: 'src/templates/'
   },
   vendor: {

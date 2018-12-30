@@ -1,16 +1,196 @@
 @import 'helpers';
 
+$menu-item-padding-vert: .125em;
+
 .scene--front {
-  .filter-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  #menu:checked ~ header {
+    .menu-toggle {
+      .icon {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+
+    .menu-list {
+      display: block;
+    }
   }
 
-  .filter-list-item {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  header {
+    padding: 1em 0;
+    background-color: $black;
+    color: $white;
+
+    .masthead-wrapper {
+      margin: 0 auto 1em;
+      padding: 0 1em;
+    }
+
+    .masthead {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        font-size: 2em;
+        line-height: 1;
+
+        .icon {
+          fill: white;
+        }
+      }
+
+      .site {
+        flex: 1 1 100%;
+
+        &__name,
+        &__slogan {
+          display: block;
+          margin-left: 1em;
+        }
+
+        &__name {
+          text-transform: uppercase;
+        }
+
+        &__slogan {
+          color: $grey;
+        }
+      }
+
+      .menu-toggle {
+        padding: .125em;
+        font-size: 1.75em;
+        line-height: 1;
+        cursor: pointer;
+
+        .icon {
+          fill: $white;
+
+          &:first-child {
+            display: block;
+          }
+
+          &:last-child {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+    }
+
+    .menu-list {
+      display: none;
+      list-style: disc;
+      margin: 0 0 .5em;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      border-top: 1px solid rgba(white, .15);
+      border-bottom: 1px solid rgba(white, .15);
+    }
+
+    .menu-list-item {
+      list-style: disc;
+      margin: 0;
+
+      a {
+        display: block;
+        padding: $menu-item-padding-vert 0;
+        color: white;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $yellow;
+
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+    }
+
+    .accordion {
+      &__item-header {
+        padding: $menu-item-padding-vert 0;
+
+        .accordion__item-button {
+          .icon {
+            fill: $white;
+          }
+        }
+
+        &:hover {
+          color: $yellow;
+
+          .accordion__item-button {
+            .icon {
+              fill: $yellow;
+            }
+          }
+        }
+      }
+
+      &__item-body {
+        padding: .25em 1em .75em;
+      }
+
+      &__item-button {
+        top: 50%;
+        margin-top: -.5em;
+        font-size: 1.25em;
+        line-height: 1;
+      }
+
+      &:not(.accordion--left),
+      &--right {
+        .accordion__item-header {
+          padding-right: $accordion-toggle-width + 1em;
+          padding-left: 1em;
+        }
+
+        .accordion__item-button {
+          right: 1em;
+          left: auto;
+        }
+      }
+    }
+
+    .filter-list {
+      display: flex;
+      flex-flow: row wrap;
+      list-style: none;
+      margin: -.125em 0;
+      padding: 0;
+    }
+
+    .filter-list-item {
+      flex: 0 0 50%;
+      list-style: none;
+      margin: .125em 0;
+      padding: 0;
+    }
+
+    @include breakpoint($screen-medium) {
+      .filter-list-item {
+        flex: 0 0 25%;
+      }
+    }
   }
 
   .project-list-wrapper {

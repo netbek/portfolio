@@ -14,6 +14,7 @@
     <script src="/vendor/picturefill/dist/picturefill.min.js" async></script>
   </head>
   <body class="scene {% for class_name in page.classNames %} scene--{{ class_name }}{% endfor %}" data-scene="{{ page.classNames[0] }}">
+{#
     <header>
       <a href="/">LOGO</a>
 
@@ -44,6 +45,9 @@
     <main>
       {{ page.content|safe }}
     </main>
+#}
+
+    {{ page.content|safe }}
 
     <script src="/vendor/jquery/dist/jquery.slim.min.js"></script>
     <script src="/vendor/FitVids.js/jquery.fitvids.js"></script>
