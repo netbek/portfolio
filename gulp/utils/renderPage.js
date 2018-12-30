@@ -23,16 +23,23 @@ module.exports = (template, uri, context = {}) => {
   }
   pathSegments.push('index.html');
 
+  const classNameSegments = isFront ? [slug] : pathSegments.slice(1, -1);
+  const classNames = classNameSegments.reduce(
+    (result, value, key) =>
+      result.concat([classNameSegments.slice(0, key + 1).join('-')]),
+    []
+  );
+
   const dest = path.join(...pathSegments);
   const {page} = context;
 
   return renderPromise(template, {
     ...context,
-    page: {...page, slug, url, isFront}
+    page: {...page, slug, url, isFront, classNames}
   }).then(content =>
     renderPromise(pageTemplate, {
       ...context,
-      page: {...page, slug, url, isFront, content}
+      page: {...page, slug, url, isFront, classNames, content}
     }).then(html => fs.outputFileAsync(dest, html, 'utf-8'))
   );
 };

@@ -18,7 +18,7 @@ module.exports = {
   css: {
     params: {
       includePaths: [
-        'node_modules/bourbon/app/assets/stylesheets/',
+        'node_modules/bourbon/core/',
         'node_modules/breakpoint-sass/stylesheets/',
         'node_modules/mathsass/dist/',
         'src/css'
@@ -89,17 +89,18 @@ module.exports = {
     classPrefix: '',
     options: ['addTest', 'prefixed', 'setClasses', 'testProp'],
     'feature-detects': [
-      'canvas',
-      'css/animations',
-      'css/backgroundsize',
-      'css/backgroundsizecover',
-      'css/calc',
-      'css/flexbox',
-      'css/transforms',
-      'css/transforms3d',
-      'svg',
-      'svg/clippaths',
-      'svg/inline'
+      // 'canvas',
+      // 'css/animations',
+      // 'css/backgroundsize',
+      // 'css/backgroundsizecover',
+      // 'css/calc',
+      // 'css/flexbox',
+      // 'css/transforms',
+      // 'css/transforms3d',
+      // 'svg',
+      // 'svg/clippaths',
+      // 'svg/inline',
+      'touchevents'
     ]
   },
   penrose: {
@@ -111,7 +112,13 @@ module.exports = {
     tasks: {
       work: {
         src: ['public://work/*'],
-        styles: [240, 480, 960, 1440, 1920]
+        styles: [
+          240,
+          480
+          // 960,
+          // 1440,
+          // 1920
+        ]
       }
     }
   },

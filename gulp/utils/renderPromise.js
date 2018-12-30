@@ -2,6 +2,7 @@ const {minify} = require('html-minifier');
 const nunjucks = require('nunjucks');
 const Promise = require('bluebird');
 const Remarkable = require('remarkable');
+const slugify = require('@sindresorhus/slugify');
 const getStyleUrl = require('./getStyleUrl');
 const getUrl = require('./getUrl');
 const getVimeoId = require('./getVimeoId');
@@ -13,6 +14,7 @@ const env = nunjucks.configure({
 const md = new Remarkable();
 
 env.addFilter('markdown', str => md.render(str));
+env.addFilter('slugify', str => slugify(str));
 env.addFilter('style_url', (uri, styleName) => getStyleUrl(styleName, uri));
 env.addFilter('url', uri => getUrl(uri));
 env.addFilter('vimeo_id', uri => getVimeoId(uri));

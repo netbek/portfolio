@@ -1,3 +1,5 @@
+@import 'helpers';
+
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
@@ -7,10 +9,37 @@
        url('/fonts/titillium-web-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-body {
-  font-family: 'Titillium Web', sans-serif;
-  background: pink;
+* {
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1em;
+  line-height: $line-height-body;
+  color: #222;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #e3e3e3;
+  background-image: radial-gradient(ellipse, #fff, #ccc);
+}
+
+main {
+  margin: auto;
+  padding: 5em 5%;
+}
+
+@include breakpoint($screen-large) {
+  main {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@import 'front';
 @import 'info';
 @import 'project';

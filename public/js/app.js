@@ -77,14 +77,27 @@ var _project2 = _interopRequireDefault(_project);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var $scene = jQuery('.scene');
+var sceneName = $scene.data('scene');
+
+if (sceneName === 'front') {
+  (0, _front2.default)($scene);
+}
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
 exports.__esModule = true;
 
-exports.default = function () {
-  console.log('index view');
+exports.default = function ($scene) {
+  if (!window.Modernizr.touchevents) {
+    jQuery('.project a, .project__label', $scene).on('mouseenter.nb focus.nb', function () {
+      jQuery(this).closest('.project-list-item').addClass('hover');
+    }).on('mouseleave.nb blur.nb', function () {
+      jQuery(this).closest('.project-list-item').removeClass('hover');
+    });
+  }
 };
 
 /***/ }),

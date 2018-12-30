@@ -1,12 +1,44 @@
-<div>
-  <ul>
-    {% for slug in data['projects-list'] %}
-      {% set project = data.projects[slug] %}
+<style>
+  {% for tag in data.tags %}
+    #filter-{{ tag|slugify }}:checked ~ .project-list-wrapper .project-list-item[data-tag-{{ tag|slugify }}] .project__thumb a {
+      border: 0;
+    }
 
-      <li>
-        <div class="thumb"><a href="/work/{{ slug }}"><img srcset="{{ project.header[0].uri|style_url(240) }} 1x, {{ project.header[0].uri|style_url(480) }} 2x" alt="{{ project.title }}"/></a></div>
-				<div class="label">{{ project.title }}</div>
+    #filter-{{ tag|slugify }}:checked ~ .project-list-wrapper .project-list-item[data-tag-{{ tag|slugify }}] .project__thumb img {
+      opacity: 1;
+    }
+  {% endfor %}
+</style>
+
+<div>
+  {% for tag in data.tags %}
+    {# <input id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" checked /> #}
+    <input id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" {% if loop.index > 2 %} checked {% endif %} />
+  {% endfor %}
+
+  <ul class="filter-list">
+    {% for tag in data.tags %}
+      <li class="filter-list-item">
+        <label for="filter-{{ tag|slugify }}">{{ tag }}</label>
       </li>
     {% endfor %}
   </ul>
+
+  <div class="project-list-wrapper">
+    <ul class="project-list">
+      {% for slug in data['projects-list'] %}
+        {% set item = data.projects[slug] %}
+        <li
+          class="project-list-item"
+          style="z-index: {{ loop.length - loop.index }};"
+          {% for tag in item.tags %} data-tag-{{ tag|slugify }}{% endfor %}
+        >
+          <div class="project">
+            <div class="project__thumb"><a href="/work/{{ slug }}"><img srcset="{{ item.header[0].uri|style_url(240) }} 1x, {{ item.header[0].uri|style_url(480) }} 2x" alt="{{ item.title }}"/></a></div>
+            <div class="project__label">{{ item.title }}</div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

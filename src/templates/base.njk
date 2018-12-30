@@ -13,7 +13,7 @@
     </script>
     <script src="/vendor/picturefill/dist/picturefill.min.js" async></script>
   </head>
-  <body class="scene">
+  <body class="scene {% for class_name in page.classNames %} scene--{{ class_name }}{% endfor %}" data-scene="{{ page.classNames[0] }}">
     <header>
       <a href="/">LOGO</a>
 
