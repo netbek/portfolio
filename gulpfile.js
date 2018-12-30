@@ -176,7 +176,10 @@ gulp.task('penrose', gulp.series('penrose-clean', 'penrose-build'));
 gulp.task('vendor-clean', () => fs.removeAsync(gulpConfig.dist.vendor));
 gulp.task('vendor-copy', copyVendor);
 gulp.task('vendor-modernizr', buildModernizr);
-gulp.task('vendor', gulp.series('vendor-copy', 'vendor-modernizr'));
+gulp.task(
+  'vendor',
+  gulp.series('vendor-clean', 'vendor-copy', 'vendor-modernizr')
+);
 
 gulp.task(
   'dev',
