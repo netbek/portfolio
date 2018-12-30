@@ -123,7 +123,7 @@ module.exports = {
     templates: 'src/templates/'
   },
   vendor: {
-    modulePaths: [
+    paths: [
       'FitVids.js/jquery.fitvids.js',
       'jquery/dist/jquery.slim.min.js',
       'normalize-css/normalize.css',
