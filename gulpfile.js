@@ -10,6 +10,7 @@ const Promise = require('bluebird');
 const webserver = require('gulp-webserver');
 const buildCss = require('./gulp/utils/buildCss');
 const buildJs = require('./gulp/utils/buildJs');
+const buildIcons = require('./gulp/utils/buildIcons');
 const buildModernizr = require('./gulp/utils/buildModernizr');
 const copyVendor = require('./gulp/utils/copyVendor');
 const loadData = require('./gulp/utils/loadData');
@@ -122,6 +123,9 @@ gulp.task('fonts-build', () =>
 );
 gulp.task('fonts', gulp.series('fonts-clean', 'fonts-build'));
 
+// Icons
+gulp.task('icons', buildIcons);
+
 // Deletes derivate images
 gulp.task('penrose-clean', () =>
   fs.removeAsync(path.join(gulpConfig.penrose.schemes.public.path, 'styles'))
@@ -181,21 +185,11 @@ gulp.task(
   gulp.series('vendor-clean', 'vendor-copy', 'vendor-modernizr')
 );
 
-gulp.task(
-  'dev',
-  gulp.series(
-    'css',
-    'js',
-    'fonts',
-    // 'penrose',
-    'vendor',
-    'html'
-  )
-);
+gulp.task('dev', gulp.series('css', 'js', 'vendor', 'html'));
 
 gulp.task(
   'prod',
-  gulp.series('css', 'js', 'fonts', 'penrose', 'vendor', 'html')
+  gulp.series('js', 'vendor', 'html', 'fonts', 'icons', 'penrose', 'css')
 );
 
 // Starts the webserver
