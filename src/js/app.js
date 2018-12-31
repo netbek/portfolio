@@ -2,8 +2,6 @@ import Expo from 'gsap/EasePack';
 import jQuery from 'jquery/dist/jquery.slim';
 import TweenMax from 'gsap/TweenMax';
 import parseUrl from './utils/parseUrl';
-import frontScene from './scenes/front';
-import workScene from './scenes/work';
 
 const PAGE_TRANSITION = false; // TODO Enable after dev
 
@@ -190,9 +188,23 @@ function initAnchors() {
 initAnchors();
 
 if (sceneName === 'front') {
-  frontScene($scene);
-} else if (sceneName === 'work') {
-  workScene($scene);
-}
+  if (!window.Modernizr.touchevents) {
+    jQuery('.project a, .project__label', $scene)
+      .on('mouseenter.nb focus.nb', function() {
+        jQuery(this)
+          .closest('.project-list-item')
+          .addClass('hover');
+      })
+      .on('mouseleave.nb blur.nb', function() {
+        jQuery(this)
+          .closest('.project-list-item')
+          .removeClass('hover');
+      });
+  }
 
-openPage();
+  $scene.imagesLoaded().always(() => openPage());
+} else if (sceneName === 'work') {
+  openPage();
+} else {
+  openPage();
+}

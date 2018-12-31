@@ -83,14 +83,6 @@ var _parseUrl3 = __webpack_require__(4);
 
 var _parseUrl4 = _interopRequireDefault(_parseUrl3);
 
-var _front = __webpack_require__(5);
-
-var _front2 = _interopRequireDefault(_front);
-
-var _work = __webpack_require__(6);
-
-var _work2 = _interopRequireDefault(_work);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PAGE_TRANSITION = false;
@@ -245,12 +237,24 @@ function initAnchors() {
 initAnchors();
 
 if (sceneName === 'front') {
-  (0, _front2.default)($scene);
-} else if (sceneName === 'work') {
-  (0, _work2.default)($scene);
-}
+  if (!window.Modernizr.touchevents) {
+    (0, _jquery2.default)('.project a, .project__label', $scene).on('mouseenter.nb focus.nb', function () {
+      (0, _jquery2.default)(this).closest('.project-list-item').addClass('hover');
+    }).on('mouseleave.nb blur.nb', function () {
+      (0, _jquery2.default)(this).closest('.project-list-item').removeClass('hover');
+    });
+  }
 
-openPage();
+  if (PAGE_TRANSITION) {
+    $scene.imagesLoaded().always(function () {
+      return openPage();
+    });
+  }
+} else if (sceneName === 'work') {
+  openPage();
+} else {
+  openPage();
+}
 
 /***/ }),
 /* 1 */
@@ -320,32 +324,6 @@ exports.default = function (url) {
     query: query,
     fragment: fragment
   };
-};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-exports.__esModule = true;
-
-exports.default = function ($scene) {
-  if (!window.Modernizr.touchevents) {
-    jQuery('.project a, .project__label', $scene).on('mouseenter.nb focus.nb', function () {
-      jQuery(this).closest('.project-list-item').addClass('hover');
-    }).on('mouseleave.nb blur.nb', function () {
-      jQuery(this).closest('.project-list-item').removeClass('hover');
-    });
-  }
-};
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-exports.__esModule = true;
-
-exports.default = function () {
-  console.log('project view');
 };
 
 /***/ })
