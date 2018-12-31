@@ -3,7 +3,8 @@ import jQuery from 'jquery/dist/jquery.slim';
 import TweenMax from 'gsap/TweenMax';
 import parseUrl from './utils/parseUrl';
 
-const PAGE_TRANSITION = false; // TODO Enable after dev
+const SPINNER = false; // TODO Enable after dev
+const TRANSITION = false; // TODO Enable after dev
 
 const {hostNorm: localhost} = parseUrl(window.location.href);
 
@@ -12,6 +13,7 @@ const $body = jQuery('body');
 const $scene = jQuery('.scene');
 const sceneName = $scene.data('scene');
 
+const $spinner = jQuery('#spinner');
 const $doorWrapper = jQuery('#door-wrapper');
 const $doorCover = jQuery('#door-cover');
 const $doorLeft = jQuery('#door-left');
@@ -19,8 +21,30 @@ const $doorRight = jQuery('#door-right');
 const doorAxis = 'X';
 const doorSkew = Math.random() < 0.5 ? -25 : 25;
 
+function showSpinner() {
+  TweenMax.killTweensOf($spinner);
+
+  TweenMax.to($spinner, 0, {
+    autoAlpha: 0
+  });
+
+  TweenMax.to($spinner, 0.3, {
+    autoAlpha: 1
+  });
+}
+
+function hideSpinner(cb) {
+  TweenMax.killTweensOf($spinner);
+
+  TweenMax.to($spinner, 0.3, {
+    delay: 0.3,
+    autoAlpha: 0,
+    onComplete: cb
+  });
+}
+
 function openPage(cb) {
-  if (PAGE_TRANSITION) {
+  if (TRANSITION) {
     TweenMax.killTweensOf($doorLeft);
     TweenMax.killTweensOf($doorRight);
     TweenMax.killTweensOf($doorCover);
@@ -88,7 +112,7 @@ function openPage(cb) {
 }
 
 function closePage(cb) {
-  if (PAGE_TRANSITION) {
+  if (TRANSITION) {
     TweenMax.killTweensOf($doorLeft);
     TweenMax.killTweensOf($doorRight);
     TweenMax.killTweensOf($doorCover);
@@ -202,7 +226,15 @@ if (sceneName === 'front') {
       });
   }
 
-  $scene.imagesLoaded().always(() => openPage());
+  if (SPINNER) {
+    showSpinner();
+
+    $scene.imagesLoaded().always(() => {
+      hideSpinner(openPage);
+    });
+  } else {
+    openPage();
+  }
 } else if (sceneName === 'work') {
   openPage();
 } else {

@@ -148,6 +148,15 @@ footer {
 	background-color: #FFF;
 }
 
+#spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -.5em;
+  margin-left: -.5em;
+  opacity: 0;
+}
+
 @include breakpoint($screen-small) {
   main {
     padding: $region-padding-vert--small 5%;
@@ -181,6 +190,10 @@ footer {
 
   footer {
     padding: max($region-padding-vert, ($region-padding-vert--large / 2)) 5% $region-padding-vert--large;
+  }
+
+  #spinner {
+    font-size: 3em;
   }
 }
 

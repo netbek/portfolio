@@ -85,7 +85,8 @@ var _parseUrl4 = _interopRequireDefault(_parseUrl3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PAGE_TRANSITION = false;
+var SPINNER = false;
+var TRANSITION = false;
 var _parseUrl = (0, _parseUrl4.default)(window.location.href),
     localhost = _parseUrl.hostNorm;
 
@@ -94,6 +95,7 @@ var $body = (0, _jquery2.default)('body');
 var $scene = (0, _jquery2.default)('.scene');
 var sceneName = $scene.data('scene');
 
+var $spinner = (0, _jquery2.default)('#spinner');
 var $doorWrapper = (0, _jquery2.default)('#door-wrapper');
 var $doorCover = (0, _jquery2.default)('#door-cover');
 var $doorLeft = (0, _jquery2.default)('#door-left');
@@ -101,8 +103,30 @@ var $doorRight = (0, _jquery2.default)('#door-right');
 var doorAxis = 'X';
 var doorSkew = Math.random() < 0.5 ? -25 : 25;
 
+function showSpinner() {
+  _TweenMax2.default.killTweensOf($spinner);
+
+  _TweenMax2.default.to($spinner, 0, {
+    autoAlpha: 0
+  });
+
+  _TweenMax2.default.to($spinner, 0.3, {
+    autoAlpha: 1
+  });
+}
+
+function hideSpinner(cb) {
+  _TweenMax2.default.killTweensOf($spinner);
+
+  _TweenMax2.default.to($spinner, 0.3, {
+    delay: 0.3,
+    autoAlpha: 0,
+    onComplete: cb
+  });
+}
+
 function openPage(cb) {
-  if (PAGE_TRANSITION) {
+  if (TRANSITION) {
     _TweenMax2.default.killTweensOf($doorLeft);
     _TweenMax2.default.killTweensOf($doorRight);
     _TweenMax2.default.killTweensOf($doorCover);
@@ -156,7 +180,7 @@ function openPage(cb) {
 }
 
 function closePage(cb) {
-  if (PAGE_TRANSITION) {
+  if (TRANSITION) {
     _TweenMax2.default.killTweensOf($doorLeft);
     _TweenMax2.default.killTweensOf($doorRight);
     _TweenMax2.default.killTweensOf($doorCover);
@@ -245,10 +269,14 @@ if (sceneName === 'front') {
     });
   }
 
-  if (PAGE_TRANSITION) {
+  if (SPINNER) {
+    showSpinner();
+
     $scene.imagesLoaded().always(function () {
-      return openPage();
+      hideSpinner(openPage);
     });
+  } else {
+    openPage();
   }
 } else if (sceneName === 'work') {
   openPage();
