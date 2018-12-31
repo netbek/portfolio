@@ -38,6 +38,13 @@ a {
   }
 }
 
+a,
+button {
+  .icon {
+    pointer-events: none;
+  }
+}
+
 .hidden-checkbox {
   @include visuallyhidden;
   position: fixed;
@@ -157,6 +164,67 @@ footer {
   opacity: 0;
 }
 
+// Magnific Popup
+
+.mfp-bg {
+  opacity: .9;
+}
+
+.mfp-container {
+  padding: 0 1em;
+}
+
+.mfp-figure {
+  &:after {
+    // 4dp
+    box-shadow:
+      0px 2px 4px -1px rgba(black, $shadow-key-umbra-opacity),
+      0px 4px 5px 0px rgba(black, $shadow-key-penumbra-opacity),
+      0px 1px 10px 0px rgba(black, $shadow-ambient-shadow-opacity);
+  }
+}
+
+img.mfp-img {
+  padding: 2.5em 0;
+}
+
+.mfp-image-holder {
+  .mfp-close {
+    top: 0;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 2em;
+    padding: 0;
+    opacity: 1;
+
+    .icon {
+      display: block;
+      fill: $white;
+    }
+
+    &:hover {
+      .icon {
+        fill: $yellow;
+      }
+    }
+
+    .icon {
+      fill: white;
+    }
+  }
+}
+
+// Frame
+
+.frame {
+  &__svg {
+    image {
+      cursor: zoom-in;
+    }
+  }
+}
+
 @include breakpoint($screen-small) {
   main {
     padding: $region-padding-vert--small 5%;
@@ -164,6 +232,20 @@ footer {
 
   footer {
     padding: max($region-padding-vert, ($region-padding-vert--small / 2)) 5% $region-padding-vert--small;
+  }
+
+  .mfp-container {
+    padding: 0 2em;
+  }
+
+  img.mfp-img {
+    padding: 2.5em 0;
+  }
+
+  .mfp-image-holder {
+    .mfp-close {
+      right: -1em;
+    }
   }
 }
 

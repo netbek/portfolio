@@ -79,7 +79,11 @@ var _TweenMax = __webpack_require__(3);
 
 var _TweenMax2 = _interopRequireDefault(_TweenMax);
 
-var _parseUrl3 = __webpack_require__(4);
+var _picturefill = __webpack_require__(4);
+
+var _picturefill2 = _interopRequireDefault(_picturefill);
+
+var _parseUrl3 = __webpack_require__(5);
 
 var _parseUrl4 = _interopRequireDefault(_parseUrl3);
 
@@ -279,7 +283,45 @@ if (sceneName === 'front') {
     openPage();
   }
 } else if (sceneName === 'work') {
-  openPage();
+  (0, _jquery2.default)('.frame__svg').magnificPopup({
+    type: 'image',
+    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon icon-ios-close"><path d="M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z"></path></svg></button>',
+    retina: {
+      ratio: window.devicePixelRatio,
+      replaceSrc: function replaceSrc(item, ratio) {
+        var $elm = (0, _jquery2.default)(item.el);
+        var src = $elm.data('mfpSrc');
+        var srcset = $elm.data('mfpSrcset');
+        var candidates = _picturefill2.default._.parseSet({ srcset: srcset }).filter(function (s) {
+          return s.d <= ratio;
+        });
+        var bestCandidates = candidates.filter(function (s) {
+          return s.d >= ratio;
+        });
+
+        var result = void 0;
+        if (bestCandidates.length) {
+          result = bestCandidates[0].url;
+        } else if (candidates.length) {
+          result = candidates[candidates.length - 1].url;
+        } else {
+          result = src;
+        }
+
+        return result;
+      }
+    }
+  });
+
+  if (SPINNER) {
+    showSpinner();
+
+    $scene.imagesLoaded().always(function () {
+      hideSpinner(openPage);
+    });
+  } else {
+    openPage();
+  }
 } else {
   openPage();
 }
@@ -304,6 +346,12 @@ module.exports = TweenMax;
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = picturefill;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 exports.__esModule = true;

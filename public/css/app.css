@@ -201,6 +201,10 @@ a {
   a:focus, a:hover {
     text-decoration: none; }
 
+a .icon,
+button .icon {
+  pointer-events: none; }
+
 .hidden-checkbox {
   border: 0;
   clip: rect(0 0 0 0);
@@ -304,11 +308,50 @@ footer {
   margin-left: -.5em;
   opacity: 0; }
 
+.mfp-bg {
+  opacity: .9; }
+
+.mfp-container {
+  padding: 0 1em; }
+
+.mfp-figure:after {
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
+
+img.mfp-img {
+  padding: 2.5em 0; }
+
+.mfp-image-holder .mfp-close {
+  top: 0;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  font-size: 2em;
+  padding: 0;
+  opacity: 1; }
+  .mfp-image-holder .mfp-close .icon {
+    display: block;
+    fill: #FFF; }
+  .mfp-image-holder .mfp-close:hover .icon {
+    fill: #FFE900; }
+  .mfp-image-holder .mfp-close .icon {
+    fill: white; }
+
+.frame__svg image {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in; }
+
 @media (min-width: 29em) {
   main {
     padding: 2em 5%; }
   footer {
-    padding: 1em 5% 2em; } }
+    padding: 1em 5% 2em; }
+  .mfp-container {
+    padding: 0 2em; }
+  img.mfp-img {
+    padding: 2.5em 0; }
+  .mfp-image-holder .mfp-close {
+    right: -1em; } }
 
 @media (min-width: 47em) {
   main {
@@ -784,3 +827,24 @@ footer {
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+.scene--work .lightbox .lightbox-button {
+  border: none;
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  fill: #FFF;
+  -webkit-border-radius: 0.2em;
+          border-radius: 0.2em;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 0.5em;
+  position: absolute;
+  bottom: 1em;
+  right: 1em; }
+
+.scene--work .lightbox .lightbox-button:focus,
+.scene--work .lightbox .lightbox-button:hover {
+  background: #000;
+  color: #FFE900;
+  fill: #FFE900; }

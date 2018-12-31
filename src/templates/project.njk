@@ -44,22 +44,18 @@
                     {{
                       desktop_frame(
                         src=item.uri|style_url(480),
-                        srcset='{img_480} 1x, {img_960} 1x'|
+                        srcset='{img_480} 1x, {img_960} 2x'|
                           replace('{img_480}', item.uri|style_url(480))|
-                          replace('{img_960}', item.uri|style_url(960)),
-                        width=item.width,
-                        height=item.height
+                          replace('{img_960}', item.uri|style_url(960))
                       )
                     }}
                   {% elif item.layout.frame == 'phone' %}
                     {{
                       phone_frame(
                         src=item.uri|style_url(480),
-                        srcset='{img_480} 1x, {img_960} 1x'|
+                        srcset='{img_480} 1x, {img_960} 2x'|
                           replace('{img_480}', item.uri|style_url(480))|
-                          replace('{img_960}', item.uri|style_url(960)),
-                        width=item.width,
-                        height=item.height
+                          replace('{img_960}', item.uri|style_url(960))
                       )
                     }}
                   {% else %}

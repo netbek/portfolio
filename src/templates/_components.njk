@@ -42,35 +42,37 @@
   </ul>
 {% endmacro %}
 
-{% macro desktop_frame(src, srcset, width, height, x=26, y=26) %}
-  <div class="nb-cutty">
-    <svg class="nb-cutty__svg" xmlns="http://www.w3.org/2000/svg" width="572" height="462" viewBox="0 0 572 462">
+{% macro desktop_frame(src, srcset) %}
+  <div class="frame">
+    <svg class="frame__svg" xmlns="http://www.w3.org/2000/svg" width="572" height="462" viewBox="0 0 572 462" data-mfp-src="{{ src }}" data-mfp-srcset="{{ srcset }}">
       <defs>
-        <clipPath id="clip">
+        <clipPath id="desktop-frame-clip">
           <rect x="26" y="26" width="520" height="292"/>
         </clipPath>
       </defs>
-      <image data-srcset="{{ srcset }}" xlink:href="{{ src }}" x="{{ x }}" y="{{ y }}" width="{{ width }}" height="{{ height }}" clip-path="url(#clip)"></image>
+      <image xlink:href="{{ src }}" x="26" y="26" width="520" height="292" clip-path="url(#desktop-frame-clip)"></image>
       <path clip-rule="evenodd" fill="none" stroke="#9C9C9C" stroke-width="2" stroke-miterlimit="10" d="M1 21C1 9.954 9.954 1 21 1h530c11.045 0 20 8.954 20 20v350c0 11.046-8.955 20-20 20H21c-11.046 0-20-8.954-20-20V21z"/>
       <path clip-rule="evenodd" fill="none" stroke="#9C9C9C" stroke-width="2" stroke-miterlimit="3.864" d="M26 26h520v292H26z"/>
       <path clip-rule="evenodd" fill="none" stroke="#9C9C9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="M223.444 391c0 3.386.101 8.549.299 15.492 0 6.113-.482 11.313-1.447 15.597-2.664 11.813-10.054 21.709-22.172 29.688-7.158 4.732-10.104 7.616-8.838 8.652.366.311 1.214.502 2.547.57h184.336c1.332-.068 2.181-.26 2.547-.57 1.265-1.036-1.681-3.92-8.839-8.652-12.118-7.979-19.508-17.876-22.171-29.688-.966-4.284-1.448-9.483-1.448-15.597.2-6.943.3-12.106.3-15.492"/>
     </svg>
+    {# <button class="lightbox-button lightbox-zoom-button">{{ 'zoom-in'|icon|safe }}</button> #}
   </div>
 {% endmacro %}
 
-{% macro phone_frame(src, srcset, width, height, x=28, y=58) %}
-  <div class="nb-cutty">
-    <svg class="nb-cutty__svg" xmlns="http://www.w3.org/2000/svg" width="286" height="462" viewBox="0 0 286 462">
+{% macro phone_frame(src, srcset) %}
+  <div class="frame">
+    <svg class="frame__svg" xmlns="http://www.w3.org/2000/svg" width="286" height="462" viewBox="0 0 286 462" data-mfp-src="{{ src }}" data-mfp-srcset="{{ srcset }}">
       <defs>
-        <clipPath id="clip">
+        <clipPath id="phone-frame-clip">
           <rect x="28" y="58" width="230" height="345"/>
         </clipPath>
       </defs>
-      <image data-srcset="{{ srcset }}" xlink:href="{{ src }}" x="{{ x }}" y="{{ y }}" width="{{ width }}" height="{{ height }}" clip-path="url(#clip)"></image>
+      <image xlink:href="{{ src }}" x="28" y="58" width="230" height="345" clip-path="url(#phone-frame-clip)"></image>
       <path clip-rule="evenodd" fill="none" stroke="#9C9C9C" stroke-width="2" stroke-miterlimit="3.864" d="M28 21C28 9.954 36.955 1 48 1h190c11.045 0 20 8.954 20 20v420c0 11.046-8.955 20-20 20H48c-11.045 0-20-8.954-20-20V21z"/>
       <circle clip-rule="evenodd" fill="none" stroke="#9C9C9C" stroke-width="2" stroke-miterlimit="3.864" cx="143" cy="432" r="16"/>
       <circle clip-rule="evenodd" fill="none" stroke="#9C9C9C" stroke-width="2" stroke-miterlimit="3.864" cx="143" cy="29" r="3"/>
       <path fill="none" stroke="#9C9C9C" stroke-width="2" stroke-miterlimit="10" d="M28 58h230M28 403h230"/>
     </svg>
+    {# <button class="lightbox-button lightbox-zoom-button">{{ 'zoom-in'|icon|safe }}</button> #}
   </div>
 {% endmacro %}

@@ -58,6 +58,7 @@ module.exports = {
   externals: {
     'gsap/EasePack': 'Expo',
     'gsap/TweenMax': 'TweenMax',
-    'jquery/dist/jquery.slim': 'jQuery'
+    'jquery/dist/jquery.slim': 'jQuery',
+    'picturefill/dist/picturefill': 'picturefill'
   }
 };

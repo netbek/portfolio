@@ -4,13 +4,13 @@ const globPromise = require('glob-promise');
 const path = require('path');
 const {Penrose} = require('penrose');
 const Promise = require('bluebird');
-const sharp = require('sharp');
+// const sharp = require('sharp');
 const yaml = require('js-yaml');
 const gulpConfig = require('../config');
 
 const penrose = new Penrose(gulpConfig.penrose);
 
-const getImageMetadata = _.memoize(filePath => sharp(filePath).metadata());
+// const getImageMetadata = _.memoize(filePath => sharp(filePath).metadata());
 
 module.exports = _.memoize(() =>
   globPromise(path.join(gulpConfig.src.data, '**/*.yaml'))
@@ -61,15 +61,15 @@ module.exports = _.memoize(() =>
                 type: type
               };
 
-              if (type === 'image') {
-                return getImageMetadata(penrose.resolvePath(d.uri)).then(
-                  metadata => ({
-                    ...norm,
-                    width: metadata.width,
-                    height: metadata.height
-                  })
-                );
-              }
+              // if (type === 'image') {
+              //   return getImageMetadata(penrose.resolvePath(d.uri)).then(
+              //     metadata => ({
+              //       ...norm,
+              //       width: metadata.width,
+              //       height: metadata.height
+              //     })
+              //   );
+              // }
 
               return norm;
             }).then(media => [key, {...value, media}]);
