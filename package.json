@@ -37,6 +37,7 @@
   ],
   "dependencies": {
     "FitVids.js": "https://github.com/davatron5000/FitVids.js",
+    "gsap": "^2.0.2",
     "jquery": "^3.3.1",
     "normalize-css": "^2.3.1",
     "picturefill": "^3.0.3"

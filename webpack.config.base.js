@@ -56,6 +56,8 @@ module.exports = {
     ]
   },
   externals: {
-    // lodash: '_'
+    'gsap/EasePack': 'Expo',
+    'gsap/TweenMax': 'TweenMax',
+    'jquery/dist/jquery.slim': 'jQuery'
   }
 };

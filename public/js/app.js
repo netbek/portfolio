@@ -67,25 +67,140 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _front = __webpack_require__(1);
+var _EasePack = __webpack_require__(1);
+
+var _EasePack2 = _interopRequireDefault(_EasePack);
+
+var _jquery = __webpack_require__(2);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _TweenMax = __webpack_require__(3);
+
+var _TweenMax2 = _interopRequireDefault(_TweenMax);
+
+var _front = __webpack_require__(4);
 
 var _front2 = _interopRequireDefault(_front);
 
-var _project = __webpack_require__(2);
+var _project = __webpack_require__(5);
 
 var _project2 = _interopRequireDefault(_project);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $scene = jQuery('.scene');
+var $body = (0, _jquery2.default)('body');
+var $scene = (0, _jquery2.default)('.scene');
 var sceneName = $scene.data('scene');
+
+var $doorWrapper = (0, _jquery2.default)('#door-wrapper');
+var $doorCover = (0, _jquery2.default)('#door-cover');
+var $doorLeft = (0, _jquery2.default)('#door-left');
+var $doorRight = (0, _jquery2.default)('#door-right');
+
+var doorAxis = 'X';
+var doorSkew = Math.random() < 0.5 ? -30 : 30;
+
+function openPage(cb) {
+  _TweenMax2.default.killTweensOf($doorLeft);
+  _TweenMax2.default.killTweensOf($doorRight);
+  _TweenMax2.default.killTweensOf($doorCover);
+  _TweenMax2.default.killTweensOf($doorWrapper);
+
+  _TweenMax2.default.to($doorLeft, 0, {
+    css: {
+      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(-49%)'
+    }
+  });
+  _TweenMax2.default.to($doorRight, 0, {
+    css: {
+      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(49%)'
+    }
+  });
+  _TweenMax2.default.to($doorCover, 0, {
+    css: {
+      autoAlpha: 0,
+      display: 'none'
+    }
+  });
+  _TweenMax2.default.to($doorLeft, 1, {
+    css: {
+      transform: 'skew' + doorAxis + '(0deg) translate' + doorAxis + '(-100%)'
+    },
+    ease: _EasePack2.default.easeOut
+  });
+  _TweenMax2.default.to($doorRight, 1, {
+    css: {
+      transform: 'skew' + doorAxis + '(0deg) translate' + doorAxis + '(100%)'
+    },
+    ease: _EasePack2.default.easeOut,
+    onComplete: function onComplete() {
+      $doorWrapper.hide();
+
+      if (cb) {
+        cb();
+      }
+    }
+  });
+}
+
+function closePage(cb) {
+  _TweenMax2.default.killTweensOf($doorLeft);
+  _TweenMax2.default.killTweensOf($doorRight);
+  _TweenMax2.default.killTweensOf($doorCover);
+  _TweenMax2.default.killTweensOf($doorWrapper);
+
+  $doorWrapper.show();
+
+  _TweenMax2.default.to($doorLeft, 1, {
+    css: {
+      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(-49%)'
+    },
+    ease: _EasePack2.default.easeOut
+  });
+  _TweenMax2.default.to($doorRight, 1, {
+    css: {
+      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(49%)'
+    },
+    ease: _EasePack2.default.easeOut,
+    onComplete: function onComplete() {
+      (0, _jquery2.default)('header, main, footer').hide();
+
+      $body.addClass('closed-page');
+
+      if (cb) {
+        setTimeout(cb, 50);
+      }
+    }
+  });
+}
 
 if (sceneName === 'front') {
   (0, _front2.default)($scene);
 }
 
+openPage();
+
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+module.exports = Expo;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = TweenMax;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports) {
 
 exports.__esModule = true;
@@ -101,7 +216,7 @@ exports.default = function ($scene) {
 };
 
 /***/ }),
-/* 2 */
+/* 5 */
 /***/ (function(module, exports) {
 
 exports.__esModule = true;

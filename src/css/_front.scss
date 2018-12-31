@@ -341,12 +341,8 @@ $menu-item-padding-vert:                .125em;
       left: $region-padding-vert--large;
       width: 16em;
 
-      .filter-list {
-        display: block;
-      }
-
       .filter-list-item {
-        flex: none;
+        flex: 0 0 50%;
       }
     }
 
@@ -448,14 +444,6 @@ $menu-item-padding-vert:                .125em;
       top: $region-padding-vert--xlarge;
       left: $region-padding-vert--xlarge;
       width: 18em;
-
-      .filter-list {
-        display: flex;
-      }
-
-      .filter-list-item {
-        flex: 0 0 50%;
-      }
     }
 
     .project-list {

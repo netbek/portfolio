@@ -133,6 +133,7 @@ module.exports = {
   vendor: {
     paths: [
       'FitVids.js/jquery.fitvids.js',
+      'gsap/src/minified/TweenMax.min.js',
       'jquery/dist/jquery.slim.min.js',
       'normalize-css/normalize.css',
       'picturefill/dist/picturefill.min.js'

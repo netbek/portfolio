@@ -14,43 +14,18 @@
     <script src="/vendor/picturefill/dist/picturefill.min.js" async></script>
   </head>
   <body class="scene {% for class_name in page.classNames %} scene--{{ class_name }}{% endfor %}" data-scene="{{ page.classNames[0] }}">
-{#
-    <header>
-      <a href="/">LOGO</a>
-
-      <address>
-        <span>{{ data.settings.site.name }}</span>
-        <span>{{ data.settings.site.slogan }}</span>
-        <a href="mailto:{{ data.settings.site.mail }}">{{ data.settings.site.mail }}</a>
-      </address>
-
-      <nav role="navigation">
-        <ul>
-          <li>
-            {% if page.isFront %}
-              <a href="/">View by category</a>
-              <ul>
-                <li><a href="/#design">Design</a></li>
-                <li><a href="/#dev">Dev</a></li>
-              </ul>
-            {% else %}
-              <a href="/">Work</a>
-            {% endif %}
-          </li>
-          <li><a href="/info">Info</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      {{ page.content|safe }}
-    </main>
-#}
-
     {{ page.content|safe }}
+
+    <div id="door-wrapper">
+      <div id="door-cover"></div>
+      <div id="door-left"></div>
+      <div id="door-right"></div>
+      <div id="preloader"></div>
+    </div>
 
     <script src="/vendor/jquery/dist/jquery.slim.min.js"></script>
     <script src="/vendor/FitVids.js/jquery.fitvids.js"></script>
+    <script src="/vendor/gsap/src/minified/TweenMax.min.js"></script>
     <script src="/js/app.min.js"></script>
   </body>
 </html>
