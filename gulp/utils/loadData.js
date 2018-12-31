@@ -2,10 +2,15 @@ const _ = require('lodash');
 const fs = require('fs-extra');
 const globPromise = require('glob-promise');
 const path = require('path');
+const {Penrose} = require('penrose');
 const Promise = require('bluebird');
+const sharp = require('sharp');
 const yaml = require('js-yaml');
-
 const gulpConfig = require('../config');
+
+const penrose = new Penrose(gulpConfig.penrose);
+
+const getImageMetadata = _.memoize(filePath => sharp(filePath).metadata());
 
 module.exports = _.memoize(() =>
   globPromise(path.join(gulpConfig.src.data, '**/*.yaml'))
@@ -21,19 +26,16 @@ module.exports = _.memoize(() =>
 
           if (dirname === 'projects') {
             // Normalise media files
-            value.media = value.media.map(d => {
-              const scheme = d.uri.split('://')[0];
-              const filename = d.uri.split('://')[1];
+            return Promise.mapSeries(value.media, d => {
+              const scheme = penrose.getScheme(d.uri);
+              const target = penrose.getTarget(d.uri);
 
               let type;
 
               if (scheme === 'vimeo' || scheme === 'youtube') {
                 type = 'video';
               } else if (scheme === 'public') {
-                const extname = _.trim(
-                  path.extname(filename).toLowerCase(),
-                  '.'
-                );
+                const extname = _.trim(path.extname(target).toLowerCase(), '.');
 
                 if (
                   extname === 'gif' ||
@@ -42,13 +44,13 @@ module.exports = _.memoize(() =>
                 ) {
                   type = 'image';
                 } else {
-                  throw new Error(`Cannot parse content type of ${filename}`);
+                  throw new Error(`Cannot parse content type of ${target}`);
                 }
               } else {
                 throw new Error(`Unsupported scheme: ${scheme}`);
               }
 
-              return {
+              const norm = {
                 ...d,
                 layout: {
                   columns: 0,
@@ -58,7 +60,19 @@ module.exports = _.memoize(() =>
                 scheme: scheme,
                 type: type
               };
-            });
+
+              if (type === 'image') {
+                return getImageMetadata(penrose.resolvePath(d.uri)).then(
+                  metadata => ({
+                    ...norm,
+                    width: metadata.width,
+                    height: metadata.height
+                  })
+                );
+              }
+
+              return norm;
+            }).then(media => [key, {...value, media}]);
           }
 
           return [key, value];

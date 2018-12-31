@@ -114,8 +114,8 @@ module.exports = {
         src: ['public://work/*'],
         styles: [
           240,
-          480
-          // 960,
+          480,
+          960
           // 1440,
           // 1920
         ]

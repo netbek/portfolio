@@ -1,3 +1,5 @@
+{% from './_components.njk' import desktop_frame, phone_frame %}
+
 <article>
 	<header>
 		<h1 class="field-title">{{ page.title }}</h1>
@@ -28,8 +30,7 @@
         >
 					<figure>
 						<div>
-              {% if item.scheme == 'vimeo' %}
-              {% elif item.scheme == 'youtube' %}
+              {% if item.scheme == 'youtube' %}
                 <iframe
                   width="{{ item.width }}"
                   height="{{ item.height }}"
@@ -38,19 +39,31 @@
                   allow="encrypted-media"
                   allowfullscreen></iframe>
               {% elif item.scheme == 'public' %}
-                {% if item.type == 'video' %}
-                {% elif item.type == 'image' %}
-                  <img srcset="{{ item.uri|style_url(480) }} 1x, {{ item.uri|style_url(960) }} 2x" alt="">
-{#
-                  <picture>
-                    <source srcset="{{ item.uri|style_url(960) }}" media="(min-width: 960px)">
-                    <source srcset="{{ item.uri|style_url(960) }}" media="(min-width: 480px) and (min-device-pixel-ratio: 2.0)">
-                    <source srcset="{{ item.uri|style_url(480) }}" media="(min-width: 480px)">
-                    <img srcset="{{ item.uri|style_url(240) }}" alt="">
-                  </picture>
-#}
-                  {% if item.layout.frame %}
+                {% if item.type == 'image' %}
+                  {% if item.layout.frame == 'desktop' %}
+                    {{
+                      desktop_frame(
+                        src=item.uri|style_url(480),
+                        srcset='{img_480} 1x, {img_960} 1x'|
+                          replace('{img_480}', item.uri|style_url(480))|
+                          replace('{img_960}', item.uri|style_url(960)),
+                        width=item.width,
+                        height=item.height
+                      )
+                    }}
+                  {% elif item.layout.frame == 'phone' %}
+                    {{
+                      phone_frame(
+                        src=item.uri|style_url(480),
+                        srcset='{img_480} 1x, {img_960} 1x'|
+                          replace('{img_480}', item.uri|style_url(480))|
+                          replace('{img_960}', item.uri|style_url(960)),
+                        width=item.width,
+                        height=item.height
+                      )
+                    }}
                   {% else %}
+                    <img srcset="{{ item.uri|style_url(480) }} 1x, {{ item.uri|style_url(960) }} 2x" alt="" />
                   {% endif %}
                 {% endif %}
               {% endif %}

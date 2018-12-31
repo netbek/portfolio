@@ -15,6 +15,7 @@ const gulpConfig = require('../config');
 const env = nunjucks.configure({
   noCache: true
 });
+
 const md = new Remarkable();
 
 env.addFilter(
