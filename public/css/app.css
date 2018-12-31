@@ -77,12 +77,31 @@
   .checkbox:hover {
     color: #FFE900; }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+  max-width: none; }
+  .icon:before {
+    display: none; }
+
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 400;
-  src: local("Titillium Web Regular"), local("TitilliumWeb-Regular"), url("/fonts/titillium-web-v6-latin-regular.woff2") format("woff2"), url("/fonts/titillium-web-v6-latin-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+  src: local("Titillium Web Regular"), local("TitilliumWeb-Regular"), url("/fonts/titillium-web-v6-latin-regular.woff2") format("woff2"), url("/fonts/titillium-web-v6-latin-regular.woff") format("woff"); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -109,26 +128,6 @@ a {
   a:focus, a:hover {
     text-decoration: none; }
 
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
-  font-weight: normal;
-  font-style: normal;
-  speak: none;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-  width: 1em;
-  height: 1em;
-  max-width: none; }
-  .icon:before {
-    display: none; }
-
 .hidden-checkbox {
   border: 0;
   clip: rect(0 0 0 0);
@@ -146,21 +145,19 @@ header {
   position: relative;
   z-index: 10; }
 
-main,
-footer {
-  padding: 1em 5%; }
-
 main {
   display: block;
   position: relative;
   z-index: 0;
-  margin: auto; }
+  margin: auto;
+  padding: 1em 5%; }
 
 footer {
   display: block;
   position: relative;
   z-index: 0;
-  margin: auto; }
+  margin: auto;
+  padding: 1em 5%; }
   footer .contact-list {
     display: block;
     list-style: none;
@@ -227,9 +224,10 @@ footer {
   background-color: #FFF; }
 
 @media (min-width: 29em) {
-  main,
+  main {
+    padding: 2em 5%; }
   footer {
-    padding: 2em 5%; } }
+    padding: 1em 5% 2em; } }
 
 @media (min-width: 47em) {
   main {
@@ -670,9 +668,3 @@ footer {
   .no-touchevents.js .scene--front .project-list-item.hover .project__label {
     background: #FFE900;
     opacity: 1; }
-
-.nb-page--info {
-  background: yellow; }
-
-.nb-page--project {
-  background: magenta; }

@@ -79,16 +79,25 @@ var _TweenMax = __webpack_require__(3);
 
 var _TweenMax2 = _interopRequireDefault(_TweenMax);
 
-var _front = __webpack_require__(4);
+var _parseUrl3 = __webpack_require__(4);
+
+var _parseUrl4 = _interopRequireDefault(_parseUrl3);
+
+var _front = __webpack_require__(5);
 
 var _front2 = _interopRequireDefault(_front);
 
-var _project = __webpack_require__(5);
+var _work = __webpack_require__(6);
 
-var _project2 = _interopRequireDefault(_project);
+var _work2 = _interopRequireDefault(_work);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var PAGE_TRANSITION = false;
+var _parseUrl = (0, _parseUrl4.default)(window.location.href),
+    localhost = _parseUrl.hostNorm;
+
+var $html = (0, _jquery2.default)('html');
 var $body = (0, _jquery2.default)('body');
 var $scene = (0, _jquery2.default)('.scene');
 var sceneName = $scene.data('scene');
@@ -97,86 +106,148 @@ var $doorWrapper = (0, _jquery2.default)('#door-wrapper');
 var $doorCover = (0, _jquery2.default)('#door-cover');
 var $doorLeft = (0, _jquery2.default)('#door-left');
 var $doorRight = (0, _jquery2.default)('#door-right');
-
 var doorAxis = 'X';
-var doorSkew = Math.random() < 0.5 ? -30 : 30;
+var doorSkew = Math.random() < 0.5 ? -25 : 25;
 
 function openPage(cb) {
-  _TweenMax2.default.killTweensOf($doorLeft);
-  _TweenMax2.default.killTweensOf($doorRight);
-  _TweenMax2.default.killTweensOf($doorCover);
-  _TweenMax2.default.killTweensOf($doorWrapper);
+  if (PAGE_TRANSITION) {
+    _TweenMax2.default.killTweensOf($doorLeft);
+    _TweenMax2.default.killTweensOf($doorRight);
+    _TweenMax2.default.killTweensOf($doorCover);
+    _TweenMax2.default.killTweensOf($doorWrapper);
 
-  _TweenMax2.default.to($doorLeft, 0, {
-    css: {
-      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(-49%)'
-    }
-  });
-  _TweenMax2.default.to($doorRight, 0, {
-    css: {
-      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(49%)'
-    }
-  });
-  _TweenMax2.default.to($doorCover, 0, {
-    css: {
-      autoAlpha: 0,
-      display: 'none'
-    }
-  });
-  _TweenMax2.default.to($doorLeft, 1, {
-    css: {
-      transform: 'skew' + doorAxis + '(0deg) translate' + doorAxis + '(-100%)'
-    },
-    ease: _EasePack2.default.easeOut
-  });
-  _TweenMax2.default.to($doorRight, 1, {
-    css: {
-      transform: 'skew' + doorAxis + '(0deg) translate' + doorAxis + '(100%)'
-    },
-    ease: _EasePack2.default.easeOut,
-    onComplete: function onComplete() {
-      $doorWrapper.hide();
+    $html.scrollTop(0);
+    $body.scrollTop(0).css('overflow', 'auto');
 
-      if (cb) {
-        cb();
+    _TweenMax2.default.to($doorLeft, 0, {
+      css: {
+        transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(-49%)'
       }
+    });
+    _TweenMax2.default.to($doorRight, 0, {
+      css: {
+        transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(49%)'
+      }
+    });
+    _TweenMax2.default.to($doorCover, 0, {
+      css: {
+        autoAlpha: 0,
+        display: 'none'
+      }
+    });
+    _TweenMax2.default.to($doorLeft, 1, {
+      css: {
+        transform: 'skew' + doorAxis + '(0deg) translate' + doorAxis + '(-100%)'
+      },
+      ease: _EasePack2.default.easeOut
+    });
+    _TweenMax2.default.to($doorRight, 1, {
+      css: {
+        transform: 'skew' + doorAxis + '(0deg) translate' + doorAxis + '(100%)'
+      },
+      ease: _EasePack2.default.easeOut,
+      onComplete: function onComplete() {
+        $doorWrapper.hide();
+
+        if (cb) {
+          cb();
+        }
+      }
+    });
+  } else {
+    $doorWrapper.hide();
+
+    if (cb) {
+      cb();
     }
-  });
+  }
 }
 
 function closePage(cb) {
-  _TweenMax2.default.killTweensOf($doorLeft);
-  _TweenMax2.default.killTweensOf($doorRight);
-  _TweenMax2.default.killTweensOf($doorCover);
-  _TweenMax2.default.killTweensOf($doorWrapper);
+  if (PAGE_TRANSITION) {
+    _TweenMax2.default.killTweensOf($doorLeft);
+    _TweenMax2.default.killTweensOf($doorRight);
+    _TweenMax2.default.killTweensOf($doorCover);
+    _TweenMax2.default.killTweensOf($doorWrapper);
 
-  $doorWrapper.show();
+    $doorWrapper.show();
 
-  _TweenMax2.default.to($doorLeft, 1, {
-    css: {
-      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(-49%)'
-    },
-    ease: _EasePack2.default.easeOut
-  });
-  _TweenMax2.default.to($doorRight, 1, {
-    css: {
-      transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(49%)'
-    },
-    ease: _EasePack2.default.easeOut,
-    onComplete: function onComplete() {
-      (0, _jquery2.default)('header, main, footer').hide();
+    _TweenMax2.default.to($doorLeft, 1, {
+      css: {
+        transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(-49%)'
+      },
+      ease: _EasePack2.default.easeOut
+    });
+    _TweenMax2.default.to($doorRight, 1, {
+      css: {
+        transform: 'skew' + doorAxis + '(' + doorSkew + 'deg) translate' + doorAxis + '(49%)'
+      },
+      ease: _EasePack2.default.easeOut,
+      onComplete: function onComplete() {
+        (0, _jquery2.default)('header, main, footer').hide();
 
-      $body.addClass('closed-page');
+        $body.addClass('closed-page');
 
-      if (cb) {
-        setTimeout(cb, 50);
+        if (cb) {
+          setTimeout(cb, 50);
+        }
+      }
+    });
+  } else {
+    if (cb) {
+      cb();
+    }
+  }
+}
+
+function initAnchors() {
+  (0, _jquery2.default)('a').each(function (i, elm) {
+    var $a = (0, _jquery2.default)(elm);
+    var href = ($a.attr('href') || '').toLowerCase();
+    var target = ($a.attr('target') || '').toLowerCase();
+
+    if (~href.indexOf('javascript:') || ~href.indexOf('mailto:') || target && target !== '_self') {
+      $a.data('pageTransition', false);
+    } else {
+      var _parseUrl2 = (0, _parseUrl4.default)(href),
+          host = _parseUrl2.hostNorm,
+          path = _parseUrl2.path;
+
+      if (host) {
+        if (host === localhost) {
+          $a.data('pageTransition', true);
+        } else {
+          $a.data('pageTransition', false).attr('target', '_blank');
+        }
+      } else if (path === undefined || path === '') {
+        $a.data('pageTransition', false);
+      } else {
+        $a.data('pageTransition', true);
       }
     }
+
+    $a.on('click', function (e) {
+      var $this = (0, _jquery2.default)(this);
+
+      if ($this.data('pageTransition')) {
+        e.preventDefault();
+
+        var _href = $this.attr('href');
+
+        closePage(function () {
+          window.location.href = _href;
+        });
+      }
+    });
   });
 }
 
+initAnchors();
+
 if (sceneName === 'front') {
   (0, _front2.default)($scene);
+} else if (sceneName === 'work') {
+  (0, _work2.default)($scene);
 }
 
 openPage();
@@ -205,6 +276,58 @@ module.exports = TweenMax;
 
 exports.__esModule = true;
 
+
+var re = /^(?:([^:\/?#]+):)?(?:\/\/()(?:(?:()(?:([^:@]*):?([^:@]*))?@)?([^:\/?#]*)(?::(\d*))?))?()(?:(()(?:(?:[^?#\/]*\/)*)()(?:[^?#]*))(?:\?([^#]*))?(?:#(.*))?)/;
+
+exports.default = function (url) {
+  var matches = re.exec(url);
+
+  if (!matches || !matches.length) {
+    return undefined;
+  }
+
+  var source = matches[0],
+      scheme = matches[1],
+      authority = matches[2],
+      userInfo = matches[3],
+      user = matches[4],
+      pass = matches[5],
+      host = matches[6],
+      port = matches[7],
+      relative = matches[8],
+      path = matches[9],
+      directory = matches[10],
+      file = matches[11],
+      query = matches[12],
+      fragment = matches[13];
+
+
+  var hostNorm = (host || '').toLowerCase().replace(/^www\./, '');
+
+  return {
+    scheme: scheme,
+    authority: authority,
+    userInfo: userInfo,
+    user: user,
+    pass: pass,
+    host: host,
+    hostNorm: hostNorm,
+    port: port,
+    relative: relative,
+    path: path,
+    directory: directory,
+    file: file,
+    query: query,
+    fragment: fragment
+  };
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+exports.__esModule = true;
+
 exports.default = function ($scene) {
   if (!window.Modernizr.touchevents) {
     jQuery('.project a, .project__label', $scene).on('mouseenter.nb focus.nb', function () {
@@ -216,7 +339,7 @@ exports.default = function ($scene) {
 };
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 exports.__esModule = true;
