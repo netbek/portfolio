@@ -62,19 +62,124 @@ a {
   }
 }
 
-.visuallyhidden {
+.hidden-checkbox {
   @include visuallyhidden;
+  position: fixed;
+}
+
+header {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+main,
+footer {
+  padding: $region-padding-vert 5%;
 }
 
 main {
+  display: block;
+  position: relative;
+  z-index: 0;
   margin: auto;
-  padding: 1em 5%;
+}
+
+footer {
+  display: block;
+  position: relative;
+  z-index: 0;
+  margin: auto;
+
+  .contact-list {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .contact-list-item {
+    display: inline-block;
+    list-style: none;
+    margin: 0 .375em;
+    padding: 0;
+
+    a {
+      display: block;
+      width: 2em;
+      height: 2em;
+      padding: .5em;
+      border-radius: 50%;
+      font-size: 1.25em;
+      background-color: $black;
+
+      .icon {
+        display: block;
+        fill: $white;
+      }
+
+      &:hover {
+        background-color: $yellow;
+
+        .icon {
+          fill: $black;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint($screen-small) {
+  main,
+  footer {
+    padding: $region-padding-vert--small 5%;
+  }
+}
+
+@include breakpoint($screen-medium) {
+  main {
+    padding: $region-padding-vert--medium 5%;
+  }
+
+  footer {
+    padding: ($region-padding-vert--medium / 2) 5% $region-padding-vert--medium;
+  }
+
+  footer {
+    .contact-list {
+      text-align: right;
+    }
+  }
 }
 
 @include breakpoint($screen-large) {
   main {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding: $region-padding-vert--large 5%;
+  }
+
+  footer {
+    padding: ($region-padding-vert--large / 2) 5% $region-padding-vert--large;
+  }
+}
+
+@include breakpoint($screen-xlarge) {
+  main {
+    padding: $region-padding-vert--xlarge 5%;
+  }
+
+  footer {
+    padding: ($region-padding-vert--xlarge / 2) 5% $region-padding-vert--xlarge;
+  }
+}
+
+@include breakpoint($screen-xxlarge) {
+  main {
+    padding: $region-padding-vert--xxlarge 5%;
+  }
+
+  footer {
+    padding: ($region-padding-vert--xxlarge / 2) 5% $region-padding-vert--xxlarge;
   }
 }
 

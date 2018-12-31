@@ -19,11 +19,11 @@
 </style>
 
 {# Menu toggle checkbox #}
-<input class="visuallyhidden" id="menu" type="checkbox" />
+<input class="hidden-checkbox" id="menu" type="checkbox" />
 
 {# Filters checkboxes #}
 {% for tag in data.tags %}
-  <input class="visuallyhidden" id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" checked />
+  <input class="hidden-checkbox" id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" checked />
 {% endfor %}
 
 <header>
@@ -46,10 +46,10 @@
   <nav role="navigation">
     <ul class="menu-list">
       <li class="menu-list-item">
-        <a href="/info">About me</a>
+        <a href="/info">About</a>
       </li>
       <li class="menu-list-item">
-        <a href="mailto:{{ data.settings.site.mail }}">Email</a>
+        <a href="mailto:{{ data.settings.contact.email }}">Email: {{ data.settings.contact.email }}</a>
       </li>
     </ul>
 
@@ -71,7 +71,7 @@
         id='accordion-1',
         items=[
           {
-            title: 'View by category',
+            title: 'Work by category',
             body: accordion_item_filter
           }
         ]
@@ -99,3 +99,17 @@
     </ul>
   </div>
 </main>
+
+<footer>
+  <ul class="contact-list">
+    <li class="contact-list-item">
+      <a href="{{ data.settings.contact.twitter }}" target="_blank" title="Twitter">{{ 'logo-twitter'|icon|safe }}</a>
+    </li>
+    <li class="contact-list-item">
+      <a href="{{ data.settings.contact.linkedin }}" target="_blank" title="LinkedIn">{{ 'logo-linkedin'|icon|safe }}</a>
+    </li>
+    <li class="contact-list-item">
+      <a href="mailto:{{ data.settings.contact.email }}" title="Email">{{ 'md-mail'|icon|safe }}</a>
+    </li>
+  </ul>
+</footer>

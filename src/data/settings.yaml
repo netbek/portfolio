@@ -1,8 +1,11 @@
 site:
   name: Hein Bekker
   slogan: Web Developer
-  mail: hein@netbek.co.za
   url: https://www.netbek.co.za
+contact:
+  email: hein@netbek.co.za
+  linkedin: https://www.linkedin.com/in/heinbekker
+  twitter: https://twitter.com/netbek
 metatags:
   copyright: '(cc) Hein Bekker http://creativecommons.org/licenses/by-sa/4.0/'
   description: Hein Bekker is a web developer with 14 years of experience.

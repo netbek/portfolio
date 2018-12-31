@@ -19,24 +19,15 @@ $screen-xxlarge:                        99em !default;  // 1584 px
 $line-height-heading:                   1.25 !default;
 $line-height-body:                      1.5 !default;
 
+// Regions
+
+$region-padding-vert:                   1em !default;
+$region-padding-vert--small:            $region-padding-vert * 2 !default;
+$region-padding-vert--medium:           $region-padding-vert--small * 1.375 !default;
+$region-padding-vert--large:            $region-padding-vert--medium * 1.375 !default;
+$region-padding-vert--xlarge:           $region-padding-vert--large * 1.125 !default;
+$region-padding-vert--xxlarge:          $region-padding-vert--xlarge * 1 !default;
+
 // Accordion
 
-$accordion-toggle-width:                3em !default; // TODO Calculate based on button size
-
-// $accordion-button-basic-margin:              0 !default;
-// $accordion-button-basic-padding:             .25em !default;
-
-// $accordion-button-flat-basic-margin:         .125em !default;
-// $accordion-button-flat-basic-padding:        .125em !default;
-
-// $accordion-button-outline-basic-margin:      0 !default;
-// $accordion-button-outline-basic-padding:     .25em !default;
-
-// $accordion-button-modern-margin:             0 !default;
-// $accordion-button-modern-padding:            .375em !default;
-
-// $accordion-button-flat-modern-margin:        .125em !default;
-// $accordion-button-flat-modern-padding:       .25em !default;
-
-// $accordion-button-outline-modern-margin:     0 !default;
-// $accordion-button-outline-modern-padding:    .375em !default;
+$accordion-toggle-width:                3em !default;

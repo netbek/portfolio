@@ -1,6 +1,6 @@
 @import 'helpers';
 
-$menu-item-padding-vert: .125em;
+$menu-item-padding-vert:                .125em;
 
 .scene--front {
   #menu:checked ~ header {
@@ -56,7 +56,6 @@ $menu-item-padding-vert: .125em;
         &__slogan {
           display: block;
           margin-left: 1em;
-          line-height: 1.375;
         }
 
         &__name {
@@ -151,7 +150,7 @@ $menu-item-padding-vert: .125em;
       }
 
       &__item-body {
-        padding: .25em 1em .75em;
+        padding: .375em 1em .25em;
       }
 
       &__item-button {
@@ -188,11 +187,9 @@ $menu-item-padding-vert: .125em;
       list-style: none;
       margin: .125em 0;
       padding: 0;
-    }
 
-    @include breakpoint($screen-medium) {
-      .filter-list-item {
-        flex: 0 0 25%;
+      .checkbox {
+        display: block;
       }
     }
   }
@@ -240,6 +237,7 @@ $menu-item-padding-vert: .125em;
         width: 100%;
         height: auto;
         opacity: 0;
+        transition: opacity .150s ease;
       }
     }
 
@@ -251,6 +249,7 @@ $menu-item-padding-vert: .125em;
       background: white;
       padding: .25em .5em;
       line-height: $line-height-heading;
+      transition: background-color .100s ease, opacity .100s ease;
     }
   }
 
@@ -269,6 +268,12 @@ $menu-item-padding-vert: .125em;
   }
 
   @include breakpoint($screen-medium) {
+    header {
+      .filter-list-item {
+        flex: 0 0 25%;
+      }
+    }
+
     .project-list {
       display: block;
       margin: 0 auto;
@@ -330,6 +335,21 @@ $menu-item-padding-vert: .125em;
   }
 
   @include breakpoint($screen-large) {
+    header {
+      position: fixed;
+      top: $region-padding-vert--large;
+      left: $region-padding-vert--large;
+      width: 16em;
+
+      .filter-list {
+        display: block;
+      }
+
+      .filter-list-item {
+        flex: none;
+      }
+    }
+
     .project-list-item {
       &:nth-child(1) {
         left: 34%;
@@ -424,6 +444,20 @@ $menu-item-padding-vert: .125em;
   }
 
   @include breakpoint($screen-xlarge) {
+    header {
+      top: $region-padding-vert--xlarge;
+      left: $region-padding-vert--xlarge;
+      width: 18em;
+
+      .filter-list {
+        display: flex;
+      }
+
+      .filter-list-item {
+        flex: 0 0 50%;
+      }
+    }
+
     .project-list {
       padding: 3.5% 0;
     }
@@ -544,45 +578,12 @@ $menu-item-padding-vert: .125em;
     }
   }
 
-  // @include breakpoint($screen-medium) {
-  //   .project-list-item {
-  //     flex: 0 0 (100% / 3);
-  //   }
-  // }
-
-  // @include breakpoint($screen-large) {
-  //   .project-list {
-  //     margin: -.75em;
-  //   }
-
-  //   .project-list-item {
-  //     flex: 0 0 (100% / 4);
-  //   }
-
-  //   .project {
-  //     margin: .75em;
-  //   }
-  // }
-
-  // @include breakpoint($screen-xlarge) {
-  //   .project-list-item {
-  //     flex: 0 0 (100% / 5);
-  //   }
-  // }
-
-  // @include breakpoint($screen-xxlarge) {
-  //   .project-list {
-  //     margin: -1em;
-  //   }
-
-  //   .project-list-item {
-  //     flex: 0 0 (100% / 6);
-  //   }
-
-  //   .project {
-  //     margin: 1em;
-  //   }
-  // }
+  @include breakpoint($screen-xxlarge) {
+    header {
+      top: $region-padding-vert--xxlarge;
+      left: $region-padding-vert--xxlarge;
+    }
+  }
 }
 
 .no-touchevents {
