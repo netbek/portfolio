@@ -273,6 +273,12 @@ if (sceneName === 'front') {
     });
   }
 
+  (0, _jquery2.default)('.project__label', $scene).on('click', function () {
+    var href = (0, _jquery2.default)(this).closest('.project').find('.project__thumb a').attr('href');
+
+    window.location.href = href;
+  });
+
   if (SPINNER) {
     showSpinner();
 
@@ -312,6 +318,8 @@ if (sceneName === 'front') {
       }
     }
   });
+
+  (0, _jquery2.default)('iframe[src*="youtube"]').parent().fitVids();
 
   if (SPINNER) {
     showSpinner();

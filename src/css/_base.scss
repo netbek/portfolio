@@ -29,7 +29,11 @@ body {
 }
 
 a {
-  text-decoration: underline;
+  &,
+  &:visited {
+    color: $pink;
+    text-decoration: underline;
+  }
 
   &:focus,
   &:hover {
@@ -106,7 +110,7 @@ button {
 
     .site {
       flex: 1 1 100%;
-      padding-top: .25em;
+      padding-top: .125em;
 
       &__name,
       &__slogan {

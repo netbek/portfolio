@@ -37,11 +37,11 @@ $line-height-body:                      1.5 !default;
 
 // Regions
 
-$region-padding-vert:                   1em !default;
-$region-padding-vert--small:            $region-padding-vert * 2 !default;
+$region-padding-vert:                   1.5em !default;
+$region-padding-vert--small:            $region-padding-vert * 1.5 !default;
 $region-padding-vert--medium:           $region-padding-vert--small * 1.375 !default;
-$region-padding-vert--large:            $region-padding-vert--medium * 1.375 !default;
-$region-padding-vert--xlarge:           $region-padding-vert--large * 1.125 !default;
+$region-padding-vert--large:            $region-padding-vert--medium * 1.125 !default;
+$region-padding-vert--xlarge:           $region-padding-vert--large * 1 !default;
 $region-padding-vert--xxlarge:          $region-padding-vert--xlarge * 1 !default;
 
 // Accordion

@@ -1,11 +1,19 @@
 @import 'helpers';
 
 .scene--work {
+  .constraint {
+    max-width: 64em;
+  }
+
   .field--title,
   .field--body {
     margin-left: auto;
     margin-right: auto;
     font-family: $font-family-heading;
+  }
+
+  .field--title {
+    line-height: $line-height-heading;
   }
 
   .field--body {
@@ -25,6 +33,7 @@
     list-style: none;
     margin: 0 auto;
     padding: 0;
+    max-width: 100em;
   }
 
   .lightbox-list-item {
@@ -50,6 +59,12 @@
         position: relative;
         margin: 0 auto;
         text-align: center;
+      }
+    }
+
+    &[data-type='video'] {
+      figure {
+        max-width: 80em;
       }
     }
 
@@ -94,6 +109,18 @@
   }
 
   @include breakpoint($screen-large) {
+    .field--body {
+      p {
+        font-size: 1.125em;
+      }
+
+      h3 {
+        + p {
+          font-size: $font-size-small;
+        }
+      }
+    }
+
     .lightbox-list {
       @include clearfix;
     }

@@ -67,12 +67,24 @@
 
       <nav role="navigation">
         <ul class="menu-list">
-          <li class="menu-list-item">
-            <a href="/info">About</a>
-          </li>
-          <li class="menu-list-item">
-            <a href="mailto:{{ data.settings.contact.email }}">Email: {{ data.settings.contact.email }}</a>
-          </li>
+          {% if page.isFront %}
+            <li class="menu-list-item">
+              <a href="/info">About</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="mailto:{{ data.settings.contact.email }}">Contact</a>
+            </li>
+          {% else %}
+            <li class="menu-list-item">
+              <a href="/">Work</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="/info">About</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="mailto:{{ data.settings.contact.email }}">Contact</a>
+            </li>
+          {% endif %}
         </ul>
 
         {% if page.isFront %}
