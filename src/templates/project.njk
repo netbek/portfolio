@@ -2,11 +2,11 @@
 
 <article>
 	<header>
-		<h1 class="field-title">{{ page.title }}</h1>
+		<h1 class="field--title">{{ page.title }}</h1>
 	</header>
 
   {% if page.body %}
-    <div class="field-body">{{ page.body|markdown|safe }}</div>
+    <div class="field--body">{{ page.body|markdown|safe }}</div>
   {% endif %}
 
   {% if page.media|length %}
@@ -19,10 +19,10 @@
 
     {% set cols_used = 0 %}
 
-    <ul id="lightbox" class="clearfix cols-{{ cols_count }}" data-cols="{{ cols_count }}">
+    <ul class="lightbox-list cols-{{ cols_count }}" data-cols="{{ cols_count }}">
       {% for item in page.media %}
         <li
-          class="cols-{{ item.layout.columns }} {% if cols_used % 4 == 0 %}cols-row-start{% endif %} {% if loop.index0 == items_count - 1 %}cols-end{% endif %} {% if item.layout.frame %}frame frame-{{ item.layout.frame }}{% endif %}"
+          class="lightbox-list-item cols-{{ item.layout.columns }} {% if cols_used % 4 == 0 %}cols-row-start{% endif %} {% if loop.index0 == items_count - 1 %}cols-end{% endif %} {% if item.layout.frame %}frame frame-{{ item.layout.frame }}{% endif %}"
           data-frame="{{ item.layout.frame }}"
           data-columns="{{ item.layout.columns }}"
           data-scheme="{{ item.scheme }}"

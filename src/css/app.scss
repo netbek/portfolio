@@ -19,8 +19,8 @@ html {
 }
 
 body {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 1em;
+  font-family: $font-family-body;
+  font-size: $font-size-body;
   line-height: $line-height-body;
   color: #222;
   background-attachment: fixed;

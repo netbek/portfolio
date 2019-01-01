@@ -1,3 +1,16 @@
+// https://github.com/h5bp/html5-boilerplate/blob/e1e7277024e7897d4baf06c476ed71acbc59e749/dist/css/main.css#L190
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
 // https://github.com/h5bp/html5-boilerplate/blob/e1e7277024e7897d4baf06c476ed71acbc59e749/dist/css/main.css#L141
 @mixin visuallyhidden {
   border: 0;

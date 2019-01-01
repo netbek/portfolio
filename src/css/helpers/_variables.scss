@@ -20,6 +20,16 @@ $screen-large:                          63em !default;  // 1008 px
 $screen-xlarge:                         84em !default;  // 1344 px
 $screen-xxlarge:                        99em !default;  // 1584 px
 
+// Font
+
+$font-family-heading:                   'Titillium Web', sans-serif !default;
+$font-family-body:                      Helvetica, Arial, sans-serif !default;
+
+// Font sizes
+
+$font-size-body:                        1em !default;
+$font-size-small:                       .875em !default;
+
 // Line heights
 
 $line-height-heading:                   1.25 !default;
