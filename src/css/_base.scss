@@ -21,7 +21,7 @@ body {
   font-family: $font-family-body;
   font-size: $font-size-body;
   line-height: $line-height-body;
-  color: #222;
+  color: $black;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #e3e3e3;
@@ -46,6 +46,10 @@ button {
   .icon {
     pointer-events: none;
   }
+}
+
+.constraint {
+  max-width: 64em;
 }
 
 .hidden-checkbox {
@@ -108,16 +112,21 @@ button {
 
     .site {
       flex: 1 1 100%;
-      padding-top: .125em;
+      padding-top: .25em;
 
       &__name,
       &__slogan {
         display: block;
-        margin-left: 1em;
+        margin-left: 1rem;
       }
 
       &__name {
-        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      &__slogan {
+        font-family: $font-family-serif;
+        font-style: italic;
       }
     }
 
@@ -326,9 +335,11 @@ button {
     .menu-list-item {
       a {
         color: $black;
+        text-decoration: none;
 
         &:hover {
-          color: $yellow;
+          color: $black;
+          text-decoration: underline;
 
           .icon {
             fill: $yellow;
@@ -355,6 +366,17 @@ button {
           }
         }
       }
+    }
+  }
+}
+
+.scene:not(.scene--front) {
+  .region--header {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .masthead-wrapper {
+      padding: 0;
     }
   }
 }
@@ -575,6 +597,104 @@ img.mfp-img {
 }
 
 @include breakpoint($screen-large) {
+  .scene:not(.scene--front) {
+    #menu:checked ~ .region--header {
+      .menu-list {
+        display: flex;
+      }
+    }
+
+    .region--header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .masthead-wrapper {
+        flex: 1 1 100%;
+      }
+
+      nav {
+        flex: 1 1 auto;
+      }
+
+      .masthead {
+        padding: $header-padding-vert--large 0;
+
+        .site {
+          &__name {
+            font-size: 1.125em;
+          }
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+      }
+
+      .menu-list {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu-list-item {
+        flex: 1 1 auto;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: block;
+          padding: ($header-padding-vert--large / 2) ($header-padding-horz--large / 2 * 2.5);
+          text-decoration: none;
+          color: $black;
+          background-color: $white;
+          font-size: 1.125em;
+
+          &:hover {
+            text-decoration: underline;
+            color: $black;
+          }
+        }
+
+        &--work {
+          a {
+            &:hover {
+              color: $black;
+              background-color: #ddd;
+            }
+          }
+
+          &.active {
+            a {
+              color: $black;
+              background-color: #ddd;
+            }
+          }
+        }
+
+        &--info {
+          a {
+            &:hover {
+              color: $black;
+              background-color: $yellow;
+            }
+          }
+
+          &.active {
+            a {
+              color: $black;
+              background-color: $yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .region--main {
     padding: $region-padding-vert--large 5%;
   }
@@ -589,6 +709,38 @@ img.mfp-img {
 }
 
 @include breakpoint($screen-xlarge) {
+  .scene--front {
+    .region--header {
+      .masthead {
+        .site {
+          &__name {
+            font-size: 1.125em;
+          }
+        }
+      }
+    }
+  }
+
+  .scene:not(.scene--front) {
+    .region--header {
+      .masthead {
+        padding: $header-padding-vert--xlarge 0;
+
+        .site {
+          &__name {
+            font-size: 1.25em;
+          }
+        }
+      }
+
+      .menu-list-item {
+        a {
+          padding: ($header-padding-vert--xlarge / 2) ($header-padding-horz--xlarge / 2 * 2.5);
+        }
+      }
+    }
+  }
+
   .region--main {
     padding: $region-padding-vert--xlarge 5%;
   }
@@ -599,6 +751,20 @@ img.mfp-img {
 }
 
 @include breakpoint($screen-xxlarge) {
+  .scene:not(.scene--front) {
+    .region--header {
+      .masthead {
+        padding: $header-padding-vert--xxlarge 0;
+      }
+
+      .menu-list-item {
+        a {
+          padding: ($header-padding-vert--xxlarge / 2) ($header-padding-horz--xxlarge / 2 * 2.5);
+        }
+      }
+    }
+  }
+
   .region--main {
     padding: $region-padding-vert--xxlarge 5%;
   }

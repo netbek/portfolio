@@ -24,6 +24,7 @@ $screen-xxlarge:                        99em !default;  // 1584 px
 
 $font-family-heading:                   'Titillium Web', sans-serif !default;
 $font-family-body:                      Helvetica, Arial, sans-serif !default;
+$font-family-serif:                     Georgia, 'Times New Roman', Times, serif !default;
 
 // Font sizes
 
@@ -43,6 +44,24 @@ $region-padding-vert--medium:           $region-padding-vert--small * 1.375 !def
 $region-padding-vert--large:            $region-padding-vert--medium * 1.125 !default;
 $region-padding-vert--xlarge:           $region-padding-vert--large * 1 !default;
 $region-padding-vert--xxlarge:          $region-padding-vert--xlarge * 1 !default;
+
+$header-padding-vert:                   $region-padding-vert * .5 !default;
+$header-padding-horz:                   1em !default;
+
+$header-padding-vert--small:            $region-padding-vert--small * .5 !default;
+$header-padding-horz--small:            $header-padding-horz !default;
+
+$header-padding-vert--medium:           $region-padding-vert--medium * .5 !default;
+$header-padding-horz--medium:           $header-padding-horz--small !default;
+
+$header-padding-vert--large:            $region-padding-vert--large * .5 !default;
+$header-padding-horz--large:            $header-padding-horz--medium * 2 !default;
+
+$header-padding-vert--xlarge:           $region-padding-vert--xlarge * .625 !default;
+$header-padding-horz--xlarge:           $header-padding-horz--large * 1.125 !default;
+
+$header-padding-vert--xxlarge:          $region-padding-vert--xxlarge * .625 !default;
+$header-padding-horz--xxlarge:          $header-padding-horz--xlarge * 1.125 !default;
 
 // Accordion
 

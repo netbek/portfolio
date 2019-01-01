@@ -27,6 +27,8 @@ env.addFilter(
     )
   )
 );
+
+env.addFilter('includes', (array, value) => array.includes(value));
 env.addFilter('markdown', str => md.render(str));
 env.addFilter('slugify', str => slugify(str));
 env.addFilter('style_url', (uri, styleName) => getStyleUrl(styleName, uri));
