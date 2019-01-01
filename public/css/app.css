@@ -438,7 +438,7 @@ button .icon {
     .region--header.dark .masthead .mast .site__slogan {
       color: #9C9C9C; }
     .region--header.dark .masthead a.mast:hover .logo .icon {
-      fill: #F9274B; }
+      fill: #FFE900; }
     .region--header.dark .masthead .menu-toggle .icon {
       fill: #FFF; }
     .region--header.dark .masthead .menu-toggle:hover .icon {
@@ -463,7 +463,7 @@ button .icon {
     .region--header.light .masthead .mast .site__slogan {
       color: #222; }
     .region--header.light .masthead a.mast:hover .logo .icon {
-      fill: #F9274B; }
+      fill: #FFE900; }
     .region--header.light .masthead .menu-toggle .icon {
       fill: #222; }
     .region--header.light .masthead .menu-toggle:hover .icon {

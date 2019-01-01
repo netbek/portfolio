@@ -80,4 +80,20 @@ module.exports = _.memoize(() =>
       )
     )
     .then(data => _.zipObjectDeep(data.map(d => d[0]), data.map(d => d[1])))
+    .then(data => {
+      // Add pagination to projects
+      const {'projects-list': projectsList, projects} = data;
+
+      projectsList.forEach((name, i) => {
+        const previous = _.get(projectsList, i - 1);
+        const next = _.get(projectsList, i + 1);
+
+        projects[name].pagination = {
+          previous,
+          next
+        };
+      });
+
+      return data;
+    })
 );
