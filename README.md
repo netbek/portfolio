@@ -1,16 +1,25 @@
-# https://netbek.github.io
+# netbek.github.io
 
 Portfolio.
 
 ## Installation
 
-1. Install global dependencies:
+1. Install NVM and Node 8.x:
+
+    ```shell
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+    source ~/.bashrc
+    nvm install v8.11.1
+    nvm alias default v8.11.1
+    ```
+
+2. Install global dependencies:
 
     ```shell
     npm install -g gulp-cli yarn
     ```
 
-2. Install local dependencies:
+3. Install local dependencies:
 
     ```shell
     yarn install --pure-lockfile
@@ -24,7 +33,7 @@ Run locally with LiveReload:
 gulp livereload
 ```
 
-## Deploy
+## Deployment
 
 Build for production:
 
