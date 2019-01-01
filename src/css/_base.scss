@@ -35,7 +35,6 @@ a {
     text-decoration: underline;
   }
 
-  &:focus,
   &:hover {
     text-decoration: none;
   }
@@ -195,9 +194,8 @@ button {
       padding: ($menu-item-padding-vert / 2) 0;
       text-decoration: none;
 
-      &:focus,
       &:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
   }
@@ -205,10 +203,14 @@ button {
   .accordion {
     &__item-header {
       padding: $menu-item-padding-vert 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &__item-body {
-      padding: .375em 1em .25em;
+      padding: .5em 1em .25em;
     }
 
     &__item-button {
@@ -248,6 +250,12 @@ button {
 
     .checkbox {
       display: block;
+
+      &:hover {
+        .checkbox__label {
+          text-decoration: underline;
+        }
+      }
     }
   }
 

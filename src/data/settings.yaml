@@ -11,10 +11,9 @@ metatags:
   description: Hein Bekker is a web developer with 17 years of experience.
   keywords:
     - web developer
-    - angular
-    - drupal
-    - kohana
-    - liquid fridge
+    - php
+    - python
+    - react
     - south africa
 opengraph:
   type: website

@@ -98,6 +98,12 @@
     margin: $region-padding-vert auto 0;
   }
 
+  .pagination-list-item {
+    a {
+      min-width: 7em;
+    }
+  }
+
   @include breakpoint($screen-small) {
     .pagination-list {
       margin: $region-padding-vert--small auto 0;

@@ -251,7 +251,7 @@ a, a:visited {
   color: #F9274B;
   text-decoration: underline; }
 
-a:focus, a:hover {
+a:hover {
   text-decoration: none; }
 
 a .icon,
@@ -390,12 +390,14 @@ button .icon {
       display: block;
       padding: 0.0625em 0;
       text-decoration: none; }
-      .region--header .menu-list-item a:focus, .region--header .menu-list-item a:hover {
-        text-decoration: none; }
+      .region--header .menu-list-item a:hover {
+        text-decoration: underline; }
   .region--header .accordion__item-header {
     padding: 0.125em 0; }
+    .region--header .accordion__item-header:hover {
+      text-decoration: underline; }
   .region--header .accordion__item-body {
-    padding: .375em 1em .25em; }
+    padding: .5em 1em .25em; }
   .region--header .accordion__item-button {
     top: 50%;
     margin-top: -.5em;
@@ -430,6 +432,8 @@ button .icon {
     padding: 0; }
     .region--header .filter-list-item .checkbox {
       display: block; }
+      .region--header .filter-list-item .checkbox:hover .checkbox__label {
+        text-decoration: underline; }
   .region--header.dark {
     background-color: #222;
     color: #FFF; }
@@ -758,15 +762,14 @@ img.mfp-img {
   padding: 0 1em; }
 
 .scene--front .region--header .menu-list {
-  margin: 0 0 .5em;
+  margin: 0 0 .75em;
   padding-top: .5em;
   padding-bottom: .5em;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
 
 .scene--front .project-list-wrapper {
-  margin: 0 auto;
-  max-width: 90em; }
+  margin: 0 auto; }
 
 .scene--front .project-list {
   display: -webkit-box;
@@ -815,6 +818,7 @@ img.mfp-img {
       -o-transition: opacity .150s ease;
       transition: opacity .150s ease; }
   .scene--front .project__label {
+    cursor: pointer;
     display: block;
     position: absolute;
     bottom: 0;
@@ -836,6 +840,8 @@ img.mfp-img {
       padding: .5em .75em; } }
 
 @media (min-width: 47em) {
+  .scene--front .project-list-wrapper {
+    max-width: 60em; }
   .scene--front .project-list {
     display: block;
     margin: 0 auto;
@@ -886,6 +892,10 @@ img.mfp-img {
     top: 3.48047em;
     left: 3.48047em;
     width: 16em; }
+    .scene--front .region--header .masthead {
+      margin: 0 auto 1.25em; }
+    .scene--front .region--header .menu-list {
+      margin: 0 0 1em; }
     .scene--front .region--header .filter-list-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 50%;
@@ -951,6 +961,8 @@ img.mfp-img {
     top: 3.48047em;
     left: 3.48047em;
     width: 18em; }
+  .scene--front .project-list-wrapper {
+    max-width: 90em; }
   .scene--front .project-list {
     padding: 3.5% 0; }
   .scene--front .project-list-item {
@@ -1143,6 +1155,9 @@ img.mfp-img {
 
 .scene--work .pagination-list {
   margin: 1.5em auto 0; }
+
+.scene--work .pagination-list-item a {
+  min-width: 7em; }
 
 @media (min-width: 29em) {
   .scene--work .pagination-list {
