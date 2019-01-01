@@ -1,3 +1,5 @@
+{% from './_components.njk' import accordion %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en" xmlns:og="http://ogp.me/ns#">
   <head>
@@ -9,13 +11,116 @@
     <link rel="stylesheet" href="/vendor/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="/vendor/magnific-popup/dist/magnific-popup.css"/>
     <link rel="stylesheet" href="/css/app.min.css"/>
+
+    {% if page.isFront %}
+      <style>
+        {% for tag in data.tags %}
+          #filter-{{ tag|slugify }}:checked ~ header .filter-list .checkbox[for='filter-{{ tag|slugify }}'] .checkbox__box {
+            background-color: {{ data.settings.style.color.yellow }};
+            border-color: {{ data.settings.style.color.yellow }};
+            border-radius: 50%;
+          }
+
+          #filter-{{ tag|slugify }}:checked ~ main .project-list-wrapper .project-list-item[data-tag-{{ tag|slugify }}] .project__thumb a {
+            border: 0;
+          }
+
+          #filter-{{ tag|slugify }}:checked ~ main .project-list-wrapper .project-list-item[data-tag-{{ tag|slugify }}] .project__thumb img {
+            opacity: 1;
+          }
+        {% endfor %}
+      </style>
+    {% endif %}
+
     <script>
       document.createElement('picture');
     </script>
     <script src="/vendor/picturefill/dist/picturefill.min.js" async></script>
   </head>
   <body class="scene {% for class_name in page.classNames %} scene--{{ class_name }}{% endfor %}" data-scene="{{ page.classNames[0] }}">
-    {{ page.content|safe }}
+    {# Menu toggle checkbox #}
+    <input class="hidden-checkbox" id="menu" type="checkbox" />
+
+    {% if page.isFront %}
+      {# Filters checkboxes #}
+      {% for tag in data.tags %}
+        <input class="hidden-checkbox" id="filter-{{ tag|slugify }}" type="checkbox" value="{{ tag|slugify }}" checked />
+      {% endfor %}
+    {% endif %}
+
+    <header class="region--header">
+      <div class="masthead-wrapper">
+        <div class="masthead">
+          <a class="logo" href="/">{{ 'logo-netbek'|icon|safe }}</a>
+
+          <span class="site">
+            <span class="site__name">{{ data.settings.site.name }}</span>
+            <span class="site__slogan">{{ data.settings.site.slogan }}</span>
+          </span>
+
+          <label class="menu-toggle" for="menu">
+            {{ 'ios-menu'|icon|safe }}
+            {{ 'ios-close'|icon|safe }}
+          </label>
+        </div>
+      </div>
+
+      <nav role="navigation">
+        <ul class="menu-list">
+          <li class="menu-list-item">
+            <a href="/info">About</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="mailto:{{ data.settings.contact.email }}">Email: {{ data.settings.contact.email }}</a>
+          </li>
+        </ul>
+
+        {% if page.isFront %}
+          {% set accordion_item_filter %}
+            <ul class="filter-list">
+              {% for tag in data.tags %}
+                <li class="filter-list-item">
+                  <label class="checkbox" for="filter-{{ tag|slugify }}">
+                    <span class="checkbox__box"></span>
+                    <span class="checkbox__label">{{ tag }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endset %}
+
+          {{
+            accordion(
+              id='accordion-1',
+              items=[
+                {
+                  title: 'Work by category',
+                  body: accordion_item_filter
+                }
+              ]
+            )
+          }}
+        {% endif %}
+      </nav>
+    </header>
+
+    <main class="region--main">
+      {{ page.content|safe }}
+    </main>
+
+    <footer class="region--footer">
+      <ul class="contact-list">
+        <li class="contact-list-item">
+          <a href="{{ data.settings.contact.twitter }}" target="_blank" title="Twitter">{{ 'logo-twitter'|icon|safe }}</a>
+        </li>
+        <li class="contact-list-item">
+          <a href="{{ data.settings.contact.linkedin }}" target="_blank" title="LinkedIn">{{ 'logo-linkedin'|icon|safe }}</a>
+        </li>
+        <li class="contact-list-item">
+          <a href="mailto:{{ data.settings.contact.email }}" title="Email">{{ 'md-mail'|icon|safe }}</a>
+        </li>
+      </ul>
+    </footer>
 
     <div id="door-wrapper">
       <div id="door-cover"></div>
