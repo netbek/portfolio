@@ -82,55 +82,66 @@ button {
   padding: 1em 0;
   font-family: $font-family-heading;
 
-  .masthead-wrapper {
-    margin: 0 auto;
-    padding: 0 1em;
-  }
-
   .masthead {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
 
-    .logo {
-      display: block;
-      font-size: 2.5em;
-      line-height: 1;
+    .grid {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
 
-      .icon {
+    .cell--1 {
+      flex: 1 1 100%;
+    }
+
+    .cell--2 {
+      flex: 1 1 auto;
+    }
+
+    .mast {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      color: inherit;
+
+      .logo {
+        flex: 1 1 auto;
         display: block;
-        fill: $white;
+        font-size: 2.5em;
+        line-height: 1;
+
+        .icon {
+          display: block;
+          fill: $white;
+        }
       }
 
-      &:hover {
-        .icon {
-          fill: $yellow;
+      .site {
+        flex: 1 1 100%;
+        padding-top: .25em;
+
+        &__name,
+        &__slogan {
+          display: block;
+          margin-left: 1rem;
+        }
+
+        &__name {
+          font-weight: bold;
+        }
+
+        &__slogan {
+          font-family: $font-family-serif;
+          font-style: italic;
         }
       }
     }
 
-    .site {
-      flex: 1 1 100%;
-      padding-top: .25em;
-
-      &__name,
-      &__slogan {
-        display: block;
-        margin-left: 1rem;
-      }
-
-      &__name {
-        font-weight: bold;
-      }
-
-      &__slogan {
-        font-family: $font-family-serif;
-        font-style: italic;
-      }
-    }
-
     .menu-toggle {
+      display: inline-block;
       padding: .125em;
       font-size: 1.75em;
       line-height: 1;
@@ -143,6 +154,25 @@ button {
 
         &:last-child {
           display: none;
+        }
+      }
+    }
+
+    a.mast {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+
+        .site {
+          &__name,
+          &__slogan {
+            color: inherit;
+          }
+
+          &__name {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -228,21 +258,27 @@ button {
     color: $white;
 
     .masthead {
-      .logo {
-        .icon {
-          fill: $white;
+      .mast {
+        .logo {
+          .icon {
+            fill: $white;
+          }
         }
 
-        &:hover {
-          .icon {
-            fill: $yellow;
+        .site {
+          &__slogan {
+            color: $grey;
           }
         }
       }
 
-      .site {
-        &__slogan {
-          color: $grey;
+      a.mast {
+        &:hover {
+          .logo {
+            .icon {
+              fill: $pink;
+            }
+          }
         }
       }
 
@@ -301,21 +337,27 @@ button {
     color: $black;
 
     .masthead {
-      .logo {
-        .icon {
-          fill: $black;
+      .mast {
+        .logo {
+          .icon {
+            fill: $black;
+          }
         }
 
-        &:hover {
-          .icon {
-            fill: $yellow;
+        .site {
+          &__slogan {
+            color: $black;
           }
         }
       }
 
-      .site {
-        &__slogan {
-          color: $black;
+      a.mast {
+        &:hover {
+          .logo {
+            .icon {
+              fill: $pink;
+            }
+          }
         }
       }
 
@@ -374,10 +416,6 @@ button {
   .region--header {
     padding-left: 5%;
     padding-right: 5%;
-
-    .masthead-wrapper {
-      padding: 0;
-    }
   }
 }
 
@@ -611,7 +649,7 @@ img.mfp-img {
       padding-top: 0;
       padding-bottom: 0;
 
-      .masthead-wrapper {
+      .masthead {
         flex: 1 1 100%;
       }
 

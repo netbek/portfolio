@@ -49,19 +49,31 @@
     {% endif %}
 
     <header class="region--header {% if page.isFront %}dark{% else %}light{% endif %}">
-      <div class="masthead-wrapper">
-        <div class="masthead">
-          <a class="logo" href="/">{{ 'logo-netbek'|icon|safe }}</a>
-
-          <span class="site">
-            <span class="site__name">{{ data.settings.site.name }}</span>
-            <span class="site__slogan">{{ data.settings.site.slogan }}</span>
-          </span>
-
-          <label class="menu-toggle" for="menu">
-            {{ 'ios-menu'|icon|safe }}
-            {{ 'ios-close'|icon|safe }}
-          </label>
+      <div class="masthead">
+        <div class="grid">
+          <div class="cell cell--1">
+            {% if page.isFront %}
+              <span class="mast">
+            {% else %}
+              <a class="mast" href="/">
+            {% endif %}
+                <span class="logo">{{ 'logo-netbek'|icon|safe }}</span>
+                <span class="site">
+                  <span class="site__name">{{ data.settings.site.name }}</span>
+                  <span class="site__slogan">{{ data.settings.site.slogan }}</span>
+                </span>
+            {% if page.isFront %}
+              </span>
+            {% else %}
+              </a>
+            {% endif %}
+          </div>
+          <div class="cell cell--2">
+            <label class="menu-toggle" for="menu">
+              {{ 'ios-menu'|icon|safe }}
+              {{ 'ios-close'|icon|safe }}
+            </label>
+          </div>
         </div>
       </div>
 
@@ -106,7 +118,7 @@
               id='accordion-1',
               items=[
                 {
-                  title: 'Work by category',
+                  title: 'Work by Category',
                   body: accordion_item_filter
                 }
               ]

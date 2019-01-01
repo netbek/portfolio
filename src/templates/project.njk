@@ -78,3 +78,24 @@
     </ul>
   {% endif %}
 </article>
+
+<nav role="navigation">
+  <ul class="pagination-list">
+    {% if true %}
+      <li class="pagination-list-item">
+        <a href="">
+          {{ 'ios-arrow-back'|icon|safe }}
+          <span>Previous</span>
+        </a>
+      </li>
+    {% endif %}
+    {% if true %}
+      <li class="pagination-list-item">
+        <a href="">
+          <span>Next</span>
+          {{ 'ios-arrow-forward'|icon|safe }}
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

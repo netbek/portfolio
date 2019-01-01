@@ -44,8 +44,7 @@ module.exports = (template, context = {}) =>
       } else {
         resolve(
           minify(result, {
-            collapseWhitespace: true,
-            conservativeCollapse: true
+            collapseWhitespace: true
           })
         );
       }

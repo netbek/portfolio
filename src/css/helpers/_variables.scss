@@ -45,6 +45,8 @@ $region-padding-vert--large:            $region-padding-vert--medium * 1.125 !de
 $region-padding-vert--xlarge:           $region-padding-vert--large * 1 !default;
 $region-padding-vert--xxlarge:          $region-padding-vert--xlarge * 1 !default;
 
+// Header region
+
 $header-padding-vert:                   $region-padding-vert * .5 !default;
 $header-padding-horz:                   1em !default;
 
@@ -62,6 +64,8 @@ $header-padding-horz--xlarge:           $header-padding-horz--large * 1.125 !def
 
 $header-padding-vert--xxlarge:          $region-padding-vert--xxlarge * .625 !default;
 $header-padding-horz--xxlarge:          $header-padding-horz--xlarge * 1.125 !default;
+
+// TODO Footer region
 
 // Accordion
 

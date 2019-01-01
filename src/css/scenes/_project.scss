@@ -94,6 +94,16 @@
     }
   }
 
+  .pagination-list {
+    margin: $region-padding-vert auto 0;
+  }
+
+  @include breakpoint($screen-small) {
+    .pagination-list {
+      margin: $region-padding-vert--small auto 0;
+    }
+  }
+
   @include breakpoint($screen-medium) {
     .lightbox-list-item {
       margin: 2.5em auto;
@@ -101,6 +111,10 @@
       figcaption {
         margin: 1em 0 2em;
       }
+    }
+
+    .pagination-list {
+      margin: $region-padding-vert--medium auto 0;
     }
   }
 
@@ -223,6 +237,26 @@
 
     .lightbox-list-item.cols-4 figure {
       width: 98%;
+    }
+
+    .pagination-list {
+      margin: $region-padding-vert--large auto 0;
+    }
+
+    .pagination-list-item {
+      font-size: 1.125em;
+    }
+  }
+
+  @include breakpoint($screen-xlarge) {
+    .pagination-list {
+      margin: $region-padding-vert--xlarge auto 0;
+    }
+  }
+
+  @include breakpoint($screen-xxlarge) {
+    .pagination-list {
+      margin: $region-padding-vert--xxlarge auto 0;
     }
   }
 }
