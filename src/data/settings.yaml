@@ -1,0 +1,33 @@
+site:
+  name: Hein Bekker
+  slogan: Web Developer
+  url: https://www.netbek.co.za
+contact:
+  email: hein@netbek.co.za
+  linkedin: https://www.linkedin.com/in/heinbekker
+  twitter: https://twitter.com/netbek
+metatags:
+  copyright: '(cc) Hein Bekker http://creativecommons.org/licenses/by-sa/4.0/'
+  description: Hein Bekker is a web developer with 17 years of experience.
+  keywords:
+    - web developer
+    - php
+    - python
+    - react
+    - south africa
+opengraph:
+  type: website
+  image: /opengraph-1200x630.png
+googleanalytics:
+  enabled: true
+  id: UA-2254733-1
+googlewebmastertools:
+  enabled: true
+  id: kKXwBSu8r1b+90XmTJ/XKxRtEg6nS6y+DME7omfJaZs=
+style:
+  color:
+    black: '#222'
+    white: '#FFF'
+    yellow: '#FFE900'
+    pink: '#F9274B'
+    grey: '#9C9C9C'

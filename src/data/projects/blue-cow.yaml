@@ -1,0 +1,46 @@
+title: Blue Cow
+body: >-
+  *Blue Cow* provides technical products and services to the broadcast and
+  multimedia industries. View the website at
+  [bluecow.co.za](http://www.bluecow.co.za/).
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://work/blue-cow-logo.png'
+    layout:
+      columns: 2
+    title: Logo
+  - uri: 'public://work/blue-cow-card.png'
+    layout:
+      columns: 2
+    title: Business card
+  - uri: 'public://work/blue-cow-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://work/blue-cow-news-post.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: News post
+  - uri: 'public://work/blue-cow-showcase.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Projects
+  - uri: 'public://work/blue-cow-project.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Project
+header:
+  - uri: 'public://work/blue-cow-header.png'
+tags:
+  - Design
+  - Dev
+metatags:
+  description: Logo and website for broadcast solutions provider.

@@ -1,0 +1,56 @@
+title: IkamvaYouth
+body: >-
+  *IkamvaYouth* equips high school learners from disadvantaged communities with
+  the knowledge, skills, networks and resources to access tertiary education and
+  employment opportunities once they matriculate. View the website at
+  [ikamvayouth.org](http://ikamvayouth.org/) (no longer maintained).
+
+
+  ### Credits
+
+  Dev: netbek.
+media:
+  - uri: 'public://work/ikamvayouth-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://work/ikamvayouth-blog.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Blog
+  - uri: 'public://work/ikamvayouth-blog-post.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Blog post
+  - uri: 'public://work/ikamvayouth-branches.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Branches
+  - uri: 'public://work/ikamvayouth-programmes.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Programmes
+  - uri: 'public://work/ikamvayouth-programme.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Programme
+  - uri: 'public://work/ikamvayouth-team.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Team
+header:
+  - uri: 'public://work/ikamvayouth-header.png'
+tags:
+  - Dev
+  - Drupal
+metatags:
+  description: >-
+    Website for NGO that tutors and mentors high school learners from
+    disadvantaged communities.

@@ -1,0 +1,121 @@
+@import '../helpers';
+
+.accordion {
+  display: block;
+  position: relative;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  &__item {
+    display: block;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item-state {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    ~ .accordion__item-header {
+      .accordion__item-button {
+        .icon {
+          &:first-child {
+            display: block;
+          }
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+
+    ~ .accordion__item-body {
+      display: none;
+    }
+
+    &:checked {
+      ~ .accordion__item-header {
+        .accordion__item-button {
+          .icon {
+            &:first-child {
+              display: none;
+            }
+
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+      }
+
+      ~ .accordion__item-body {
+        display: block;
+      }
+    }
+  }
+
+  &__item-header {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  a.accordion__item-header {
+    &,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__item-title {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  &__item-button {
+    position: absolute;
+    top: 0;
+
+    .icon {
+      display: block;
+    }
+  }
+
+  &__item-body {
+    padding: 0;
+  }
+
+  // Left-aligned button
+  &--left {
+    .accordion__item-header {
+      padding-right: 0;
+      padding-left: $accordion-toggle-width;
+    }
+
+    .accordion__item-button {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  // Right-aligned button (default)
+  &:not(.accordion--left),
+  &--right {
+    .accordion__item-header {
+      padding-right: $accordion-toggle-width;
+      padding-left: 0;
+    }
+
+    .accordion__item-button {
+      right: 0;
+      left: auto;
+    }
+  }
+}

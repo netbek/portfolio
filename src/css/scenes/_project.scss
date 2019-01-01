@@ -1,0 +1,268 @@
+@import 'helpers';
+
+.scene--work {
+  .field--title,
+  .field--body {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $font-family-heading;
+  }
+
+  .field--title {
+    line-height: $line-height-heading;
+  }
+
+  .field--body {
+    h3 {
+      margin-top: 2em;
+
+      + p {
+        margin-top: 0;
+        font-family: $font-family-body;
+        font-size: $font-size-small;
+        line-height: $line-height-heading;
+      }
+    }
+  }
+
+  .lightbox-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100em;
+  }
+
+  .lightbox-list-item {
+    list-style: none;
+    margin: 2em auto;
+    padding: 0;
+
+    &.zoom {
+      canvas,
+      img,
+      svg {
+        cursor: pointer;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+      }
+    }
+
+    figure {
+      margin: 0 auto;
+      padding: 0;
+
+      > div {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+
+    &[data-type='video'] {
+      figure {
+        max-width: 80em;
+      }
+    }
+
+    iframe {
+      width: 100%;
+      max-width: none;
+    }
+
+    audio,
+    canvas,
+    img,
+    video,
+    .frame {
+      position: relative;
+      margin: auto;
+    }
+
+    canvas,
+    img,
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin: .75em 0 2em;
+      padding: 0;
+      font-size: $font-size-small;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+
+  .pagination-list {
+    margin: $region-padding-vert auto 0;
+  }
+
+  .pagination-list-item {
+    a {
+      min-width: 7em;
+    }
+  }
+
+  @include breakpoint($screen-small) {
+    .pagination-list {
+      margin: $region-padding-vert--small auto 0;
+    }
+  }
+
+  @include breakpoint($screen-medium) {
+    .lightbox-list-item {
+      margin: 2.5em auto;
+
+      figcaption {
+        margin: 1em 0 2em;
+      }
+    }
+
+    .pagination-list {
+      margin: $region-padding-vert--medium auto 0;
+    }
+  }
+
+  @include breakpoint($screen-large) {
+    .field--body {
+      p {
+        font-size: 1.125em;
+      }
+
+      h3 {
+        + p {
+          font-size: $font-size-small;
+        }
+      }
+    }
+
+    .lightbox-list {
+      @include clearfix;
+    }
+
+    .lightbox-list-item {
+      float: left;
+
+      figcaption {
+        margin: 1em 0 0;
+      }
+    }
+
+    .lightbox-list-item.cols-1 {
+      width: 100 / 4 * 1 * 1%;
+    }
+
+    .lightbox-list-item.cols-2 {
+      width: 100 / 4 * 2 * 1%;
+    }
+
+    .lightbox-list-item.cols-3 {
+      width: 100 / 4 * 3 * 1%;
+    }
+
+    .lightbox-list-item.cols-4 {
+      width: 100 / 4 * 4 * 1%;
+    }
+
+    .lightbox-list-item.cols-row-start {
+      clear: left;
+    }
+
+    .lightbox-list.cols-1 {
+      width: 30%;
+    }
+
+    .lightbox-list.cols-1 .lightbox-list-item.cols-1 {
+      width: 100%;
+    }
+
+    .lightbox-list.cols-2 {
+      width: 60%;
+    }
+
+    .lightbox-list.cols-2 .lightbox-list-item.cols-1 {
+      width: 50%;
+    }
+
+    .lightbox-list.cols-2 .lightbox-list-item.cols-2 {
+      width: 100%;
+    }
+
+    .lightbox-list.cols-3 {
+      width: 92%;
+    }
+
+    .lightbox-list.cols-3 .lightbox-list-item.cols-1 {
+      width: 100 / 3 * 1 * 1%;
+    }
+
+    .lightbox-list.cols-3 .lightbox-list-item.cols-2 {
+      width: 100 / 3 * 2 * 1%;
+    }
+
+    .lightbox-list.cols-3 .lightbox-list-item.cols-3 {
+      width: 100 / 3 * 3 * 1%;
+    }
+
+    .lightbox-list-item.cols-row-start.cols-end.cols-2 {
+      margin-left: 100 / 4 * 1%;
+    }
+
+    .lightbox-list.cols-2 .lightbox-list-item.cols-row-start.cols-end.cols-2 {
+      margin-left: 0;
+    }
+
+    .lightbox-list.cols-3 .lightbox-list-item.cols-row-start.cols-end.cols-2 {
+      margin-left: 100 / 6 * 1%;
+    }
+
+    .lightbox-list-item.cols-row-start.cols-end.cols-1 {
+      margin-left: 37.5%;
+    }
+
+    .lightbox-list.cols-2 .lightbox-list-item.cols-row-start.cols-end.cols-1 {
+      margin-left: 100 / 4 * 1%;
+    }
+
+    .lightbox-list.cols-3 .lightbox-list-item.cols-row-start.cols-end.cols-1 {
+      margin-left: 0;
+    }
+
+    .lightbox-list-item.cols-1 figure {
+      width: 92%;
+    }
+
+    .lightbox-list-item.cols-2 figure {
+      width: 94%;
+    }
+
+    .lightbox-list-item.cols-3 figure {
+      width: 96%;
+    }
+
+    .lightbox-list-item.cols-4 figure {
+      width: 98%;
+    }
+
+    .pagination-list {
+      margin: $region-padding-vert--large auto 0;
+    }
+
+    .pagination-list-item {
+      font-size: 1.125em;
+    }
+  }
+
+  @include breakpoint($screen-xlarge) {
+    .pagination-list {
+      margin: $region-padding-vert--xlarge auto 0;
+    }
+  }
+
+  @include breakpoint($screen-xxlarge) {
+    .pagination-list {
+      margin: $region-padding-vert--xxlarge auto 0;
+    }
+  }
+}

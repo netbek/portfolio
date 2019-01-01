@@ -1,0 +1,55 @@
+title: Spur Boot Camp
+body: >-
+  Blood, sweat and burgers as schools in each region of the *Spur Adventure
+  Charity Challenge* square off at their local steakhouse ahead of a gruelling
+  cross-country race on mountain bike and foot. The 2010 website is presented
+  here. netbek also produced the 2008 and 2009 versions.
+
+
+  ### Credits
+
+  Dev: netbek. Design: [Plan B](http://www.planbdesign.co.za). Agency:
+  [H-Factor](http://www.hfactor.co.za), [TMGS
+  Creative](http://www.tmgscreative.com).
+media:
+  - uri: 'public://work/spur-boot-camp-2010-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://work/spur-boot-camp-2010-region.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Region
+  - uri: 'public://work/spur-boot-camp-2010-photo.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Photo
+  - uri: 'public://work/spur-boot-camp-2010-video.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Video
+  - uri: 'public://work/spur-boot-camp-2010-training.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Spur Adventure training routine
+  - uri: 'public://work/spur-boot-camp-2010-mailer-1.png'
+    layout:
+      columns: 1
+    title: E-mail. Updates were sent out before and after each event.
+  - uri: 'public://work/spur-boot-camp-2010-mailer-2.png'
+    layout:
+      columns: 1
+    title: Final e-mail
+header:
+  - uri: 'public://work/spur-boot-camp-2010-header.png'
+    title: spur-boot-camp-2010-header
+tags:
+  - Design
+  - Dev
+metatags:
+  description: Website for boot camp of an adventure race.

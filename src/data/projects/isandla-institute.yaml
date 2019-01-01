@@ -1,0 +1,36 @@
+title: Isandla Institute
+body: >-
+  *Isandla Institute*'s mission is to act as a public interest think-tank with a
+  primary focus on fostering just, equitable and democratic urban settlements.
+
+
+  ### Credits
+
+  Dev: netbek.
+media:
+  - uri: 'public://work/isandla-institute-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://work/isandla-institute-programmes.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Programmes
+  - uri: 'public://work/isandla-institute-projects.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Projects
+  - uri: 'public://work/isandla-institute-publications.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Publications
+header:
+  - uri: 'public://work/isandla-institute-header.png'
+tags:
+  - Dev
+metatags:
+  description: Website for urban-related think-tank.

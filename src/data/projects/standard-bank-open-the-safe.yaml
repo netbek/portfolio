@@ -1,0 +1,43 @@
+title: Standard Bank Open The Safe
+body: >-
+  Through the *Open The Safe* initiative, in partnership with *Metro FM*,
+  *Standard Bank* donated funds to five schools in South Africa. Learners who
+  entered had to explain why they thought *Standard Bank* should open the safe
+  for their school. The 2008 website is presented here. netbek also produced the
+  2007 version.
+
+
+  ### Credits
+
+  Dev: netbek. Design: [Plan B](http://www.planbdesign.co.za). Agency:
+  [H-Factor](http://www.hfactor.co.za), [TMGS
+  Creative](http://www.tmgscreative.com).
+media:
+  - uri: 'youtube://v/yngIdQBu66g'
+    layout:
+      columns: 2
+    artist: Hein Bekker
+    title: Landing page animation
+    width: 1280
+    height: 720
+  - uri: 'public://work/standard-bank-open-the-safe-landing.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Landing page
+  - uri: 'public://work/standard-bank-open-the-safe-profile.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Contestant profile
+  - uri: 'public://work/standard-bank-open-the-safe-video.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Contestant video
+header:
+  - uri: 'public://work/standard-bank-open-the-safe-header.png'
+tags:
+  - Dev
+metatags:
+  description: Website for CSI campaign.

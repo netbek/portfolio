@@ -1,0 +1,59 @@
+title: African Centre for Cities
+body: >-
+  The *African Centre for Cities* is an interdisciplinary research and teaching
+  programme focussed on quality scholarship regarding the dynamics of
+  unsustainable urbanisation processes in Africa, with an eye on identifying
+  systemic responses.
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://work/african-centre-for-cities-landing.png'
+    layout:
+      columns: 2
+    title: Landing page
+  - uri: 'public://work/african-centre-for-cities-programme.png'
+    layout:
+      columns: 2
+    title: Programme
+  - uri: 'public://work/african-centre-for-cities-planner.png'
+    layout:
+      columns: 2
+    title: Planner
+  - uri: 'public://work/african-centre-for-cities-event.png'
+    layout:
+      columns: 2
+    title: Event
+  - uri: 'public://work/african-centre-for-cities-lectures.png'
+    layout:
+      columns: 2
+    title: ACC Lecture Series
+  - uri: 'public://work/african-centre-for-cities-media.png'
+    layout:
+      columns: 2
+    title: Media
+  - uri: 'public://work/african-centre-for-cities-papers.png'
+    layout:
+      columns: 2
+    title: Papers
+  - uri: 'public://work/african-centre-for-cities-people.png'
+    layout:
+      columns: 2
+    title: People
+  - uri: 'public://work/african-centre-for-cities-profile.png'
+    layout:
+      columns: 2
+    title: Profile
+  - uri: 'public://work/african-centre-for-cities-publications.png'
+    layout:
+      columns: 2
+    title: Publications
+header:
+  - uri: 'public://work/african-centre-for-cities-header.png'
+tags:
+  - Design
+  - Dev
+metatags:
+  description: Website for urban research and teaching programme.

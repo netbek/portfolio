@@ -1,0 +1,33 @@
+@import 'helpers';
+
+.scene--info {
+  background-color: $yellow;
+  background-image: none;
+
+  a {
+    &,
+    &:visited {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .region--main {
+    > div {
+      font-family: $font-family-heading;
+    }
+  }
+
+  @include breakpoint($screen-large) {
+    .region--main {
+      > div {
+        font-size: 1.125em;
+      }
+    }
+  }
+}

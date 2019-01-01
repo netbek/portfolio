@@ -1,0 +1,21 @@
+@import '../helpers';
+
+.checkbox {
+  cursor: pointer;
+
+  &__box {
+    display: inline-flex;
+    border: 2px solid $yellow;
+    width: 1em;
+    height: 1em;
+    margin-right: .25em;
+  }
+
+  &__label {
+    display: inline-flex;
+  }
+
+  &:hover {
+    color: $yellow;
+  }
+}

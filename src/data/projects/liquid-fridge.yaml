@@ -1,0 +1,55 @@
+title: Liquid Fridge
+body: >-
+  *'ardkore* was a radio programme of brazen beats broadcast weekly in
+  Stellenbosch and Cape Town from 1995 to 2004, that led to the formation of the
+  *Liquid Fridge* (see [previous work](/work/liquid-fridge-2003-2010)). In 2014,
+  the men from *'ardkore* returned. View the website at
+  [liquidfridge.co.za](http://liquidfridge.co.za).
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://work/liquid-fridge-logo.png'
+    layout:
+      columns: 1
+    title: Logo
+  - uri: 'public://work/liquid-fridge-radio-320x480.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Landing page (phone)
+  - uri: 'public://work/liquid-fridge-radio-1600x900.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: >-
+      Landing page with countdown until next broadcast. The spectrum analyser at
+      the top of the page is a nod to covert shortwave radio stations.
+  - uri: 'public://work/liquid-fridge-radio-player-320x480.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Stream player (phone)
+  - uri: 'public://work/liquid-fridge-tumblr.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Tumblr blog of notable tracks and broadcast announcements
+  - uri: 'public://work/liquid-fridge-radio-mailer.png'
+    layout:
+      columns: 1
+    title: E-mail
+  - uri: 'public://work/liquid-fridge-radio-podcast.png'
+    layout:
+      columns: 2
+    title: Podcast cover art (alternate designs)
+header:
+  - uri: 'public://work/liquid-fridge-header.png'
+tags:
+  - Design
+  - Dev
+  - Kohana
+metatags:
+  description: Logo and website for radio programme.

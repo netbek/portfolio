@@ -1,0 +1,76 @@
+// Colors
+
+$black:                                 #222 !default;
+$white:                                 #FFF !default;
+$yellow:                                #FFE900 !default;
+$pink:                                  #F9274B !default;
+$grey:                                  #9C9C9C !default;
+
+// Shadows
+
+$shadow-key-umbra-opacity:              .2 !default;
+$shadow-key-penumbra-opacity:           .14 !default;
+$shadow-ambient-shadow-opacity:         .12 !default;
+
+// Breakpoints
+
+$screen-small:                          29em !default;  // 464 px
+$screen-medium:                         47em !default;  // 752 px
+$screen-large:                          63em !default;  // 1008 px
+$screen-xlarge:                         84em !default;  // 1344 px
+$screen-xxlarge:                        99em !default;  // 1584 px
+
+// Font
+
+$font-family-heading:                   'Titillium Web', sans-serif !default;
+$font-family-body:                      Helvetica, Arial, sans-serif !default;
+$font-family-serif:                     Georgia, 'Times New Roman', Times, serif !default;
+
+// Font sizes
+
+$font-size-body:                        1em !default;
+$font-size-small:                       .875em !default;
+
+// Line heights
+
+$line-height-heading:                   1.25 !default;
+$line-height-body:                      1.5 !default;
+
+// Regions
+
+$region-padding-vert:                   1.5em !default;
+$region-padding-vert--small:            $region-padding-vert * 1.5 !default;
+$region-padding-vert--medium:           $region-padding-vert--small * 1.375 !default;
+$region-padding-vert--large:            $region-padding-vert--medium * 1.125 !default;
+$region-padding-vert--xlarge:           $region-padding-vert--large * 1 !default;
+$region-padding-vert--xxlarge:          $region-padding-vert--xlarge * 1 !default;
+
+// Header region
+
+$header-padding-vert:                   $region-padding-vert * .5 !default;
+$header-padding-horz:                   1em !default;
+
+$header-padding-vert--small:            $region-padding-vert--small * .5 !default;
+$header-padding-horz--small:            $header-padding-horz !default;
+
+$header-padding-vert--medium:           $region-padding-vert--medium * .5 !default;
+$header-padding-horz--medium:           $header-padding-horz--small !default;
+
+$header-padding-vert--large:            $region-padding-vert--large * .5 !default;
+$header-padding-horz--large:            $header-padding-horz--medium * 2 !default;
+
+$header-padding-vert--xlarge:           $region-padding-vert--xlarge * .625 !default;
+$header-padding-horz--xlarge:           $header-padding-horz--large * 1.125 !default;
+
+$header-padding-vert--xxlarge:          $region-padding-vert--xxlarge * .625 !default;
+$header-padding-horz--xxlarge:          $header-padding-horz--xlarge * 1.125 !default;
+
+// TODO Footer region
+
+// Accordion
+
+$accordion-toggle-width:                3em !default;
+
+// Header
+
+$menu-item-padding-vert:                .125em !default;

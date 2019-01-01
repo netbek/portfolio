@@ -1,0 +1,17 @@
+<div class="project-list-wrapper">
+  <ul class="project-list">
+    {% for slug in data['projects-list'] %}
+      {% set item = data.projects[slug] %}
+      <li
+        class="project-list-item"
+        style="z-index: {{ loop.length - loop.index }};"
+        {% for tag in item.tags %} data-tag-{{ tag|slugify }}{% endfor %}
+      >
+        <div class="project">
+          <div class="project__thumb"><a href="/work/{{ slug }}"><img srcset="{{ item.header[0].uri|style_url(240) }} 1x, {{ item.header[0].uri|style_url(480) }} 2x" alt="{{ item.title }}"/></a></div>
+          <div class="project__label">{{ item.title }}</div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+bower_components
+node_modules
+npm-debug.log
+temp/
+*.orig
+
+# IDE files
+nbproject
+.idea
+.netbeans.xml
+.vscode

@@ -1,0 +1,63 @@
+@import '../helpers';
+
+.pagination-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.pagination-list-item {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  + .pagination-list-item {
+    border-left: 1px solid $grey;
+  }
+
+  a {
+    display: block;
+    padding: 0 1.5em 0 0;
+    text-align: right;
+    text-decoration: none;
+    font-family: $font-family-heading;
+    line-height: 1;
+    color: $pink;
+
+    span {
+      color: inherit;
+    }
+
+    .icon {
+      margin: 0 .25em 0 0;
+      font-size: 1.25em;
+      fill: $pink;
+    }
+
+    &:hover {
+      color: $black;
+
+      span {
+        text-decoration: underline;
+      }
+
+      .icon {
+        fill: $black;
+      }
+    }
+  }
+
+  + .pagination-list-item {
+    a {
+      padding: 0 0 0 1.5em;
+      text-align: left;
+
+      .icon {
+        margin: 0 0 0 .25em;
+        font-size: 1.25em;
+      }
+    }
+  }
+}

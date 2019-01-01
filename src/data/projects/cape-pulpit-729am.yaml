@@ -1,0 +1,33 @@
+title: Cape Pulpit 729AM
+body: >-
+  *Cape Pulpit 729AM* is a faith-based radio station broadcasting to Cape Town
+  and surrounding areas. View the streaming audio player built with AngularJS on
+  [Facebook](https://www.facebook.com/KaapseKansel/?sk=app_1620771238142885).
+
+
+  ### Credits
+
+  Design, dev: netbek.
+media:
+  - uri: 'public://work/cape-pulpit-player-facebook.png'
+    layout:
+      frame: desktop
+      columns: 2
+    title: Facebook player
+  - uri: 'public://work/cape-pulpit-player-phone.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Player (phone)
+  - uri: 'public://work/cape-pulpit-player-fallback-phone.png'
+    layout:
+      frame: phone
+      columns: 1
+    title: Fallback player (phone)
+header:
+  - uri: 'public://work/cape-pulpit-header.png'
+tags:
+  - Design
+  - Dev
+metatags:
+  description: Facebook streaming audio player for radio station.

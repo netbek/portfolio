@@ -1,0 +1,34 @@
+title: Breathe Sunshine
+body: >-
+  The *Breathe Sunshine* series showcases chilled out lounge sounds from South
+  Africa. Each release is accompanied by a DVD of visuals set to the music.
+
+
+  ### Credits
+
+  Animation, menu design: netbek. Video: softTouch. Producer: [Blue
+  Cow](http://www.bluecow.co.za).
+media:
+  - uri: 'public://work/breathe-sunshine-menu.png'
+    layout:
+      columns: 2
+    title: Menu screen
+  - uri: 'public://work/breathe-sunshine-track.png'
+    layout:
+      columns: 2
+    title: Track title screen
+  - uri: 'youtube://v/oy7b0nFrJC4'
+    layout:
+      columns: 4
+    artist: Hein Bekker
+    title: 'Animation (note: low quality video as it was re-encoded from DVD)'
+    width: 640
+    height: 360
+header:
+  - uri: 'public://work/breathe-sunshine-header.png'
+    title: breathe-sunshine-header
+tags:
+  - Design
+  - Animation
+metatags:
+  description: Animation and menu design for music DVD.
