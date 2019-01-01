@@ -44,7 +44,7 @@ gulp prod
 Deploy to GitHub Pages:
 
 ```shell
-yarn run deploy
+yarn deploy
 ```
 
 ## License
