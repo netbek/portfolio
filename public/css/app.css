@@ -233,8 +233,6 @@ button .icon {
   position: relative;
   z-index: 10;
   padding: 1em 0;
-  background-color: #222;
-  color: #FFF;
   font-family: "Titillium Web", sans-serif; }
   .region--header .masthead-wrapper {
     margin: 0 auto;
@@ -277,21 +275,15 @@ button .icon {
         margin-left: 1em; }
       .region--header .masthead .site__name {
         text-transform: uppercase; }
-      .region--header .masthead .site__slogan {
-        color: #9C9C9C; }
     .region--header .masthead .menu-toggle {
       padding: .125em;
       font-size: 1.75em;
       line-height: 1;
       cursor: pointer; }
-      .region--header .masthead .menu-toggle .icon {
-        fill: #FFF; }
-        .region--header .masthead .menu-toggle .icon:first-child {
-          display: block; }
-        .region--header .masthead .menu-toggle .icon:last-child {
-          display: none; }
-      .region--header .masthead .menu-toggle:hover .icon {
-        fill: #FFE900; }
+      .region--header .masthead .menu-toggle .icon:first-child {
+        display: block; }
+      .region--header .masthead .menu-toggle .icon:last-child {
+        display: none; }
   .region--header .menu-list {
     display: none;
     list-style: disc;
@@ -304,22 +296,11 @@ button .icon {
     .region--header .menu-list-item a {
       display: block;
       padding: 0.0625em 0;
-      color: white;
       text-decoration: none; }
       .region--header .menu-list-item a:focus, .region--header .menu-list-item a:hover {
         text-decoration: none; }
-      .region--header .menu-list-item a:hover {
-        color: #FFE900; }
-        .region--header .menu-list-item a:hover .icon {
-          fill: #FFE900; }
   .region--header .accordion__item-header {
     padding: 0.125em 0; }
-    .region--header .accordion__item-header .accordion__item-button .icon {
-      fill: #FFF; }
-    .region--header .accordion__item-header:hover {
-      color: #FFE900; }
-      .region--header .accordion__item-header:hover .accordion__item-button .icon {
-        fill: #FFE900; }
   .region--header .accordion__item-body {
     padding: .375em 1em .25em; }
   .region--header .accordion__item-button {
@@ -356,6 +337,56 @@ button .icon {
     padding: 0; }
     .region--header .filter-list-item .checkbox {
       display: block; }
+  .region--header.dark {
+    background-color: #222;
+    color: #FFF; }
+    .region--header.dark .masthead .logo .icon {
+      fill: #FFF; }
+    .region--header.dark .masthead .logo:hover .icon {
+      fill: #FFE900; }
+    .region--header.dark .masthead .site__slogan {
+      color: #9C9C9C; }
+    .region--header.dark .masthead .menu-toggle .icon {
+      fill: #FFF; }
+    .region--header.dark .masthead .menu-toggle:hover .icon {
+      fill: #FFE900; }
+    .region--header.dark .menu-list-item a {
+      color: #FFF; }
+      .region--header.dark .menu-list-item a:hover {
+        color: #FFE900; }
+        .region--header.dark .menu-list-item a:hover .icon {
+          fill: #FFE900; }
+    .region--header.dark .accordion__item-header .accordion__item-button .icon {
+      fill: #FFF; }
+    .region--header.dark .accordion__item-header:hover {
+      color: #FFE900; }
+      .region--header.dark .accordion__item-header:hover .accordion__item-button .icon {
+        fill: #FFE900; }
+  .region--header.light {
+    background-color: #FFF;
+    color: #222; }
+    .region--header.light .masthead .logo .icon {
+      fill: #222; }
+    .region--header.light .masthead .logo:hover .icon {
+      fill: #FFE900; }
+    .region--header.light .masthead .site__slogan {
+      color: #222; }
+    .region--header.light .masthead .menu-toggle .icon {
+      fill: #222; }
+    .region--header.light .masthead .menu-toggle:hover .icon {
+      fill: #FFE900; }
+    .region--header.light .menu-list-item a {
+      color: #222; }
+      .region--header.light .menu-list-item a:hover {
+        color: #FFE900; }
+        .region--header.light .menu-list-item a:hover .icon {
+          fill: #FFE900; }
+    .region--header.light .accordion__item-header .accordion__item-button .icon {
+      fill: #FFF; }
+    .region--header.light .accordion__item-header:hover {
+      color: #FFE900; }
+      .region--header.light .accordion__item-header:hover .accordion__item-button .icon {
+        fill: #FFE900; }
 
 .region--main {
   display: block;

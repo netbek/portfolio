@@ -48,7 +48,7 @@
       {% endfor %}
     {% endif %}
 
-    <header class="region--header">
+    <header class="region--header {% if page.isFront %}dark{% else %}light{% endif %}">
       <div class="masthead-wrapper">
         <div class="masthead">
           <a class="logo" href="/">{{ 'logo-netbek'|icon|safe }}</a>

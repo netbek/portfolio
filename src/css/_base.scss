@@ -76,8 +76,6 @@ button {
   position: relative;
   z-index: 10;
   padding: 1em 0;
-  background-color: $black;
-  color: $white;
   font-family: $font-family-heading;
 
   .masthead-wrapper {
@@ -121,10 +119,6 @@ button {
       &__name {
         text-transform: uppercase;
       }
-
-      &__slogan {
-        color: $grey;
-      }
     }
 
     .menu-toggle {
@@ -134,20 +128,12 @@ button {
       cursor: pointer;
 
       .icon {
-        fill: $white;
-
         &:first-child {
           display: block;
         }
 
         &:last-child {
           display: none;
-        }
-      }
-
-      &:hover {
-        .icon {
-          fill: $yellow;
         }
       }
     }
@@ -168,20 +154,11 @@ button {
     a {
       display: block;
       padding: ($menu-item-padding-vert / 2) 0;
-      color: white;
       text-decoration: none;
 
       &:focus,
       &:hover {
         text-decoration: none;
-      }
-
-      &:hover {
-        color: $yellow;
-
-        .icon {
-          fill: $yellow;
-        }
       }
     }
   }
@@ -189,22 +166,6 @@ button {
   .accordion {
     &__item-header {
       padding: $menu-item-padding-vert 0;
-
-      .accordion__item-button {
-        .icon {
-          fill: $white;
-        }
-      }
-
-      &:hover {
-        color: $yellow;
-
-        .accordion__item-button {
-          .icon {
-            fill: $yellow;
-          }
-        }
-      }
     }
 
     &__item-body {
@@ -248,6 +209,152 @@ button {
 
     .checkbox {
       display: block;
+    }
+  }
+
+  // Dark theme
+
+  &.dark {
+    background-color: $black;
+    color: $white;
+
+    .masthead {
+      .logo {
+        .icon {
+          fill: $white;
+        }
+
+        &:hover {
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+
+      .site {
+        &__slogan {
+          color: $grey;
+        }
+      }
+
+      .menu-toggle {
+        .icon {
+          fill: $white;
+        }
+
+        &:hover {
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+    }
+
+    .menu-list-item {
+      a {
+        color: $white;
+
+        &:hover {
+          color: $yellow;
+
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+    }
+
+    .accordion {
+      &__item-header {
+       .accordion__item-button {
+          .icon {
+            fill: $white;
+          }
+        }
+
+        &:hover {
+          color: $yellow;
+
+          .accordion__item-button {
+            .icon {
+              fill: $yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Light theme
+
+  &.light {
+    background-color: $white;
+    color: $black;
+
+    .masthead {
+      .logo {
+        .icon {
+          fill: $black;
+        }
+
+        &:hover {
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+
+      .site {
+        &__slogan {
+          color: $black;
+        }
+      }
+
+      .menu-toggle {
+        .icon {
+          fill: $black;
+        }
+
+        &:hover {
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+    }
+
+    .menu-list-item {
+      a {
+        color: $black;
+
+        &:hover {
+          color: $yellow;
+
+          .icon {
+            fill: $yellow;
+          }
+        }
+      }
+    }
+
+    .accordion {
+      &__item-header {
+       .accordion__item-button {
+          .icon {
+            fill: $white;
+          }
+        }
+
+        &:hover {
+          color: $yellow;
+
+          .accordion__item-button {
+            .icon {
+              fill: $yellow;
+            }
+          }
+        }
+      }
     }
   }
 }
