@@ -39,6 +39,12 @@ let livereloadServer;
 
 /* ---------------------------------------------------------------------------------------------- */
 
+gulp.task('cname', () =>
+  fs.copyAsync('CNAME', path.join(gulpConfig.dist.base, 'CNAME'), {
+    preserveTimestamps: true
+  })
+);
+
 // Deletes all HTML
 gulp.task('html-clean', () => Promise.resolve());
 
@@ -200,19 +206,20 @@ gulp.task(
   gulp.series('vendor-clean', 'vendor-copy', 'vendor-modernizr')
 );
 
-gulp.task('dev', gulp.series('css', 'js', 'vendor', 'html'));
+gulp.task('dev', gulp.series('css', 'html', 'js', 'vendor'));
 
 gulp.task(
   'prod',
   gulp.series(
+    'cname',
+    'css',
     'js',
-    'vendor',
-    'html',
     'favicon',
     'fonts',
+    'html',
     'icons',
     'penrose',
-    'css'
+    'vendor'
   )
 );
 
