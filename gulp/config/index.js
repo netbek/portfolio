@@ -39,7 +39,7 @@ module.exports = {
         {
           name: 'resize',
           width: 240,
-          options: '>'
+          withoutEnlargement: true
         }
       ],
       quality: 85
@@ -49,7 +49,7 @@ module.exports = {
         {
           name: 'resize',
           width: 480,
-          options: '>'
+          withoutEnlargement: true
         }
       ],
       quality: 85
@@ -59,17 +59,7 @@ module.exports = {
         {
           name: 'resize',
           width: 960,
-          options: '>'
-        }
-      ],
-      quality: 85
-    },
-    '1440': {
-      actions: [
-        {
-          name: 'resize',
-          width: 1440,
-          options: '>'
+          withoutEnlargement: true
         }
       ],
       quality: 85
@@ -79,7 +69,7 @@ module.exports = {
         {
           name: 'resize',
           width: 1920,
-          options: '>'
+          withoutEnlargement: true
         }
       ],
       quality: 85
@@ -88,20 +78,7 @@ module.exports = {
   modernizr: {
     classPrefix: '',
     options: ['addTest', 'prefixed', 'setClasses', 'testProp'],
-    'feature-detects': [
-      // 'canvas',
-      // 'css/animations',
-      // 'css/backgroundsize',
-      // 'css/backgroundsizecover',
-      // 'css/calc',
-      // 'css/flexbox',
-      // 'css/transforms',
-      // 'css/transforms3d',
-      // 'svg',
-      // 'svg/clippaths',
-      // 'svg/inline',
-      'touchevents'
-    ]
+    'feature-detects': ['img/webp', 'svg/clippaths', 'touchevents']
   },
   penrose: {
     schemes: {
@@ -112,13 +89,7 @@ module.exports = {
     tasks: {
       work: {
         src: ['public://work/*'],
-        styles: [
-          240,
-          480,
-          960
-          // 1440,
-          // 1920
-        ]
+        styles: [240, 480, 960, 1920]
       }
     }
   },

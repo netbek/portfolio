@@ -46,18 +46,20 @@
                     {{
                       desktop_frame(
                         src=item.uri|style_url(480),
-                        srcset='{img_480} 1x, {img_960} 2x'|
-                          replace('{img_480}', item.uri|style_url(480))|
-                          replace('{img_960}', item.uri|style_url(960))
+                        lightbox_src=item.uri|style_url(960),
+                        lightbox_srcset='{img_960} 1x, {img_1920} 2x'|
+                          replace('{img_960}', item.uri|style_url(960))|
+                          replace('{img_1920}', item.uri|style_url(1920))
                       )
                     }}
                   {% elif item.layout.frame == 'phone' %}
                     {{
                       phone_frame(
                         src=item.uri|style_url(480),
-                        srcset='{img_480} 1x, {img_960} 2x'|
-                          replace('{img_480}', item.uri|style_url(480))|
-                          replace('{img_960}', item.uri|style_url(960))
+                        lightbox_src=item.uri|style_url(960),
+                        lightbox_srcset='{img_960} 1x, {img_1920} 2x'|
+                          replace('{img_960}', item.uri|style_url(960))|
+                          replace('{img_1920}', item.uri|style_url(1920))
                       )
                     }}
                   {% else %}

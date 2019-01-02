@@ -42,9 +42,9 @@
   </ul>
 {% endmacro %}
 
-{% macro desktop_frame(src, srcset) %}
+{% macro desktop_frame(src, lightbox_src, lightbox_srcset) %}
   <div class="frame">
-    <svg class="frame__svg" xmlns="http://www.w3.org/2000/svg" width="572" height="462" viewBox="0 0 572 462" data-mfp-src="{{ src }}" data-mfp-srcset="{{ srcset }}">
+    <svg class="frame__svg" xmlns="http://www.w3.org/2000/svg" width="572" height="462" viewBox="0 0 572 462" data-mfp-src="{{ lightbox_src }}" data-mfp-srcset="{{ lightbox_srcset }}">
       <defs>
         <clipPath id="desktop-frame-clip">
           <rect x="26" y="26" width="520" height="292"/>
@@ -55,13 +55,13 @@
       <path clip-rule="evenodd" fill="none" stroke="#999" stroke-width="1" stroke-miterlimit="3.864" d="M26 26h520v292H26z"/>
       <path clip-rule="evenodd" fill="none" stroke="#999" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="M223.444 391c0 3.386.101 8.549.299 15.492 0 6.113-.482 11.313-1.447 15.597-2.664 11.813-10.054 21.709-22.172 29.688-7.158 4.732-10.104 7.616-8.838 8.652.366.311 1.214.502 2.547.57h184.336c1.332-.068 2.181-.26 2.547-.57 1.265-1.036-1.681-3.92-8.839-8.652-12.118-7.979-19.508-17.876-22.171-29.688-.966-4.284-1.448-9.483-1.448-15.597.2-6.943.3-12.106.3-15.492"/>
     </svg>
-    {# <button class="lightbox-button lightbox-zoom-button">{{ 'zoom-in'|icon|safe }}</button> #}
+    <img class="frame__img" src="{{ src }}" />
   </div>
 {% endmacro %}
 
-{% macro phone_frame(src, srcset) %}
+{% macro phone_frame(src, lightbox_src, lightbox_srcset) %}
   <div class="frame">
-    <svg class="frame__svg" xmlns="http://www.w3.org/2000/svg" width="286" height="462" viewBox="0 0 286 462" data-mfp-src="{{ src }}" data-mfp-srcset="{{ srcset }}">
+    <svg class="frame__svg" xmlns="http://www.w3.org/2000/svg" width="286" height="462" viewBox="0 0 286 462" data-mfp-src="{{ lightbox_src }}" data-mfp-srcset="{{ lightbox_srcset }}">
       <defs>
         <clipPath id="phone-frame-clip">
           <rect x="28" y="58" width="230" height="345"/>
@@ -73,6 +73,6 @@
       <circle clip-rule="evenodd" fill="none" stroke="#999" stroke-width="1" stroke-miterlimit="3.864" cx="143" cy="29" r="3"/>
       <path fill="none" stroke="#999" stroke-width="1" stroke-miterlimit="10" d="M28 58h230M28 403h230"/>
     </svg>
-    {# <button class="lightbox-button lightbox-zoom-button">{{ 'zoom-in'|icon|safe }}</button> #}
+    <img class="frame__img" src="{{ src }}" />
   </div>
 {% endmacro %}

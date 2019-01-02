@@ -301,7 +301,6 @@
     -webkit-transform: perspective(120px) rotateX(-179.9deg) rotateY(-180deg);
             transform: perspective(120px) rotateX(-179.9deg) rotateY(-180deg); } }
 
-/* ibm-plex-serif-700 - latin */
 @font-face {
   font-family: 'IBM Plex Serif';
   font-style: normal;
@@ -719,9 +718,20 @@ img.mfp-img {
   .mfp-image-holder .mfp-close .icon {
     fill: white; }
 
-.frame__svg image {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in; }
+.frame__svg {
+  display: none; }
+  .frame__svg image {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in; }
+
+.frame__img {
+  display: inline-block; }
+
+.svgclippaths .frame__svg {
+  display: inline-block; }
+
+.svgclippaths .frame__img {
+  display: none; }
 
 @media (min-width: 29em) {
   .region--main {

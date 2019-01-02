@@ -1,24 +1,5 @@
 @import 'helpers';
 
-// @font-face {
-//   font-family: 'Open Sans';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local('Open Sans Regular'), local('OpenSans-Regular'),
-//        url('/fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-//        url('/fonts/open-sans-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-// }
-
-// @font-face {
-//   font-family: 'Open Sans';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local('Open Sans Regular'), local('OpenSans-Regular'),
-//        url('/fonts/titillium-web-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-//        url('/fonts/titillium-web-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-// }
-
-/* ibm-plex-serif-700 - latin */
 @font-face {
   font-family: 'IBM Plex Serif';
   font-style: normal;
@@ -647,8 +628,26 @@ img.mfp-img {
 
 .frame {
   &__svg {
+    display: none;
+
     image {
       cursor: zoom-in;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+  }
+}
+
+.svgclippaths {
+  .frame {
+    &__svg {
+      display: inline-block;
+    }
+
+    &__img {
+      display: none;
     }
   }
 }
