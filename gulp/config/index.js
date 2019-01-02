@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const os = require('os');
+const {PNG, WEBP} = require('penrose');
 const {browserslist} = require('../../package.json');
 
 // Browsers for node-open/livereload
@@ -34,7 +35,7 @@ module.exports = {
     vendor: 'public/vendor/'
   },
   imageStyles: {
-    '240': {
+    '240-png': {
       actions: [
         {
           name: 'resize',
@@ -42,9 +43,10 @@ module.exports = {
           withoutEnlargement: true
         }
       ],
+      format: PNG,
       quality: 85
     },
-    '480': {
+    '480-png': {
       actions: [
         {
           name: 'resize',
@@ -52,9 +54,10 @@ module.exports = {
           withoutEnlargement: true
         }
       ],
+      format: PNG,
       quality: 85
     },
-    '960': {
+    '960-png': {
       actions: [
         {
           name: 'resize',
@@ -62,9 +65,10 @@ module.exports = {
           withoutEnlargement: true
         }
       ],
+      format: PNG,
       quality: 85
     },
-    '1920': {
+    '1920-png': {
       actions: [
         {
           name: 'resize',
@@ -72,7 +76,52 @@ module.exports = {
           withoutEnlargement: true
         }
       ],
+      format: PNG,
       quality: 85
+    },
+    '240-webp': {
+      actions: [
+        {
+          name: 'resize',
+          width: 240,
+          withoutEnlargement: true
+        }
+      ],
+      format: WEBP,
+      quality: 75
+    },
+    '480-webp': {
+      actions: [
+        {
+          name: 'resize',
+          width: 480,
+          withoutEnlargement: true
+        }
+      ],
+      format: WEBP,
+      quality: 75
+    },
+    '960-webp': {
+      actions: [
+        {
+          name: 'resize',
+          width: 960,
+          withoutEnlargement: true
+        }
+      ],
+      format: WEBP,
+      quality: 75
+    },
+    '1920-webp': {
+      actions: [
+        {
+          name: 'resize',
+          width: 1920,
+          withoutEnlargement: true
+        }
+      ],
+      format: WEBP,
+      quality: 75
     }
   },
   modernizr: {
@@ -89,7 +138,16 @@ module.exports = {
     tasks: {
       work: {
         src: ['public://work/*'],
-        styles: [240, 480, 960, 1920]
+        styles: [
+          '240-png',
+          '480-png',
+          '960-png',
+          '1920-png',
+          '240-webp',
+          '480-webp',
+          '960-webp',
+          '1920-webp'
+        ]
       }
     }
   },
