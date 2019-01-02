@@ -9,6 +9,25 @@
 //        url('/fonts/open-sans-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 // }
 
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local('Open Sans Regular'), local('OpenSans-Regular'),
+//        url('/fonts/titillium-web-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//        url('/fonts/titillium-web-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
+
+/* ibm-plex-serif-700 - latin */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('IBM Plex Serif Bold'), local('IBMPlexSerif-Bold'),
+       url('../fonts/ibm-plex-serif-v4-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/ibm-plex-serif-v4-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,6 +45,41 @@ body {
   background-repeat: no-repeat;
   background-color: #e3e3e3;
   background-image: radial-gradient(ellipse, #fff, #ccc);
+}
+
+h1 {
+  font-size: 1.75em * pow(.8, 0);
+}
+
+h2 {
+  font-size: 1.75em * pow(.8, 1);
+}
+
+h3 {
+  font-size: 1.75em * pow(.8, 2);
+}
+
+h4 {
+  font-size: 1.75em * pow(.8, 3);
+}
+
+h5 {
+  font-size: 1.75em * pow(.8, 4);
+}
+
+h6 {
+  font-size: 1.75em * pow(.8, 5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-heading;
+  line-height: $line-height-heading;
+  font-weight: bold;
 }
 
 a {
@@ -48,7 +102,7 @@ button {
 }
 
 .constraint {
-  max-width: 64em;
+  max-width: 48em;
 }
 
 .hidden-checkbox {
@@ -87,7 +141,7 @@ button {
     .grid {
       display: flex;
       flex-flow: row nowrap;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
     }
 
@@ -102,7 +156,7 @@ button {
     .mast {
       display: inline-flex;
       flex-flow: row nowrap;
-      align-items: flex-start;
+      align-items: center;
       color: inherit;
 
       .logo {
@@ -119,22 +173,25 @@ button {
 
       .site {
         flex: 1 1 100%;
-        padding-top: .25em;
 
         &__name,
         &__slogan {
           display: block;
-          margin-left: 1rem;
+          margin-left: .75rem;
         }
 
         &__name {
+          font-family: $font-family-heading;
+          line-height: $line-height-heading;
           font-weight: bold;
         }
 
         &__slogan {
-          font-family: $font-family-serif;
+          font-family: $font-family-heading;
+          line-height: $line-height-heading;
           font-size: $font-size-small;
           font-style: italic;
+          text-transform: uppercase;
         }
       }
     }
@@ -669,6 +726,11 @@ img.mfp-img {
         padding: $header-padding-vert--large 0;
 
         .site {
+          &__name,
+          &__slogan {
+            margin-left: 1rem;
+          }
+
           &__name {
             font-size: 1.25em;
           }
