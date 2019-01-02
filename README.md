@@ -1,6 +1,4 @@
-# netbek.github.io
-
-Portfolio.
+# Portfolio
 
 ## Installation
 
