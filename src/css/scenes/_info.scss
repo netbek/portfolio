@@ -17,12 +17,6 @@
     }
   }
 
-  .region--main {
-    > div {
-      font-family: $font-family-heading;
-    }
-  }
-
   @include breakpoint($screen-large) {
     .region--main {
       > div {

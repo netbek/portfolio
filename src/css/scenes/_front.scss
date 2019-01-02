@@ -70,8 +70,9 @@
       bottom: 0;
       left: 0;
       background: white;
-      padding: .25em .5em;
-      font-family: $font-family-heading;
+      padding: .25em .375em;
+      font-weight: bold;
+      font-size: $font-size-small;
       line-height: $line-height-heading;
       transition: background-color .100s ease, opacity .100s ease;
     }
@@ -86,7 +87,8 @@
       margin: .5em;
 
       &__label {
-        padding: .5em .75em;
+        font-size: $font-size-body;
+        padding: .5em .625em;
       }
     }
   }

@@ -167,7 +167,6 @@
     padding: 0 1.5em 0 0;
     text-align: right;
     text-decoration: none;
-    font-family: "Titillium Web", sans-serif;
     line-height: 1;
     color: #F9274B; }
     .pagination-list-item a span {
@@ -221,12 +220,6 @@
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
 
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Titillium Web Regular"), local("TitilliumWeb-Regular"), url("/fonts/titillium-web-v6-latin-regular.woff2") format("woff2"), url("/fonts/titillium-web-v6-latin-regular.woff") format("woff"); }
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -236,7 +229,7 @@ html {
   font-size: 100%; }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Liberation Sans", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
   color: #222;
@@ -286,8 +279,7 @@ button .icon {
   display: block;
   position: relative;
   z-index: 10;
-  padding: 1em 0;
-  font-family: "Titillium Web", sans-serif; }
+  padding: 1em 0; }
   .region--header .masthead {
     margin: 0 auto;
     padding: 0; }
@@ -358,6 +350,7 @@ button .icon {
           font-weight: bold; }
         .region--header .masthead .mast .site__slogan {
           font-family: Georgia, "Times New Roman", Times, serif;
+          font-size: 0.875em;
           font-style: italic; }
     .region--header .masthead .menu-toggle {
       display: inline-block;
@@ -670,7 +663,7 @@ img.mfp-img {
     .scene:not(.scene--front) .region--header .masthead {
       padding: 1.74023em 0; }
       .scene:not(.scene--front) .region--header .masthead .site__name {
-        font-size: 1.125em; }
+        font-size: 1.25em; }
       .scene:not(.scene--front) .region--header .masthead .menu-toggle {
         display: none; }
     .scene:not(.scene--front) .region--header .menu-list {
@@ -824,8 +817,9 @@ img.mfp-img {
     bottom: 0;
     left: 0;
     background: white;
-    padding: .25em .5em;
-    font-family: "Titillium Web", sans-serif;
+    padding: .25em .375em;
+    font-weight: bold;
+    font-size: 0.875em;
     line-height: 1.25;
     -webkit-transition: background-color .100s ease, opacity .100s ease;
     -o-transition: background-color .100s ease, opacity .100s ease;
@@ -837,7 +831,8 @@ img.mfp-img {
   .scene--front .project {
     margin: .5em; }
     .scene--front .project__label {
-      padding: .5em .75em; } }
+      font-size: 1em;
+      padding: .5em .625em; } }
 
 @media (min-width: 47em) {
   .scene--front .project-list-wrapper {
@@ -1072,8 +1067,6 @@ img.mfp-img {
     text-decoration: underline; }
   .scene--info a:focus, .scene--info a:hover {
     text-decoration: none; }
-  .scene--info .region--main > div {
-    font-family: "Titillium Web", sans-serif; }
   @media (min-width: 63em) {
     .scene--info .region--main > div {
       font-size: 1.125em; } }
@@ -1092,8 +1085,7 @@ img.mfp-img {
 .scene--work .field--title,
 .scene--work .field--body {
   margin-left: auto;
-  margin-right: auto;
-  font-family: "Titillium Web", sans-serif; }
+  margin-right: auto; }
 
 .scene--work .field--title {
   line-height: 1.25; }
@@ -1102,7 +1094,6 @@ img.mfp-img {
   margin-top: 2em; }
   .scene--work .field--body h3 + p {
     margin-top: 0;
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 0.875em;
     line-height: 1.25; }
 
