@@ -136,7 +136,7 @@ module.exports = {
       'gsap/src/minified/TweenMax.min.js',
       'imagesloaded/imagesloaded.pkgd.min.js',
       'jquery/dist/jquery.slim.min.js',
-      'magnific-popup',
+      'magnific-popup/dist',
       'normalize-css/normalize.css',
       'picturefill/dist/picturefill.min.js'
     ]
