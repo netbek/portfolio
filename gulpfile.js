@@ -106,6 +106,21 @@ gulp.task('js-build', () =>
 );
 gulp.task('js', gulp.series('js-clean', 'js-build'));
 
+// Favicon
+gulp.task('favicon-clean', () => Promise.resolve());
+gulp.task('favicon-build', () =>
+  globPromise(path.join(gulpConfig.src.favicon, '*'), {
+    nodir: true
+  }).then(files =>
+    Promise.mapSeries(files, file =>
+      fs.copyAsync(file, path.join(gulpConfig.dist.base, path.basename(file)), {
+        preserveTimestamps: true
+      })
+    )
+  )
+);
+gulp.task('favicon', gulp.series('favicon-clean', 'favicon-build'));
+
 // Fonts
 gulp.task('fonts-clean', () => fs.removeAsync(gulpConfig.dist.fonts));
 gulp.task('fonts-build', () =>
@@ -189,7 +204,16 @@ gulp.task('dev', gulp.series('css', 'js', 'vendor', 'html'));
 
 gulp.task(
   'prod',
-  gulp.series('js', 'vendor', 'html', 'fonts', 'icons', 'penrose', 'css')
+  gulp.series(
+    'js',
+    'vendor',
+    'html',
+    'favicon',
+    'fonts',
+    'icons',
+    'penrose',
+    'css'
+  )
 );
 
 // Starts the webserver

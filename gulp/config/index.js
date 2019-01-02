@@ -125,6 +125,7 @@ module.exports = {
   src: {
     css: 'src/css/',
     data: 'src/data/',
+    favicon: 'src/favicon/',
     fonts: 'src/fonts/',
     js: 'src/js/',
     svg: 'src/svg/',
