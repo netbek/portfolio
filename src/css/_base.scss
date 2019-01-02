@@ -154,7 +154,7 @@ button {
     }
 
     .mast {
-      display: inline-flex;
+      display: flex;
       flex-flow: row nowrap;
       align-items: center;
       color: inherit;
@@ -197,7 +197,7 @@ button {
     }
 
     .menu-toggle {
-      display: inline-block;
+      display: block;
       padding: .125em;
       font-size: 1.75em;
       line-height: 1;

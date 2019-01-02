@@ -348,10 +348,10 @@ button .icon {
           -ms-flex: 1 1 auto;
               flex: 1 1 auto; }
     .region--header .masthead .mast {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -webkit-flex-flow: row nowrap;
@@ -392,7 +392,7 @@ button .icon {
           font-style: italic;
           text-transform: uppercase; }
     .region--header .masthead .menu-toggle {
-      display: inline-block;
+      display: block;
       padding: .125em;
       font-size: 1.75em;
       line-height: 1;
