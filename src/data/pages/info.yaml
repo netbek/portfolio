@@ -1,127 +1,49 @@
 title: About
 headline: What I do
-body: >-
-  Front-end developer at [Siyavula Education](http://siyavula.com).
+body: |
+  ## Present
 
+  I work as a front-end developer at [Siyavula Education](http://siyavulaeducation.com), helping to
+  create high-quality learning experiences in Mathematics, Physics, and Chemistry.
 
-  I build websites: back- to front-end. I turn an idea into a website that
-  functions in the most efficient way possible through smart application design
-  and programming. Occasionally, I advise on creative strategy, design graphics,
-  and do light animation. When not wrangling code, I [think about civic
-  engagement](/work/dandelion), and [arrange challenging music in a tasteful
-  manner](/work/liquid-fridge). Many moons ago, I [organised creative
-  swapmeets](/work/liquid-fridge-2003-2010) that combined academia, art and free
-  culture.
+  As part of a small team, I create and maintain front-end UI components and a living style guide,
+  and guide and review front-end development by the full-stack team. Sometimes, I design and develop
+  admin and reporting dashboards, and data visualisations, too.
 
+  _Stack: React, Redux, Vega, D3, Python, Pyramid, Pandas, Seaborn_
 
-  ### Languages and frameworks
+  ## Past
 
+  Previously, I was a freelance full-stack developer for 13 years, and
+  [organised creative swapmeets](/work/liquid-fridge-2003-2010) that combined academia, art and
+  free culture.
 
-  * PHP
+  I worked solo and in agency teams, and often took on multiple roles as designer, front- and
+  back-end developer, and technical support. I built and maintained websites of online and print
+  magazines, broadcast media consultants, radio stations, an art gallery, an architecture firm,
+  an event agency, guest houses, and various other small businesses. I worked on integrated
+  marketing campaigns for PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM, Metro FM, and other
+  large brands.
 
-  * Drupal
-
-  * Kohana
-
-  * JavaScript
-
-  * AngularJS
-
-  * Node.js
-
-  * Flash
-
-  * ActionScript
-
+  _Stack: PHP, Drupal, Kohana, AngularJS, Node.js, ActionScript_
 
   ## Open source software
 
-
-  A few of my projects that you are free to use or improve upon.
-
-
-  ### AngularJS
-
-
-  * [Responsive image maps with editable
-  overlays](https://github.com/netbek/nb-picture-map-editor)
-
-  * [Scalable icons (SVG with PNG fallback)](https://github.com/netbek/nb-icon)
-
-
-  ### Drupal
-
-
-  * [Bower integration for modules and
-  themes](https://www.drupal.org/sandbox/netbek/2460163)
-
-  * [Prerender integration to serve JavaScript-rendered pages as
-  HTML](https://www.drupal.org/sandbox/netbek/2421967)
-
-  * [Bulk generation of image
-  styles](https://www.drupal.org/sandbox/netbek/2444745)
-
-
-  View my profiles on [GitHub](https://github.com/netbek) and
-  [Drupal.org](https://www.drupal.org/user/636644) for more projects.
-
+  My profiles on [GitHub](https://github.com/netbek) and
+  [Drupal.org](https://www.drupal.org/user/636644) list a few side projects in Node.js, AngularJS,
+  and Drupal (unmaintained), that anyone is free to use or improve upon.
 
   ## Reading list
 
-
   * [24 ways](https://24ways.org/) (front-end)
-
   * [A List Apart](http://alistapart.com/) (front-end)
-
-  * [Ben Nadel](http://www.bennadel.com/blog/) (front-end)
-
   * [Brand New](http://www.underconsideration.com/brandnew) (identity design)
-
   * [Bruce Schneier](https://www.schneier.com/) (security)
-
   * [CSS-Tricks](http://css-tricks.com/) (front-end)
-
-  * [David Walsh](http://davidwalsh.name/) (front-end)
-
-  * [Electronic Frontier Foundation](https://www.eff.org/deeplinks) (civil
-  liberties)
-
+  * [Electronic Frontier Foundation](https://www.eff.org/deeplinks) (civil liberties)
   * [Filament Group](http://filamentgroup.com/lab) (front-end)
-
   * [Hacker News](https://news.ycombinator.com/) (announcements)
-
   * [LWN](https://lwn.net/) (Linux)
-
   * [Open Rights Group](https://www.openrightsgroup.org/blog/) (civil liberties)
-
-  * [PHP Weekly](http://www.phpweekly.com/) (PHP)
-
-  * [Responsive Web Design Podcast](http://responsivewebdesign.com/podcast/)
-  (front-end)
-
-
-  ## About the site
-
-
-  Under the hood, everything is neatly tied together with
-  [Kohana](http://kohanaframework.org/). Content is written in [GitHub Flavored
-  Markdown](https://help.github.com/articles/github-flavored-markdown) and
-  presented using [AnimationFrame](https://github.com/kof/animation-frame),
-  [canvgc](https://github.com/nathan-muir/canvgc), [Grunt](http://gruntjs.com/),
-  [Modernizr](http://modernizr.com/),
-  [Normalize.css](https://github.com/necolas/normalize.css),
-  [Picturefill](https://github.com/scottjehl/picturefill),
-  [Respond.js](https://github.com/scottjehl/Respond),
-  [ScrollUp](https://github.com/markgoodyear/scrollup),
-  [Selectivizr](http://selectivizr.com/),
-  [svg2png](https://github.com/dbushell/grunt-svg2png) and
-  [svgstore](https://github.com/FWeinb/grunt-svgstore). Screen capture videos
-  were created with [VirtualDub](http://www.virtualdub.org/),
-  [UScreenCapture](http://www.umediaserver.net/umediaserver/download.html) and
-  [Ut video codec](http://umezawa.dyndns.info/archive/utvideo/).
-
-
-  Heading typeface is [Titillium](http://www.campivisivi.net/titillium/) by
-  Campi Visivi.
 metatags:
-  description: Hein Bekker is a web developer with 14 years of experience.
+  description: Hein Bekker is a web developer with 17 years of experience.

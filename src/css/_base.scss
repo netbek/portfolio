@@ -61,6 +61,10 @@ h6 {
   font-family: $font-family-heading;
   line-height: $line-height-heading;
   font-weight: bold;
+
+  &:not(:first-child) {
+    margin-top: 1.75em;
+  }
 }
 
 a {
@@ -755,7 +759,7 @@ img.mfp-img {
 
         a {
           display: block;
-          padding: ($header-padding-vert--large / 2) ($header-padding-horz--large / 2 * 2.5);
+          padding: ($header-padding-vert--large * .5) ($header-padding-horz--large * .5 * 2.5);
           text-decoration: none;
           color: $black;
           background-color: $white;
@@ -842,7 +846,7 @@ img.mfp-img {
 
       .menu-list-item {
         a {
-          padding: ($header-padding-vert--xlarge / 2) ($header-padding-horz--xlarge / 2 * 2.5);
+          padding: ($header-padding-vert--xlarge * .5) ($header-padding-horz--xlarge * .5 * 2.5);
         }
       }
     }
@@ -866,7 +870,7 @@ img.mfp-img {
 
       .menu-list-item {
         a {
-          padding: ($header-padding-vert--xxlarge / 2) ($header-padding-horz--xxlarge / 2 * 2.5);
+          padding: ($header-padding-vert--xxlarge * .5) ($header-padding-horz--xxlarge * .5 * 2.5);
         }
       }
     }

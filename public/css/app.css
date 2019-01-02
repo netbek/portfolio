@@ -317,7 +317,7 @@ html {
   font-size: 100%; }
 
 body {
-  font-family: "Liberation Sans", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
   color: #222;
@@ -355,6 +355,13 @@ h6 {
   font-family: "IBM Plex Serif", Georgia, "Times New Roman", Times, serif;
   line-height: 1.25;
   font-weight: bold; }
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child),
+  h5:not(:first-child),
+  h6:not(:first-child) {
+    margin-top: 1.75em; }
 
 a, a:visited {
   color: #F9274B;
@@ -1255,12 +1262,10 @@ img.mfp-img {
 .scene--work .field--title {
   line-height: 1.25; }
 
-.scene--work .field--body h3 {
-  margin-top: 2em; }
-  .scene--work .field--body h3 + p {
-    margin-top: 0;
-    font-size: 0.875em;
-    line-height: 1.25; }
+.scene--work .field--body h3 + p {
+  margin-top: 0;
+  font-size: 0.875em;
+  line-height: 1.25; }
 
 .scene--work .lightbox-list {
   list-style: none;

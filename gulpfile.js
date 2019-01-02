@@ -45,41 +45,34 @@ gulp.task('cname', () =>
   })
 );
 
-// Deletes all HTML
+// HTML
 gulp.task('html-clean', () => Promise.resolve());
+gulp.task('html-build', () =>
+  loadData()
+    // Build pages
+    .then(data =>
+      Promise.mapSeries(Object.keys(data.pages), slug => {
+        const {[slug]: page} = data.pages;
+        const template = path.join(gulpConfig.src.templates, slug + '.njk');
+        const uri = path.join(slug);
+        const context = {data, page};
 
-// Creates pages HTML
-gulp.task('html-build-pages', () =>
-  loadData().then(data =>
-    Promise.mapSeries(Object.keys(data.pages), slug => {
-      const {[slug]: page} = data.pages;
-      const template = path.join(gulpConfig.src.templates, slug + '.njk');
-      const uri = path.join(slug);
-      const context = {data, page};
+        return renderPage(template, uri, context);
+      }).then(() => data)
+    )
+    // Build projects
+    .then(data =>
+      Promise.mapSeries(Object.keys(data.projects), slug => {
+        const {[slug]: page} = data.projects;
+        const template = path.join(gulpConfig.src.templates, 'project.njk');
+        const uri = path.join('work', slug);
+        const context = {data, page};
 
-      return renderPage(template, uri, context);
-    })
-  )
+        return renderPage(template, uri, context);
+      })
+    )
 );
-
-// Creates projects HTML
-gulp.task('html-build-projects', () =>
-  loadData().then(data =>
-    Promise.mapSeries(Object.keys(data.projects), slug => {
-      const {[slug]: page} = data.projects;
-      const template = path.join(gulpConfig.src.templates, 'project.njk');
-      const uri = path.join('work', slug);
-      const context = {data, page};
-
-      return renderPage(template, uri, context);
-    })
-  )
-);
-
-gulp.task(
-  'html',
-  gulp.series('html-clean', 'html-build-pages', 'html-build-projects')
-);
+gulp.task('html', gulp.series('html-clean', 'html-build'));
 
 // CSS
 gulp.task('css-clean', () => fs.removeAsync(gulpConfig.dist.css));
@@ -262,8 +255,8 @@ gulp.task('watch:livereload', function() {
     // HTML and data
     {
       files: [
-        path.join('src/data', '*.yaml'),
-        path.join(gulpConfig.src.templates, '*.njk')
+        path.join('src/data', '**/*.yaml'),
+        path.join(gulpConfig.src.templates, '**/*.njk')
       ],
       tasks: ['html']
     }

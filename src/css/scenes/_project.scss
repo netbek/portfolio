@@ -12,14 +12,10 @@
   }
 
   .field--body {
-    h3 {
-      margin-top: 2em;
-
-      + p {
-        margin-top: 0;
-        font-size: $font-size-small;
-        line-height: $line-height-heading;
-      }
+    h3 + p {
+      margin-top: 0;
+      font-size: $font-size-small;
+      line-height: $line-height-heading;
     }
   }
 
