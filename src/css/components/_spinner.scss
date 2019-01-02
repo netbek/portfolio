@@ -6,5 +6,12 @@
   width: 1em;
   height: 1em;
   border: 2px solid $black;
-  animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+
+.spinner--xy {
+  animation: sk-rotate-plane-xy 1.2s infinite ease-in-out;
+}
+
+.spinner--yx {
+  animation: sk-rotate-plane-yx 1.2s infinite ease-in-out;
 }

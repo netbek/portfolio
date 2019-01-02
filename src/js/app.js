@@ -49,6 +49,12 @@ function onLoad(cb) {
   }, 1000 / 60);
 }
 
+function randomizeSpinner() {
+  $spinner
+    .removeClass('spinner--xy spinner--yx')
+    .addClass(Math.random() <= 0.5 ? 'spinner--xy' : 'spinner--yx');
+}
+
 function showSpinner() {
   TweenMax.killTweensOf($spinner);
 
@@ -265,6 +271,7 @@ onLoad(() => {
     });
 
     if (SPINNER) {
+      randomizeSpinner();
       showSpinner();
 
       $scene.imagesLoaded().always(() => {
@@ -308,6 +315,7 @@ onLoad(() => {
       .fitVids();
 
     if (SPINNER) {
+      randomizeSpinner();
       showSpinner();
 
       $scene.imagesLoaded().always(() => {

@@ -1,5 +1,5 @@
 // https://github.com/tobiasahlin/SpinKit/blob/d45b25cf9f63c8c5fe7c1115ab2f921bc924319b/scss/spinners/1-rotating-plane.scss
-@keyframes sk-rotatePlane {
+@keyframes sk-rotate-plane-yx {
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
@@ -8,5 +8,17 @@
   }
   100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@keyframes sk-rotate-plane-xy {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(0deg) rotateY(-180.1deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-179.9deg) rotateY(-180deg);
   }
 }

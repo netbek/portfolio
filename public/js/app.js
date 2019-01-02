@@ -125,6 +125,10 @@ function onLoad(cb) {
   }, 1000 / 60);
 }
 
+function randomizeSpinner() {
+  $spinner.removeClass('spinner--xy spinner--yx').addClass(Math.random() <= 0.5 ? 'spinner--xy' : 'spinner--yx');
+}
+
 function showSpinner() {
   _TweenMax2.default.killTweensOf($spinner);
 
@@ -299,6 +303,7 @@ onLoad(function () {
     });
 
     if (SPINNER) {
+      randomizeSpinner();
       showSpinner();
 
       $scene.imagesLoaded().always(function () {
@@ -341,6 +346,7 @@ onLoad(function () {
     (0, _jquery2.default)('iframe[src*="youtube"]').parent().fitVids();
 
     if (SPINNER) {
+      randomizeSpinner();
       showSpinner();
 
       $scene.imagesLoaded().always(function () {
