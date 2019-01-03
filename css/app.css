@@ -1229,8 +1229,14 @@ img.mfp-img {
   .scene--info a:focus, .scene--info a:hover {
     text-decoration: none; }
   @media (min-width: 63em) {
-    .scene--info .region--main > div {
-      font-size: 1.125em; } }
+    .scene--info .field--body {
+      font-size: 1.125em; }
+      .scene--info .field--body p {
+        margin-left: 5%; }
+      .scene--info .field--body ul,
+      .scene--info .field--body ol {
+        margin-left: 5%;
+        padding-left: 1.5em; } }
 
 @keyframes sk-rotate-plane-yx {
   0% {
