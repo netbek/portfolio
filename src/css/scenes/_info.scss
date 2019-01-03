@@ -18,9 +18,17 @@
   }
 
   @include breakpoint($screen-large) {
-    .region--main {
-      > div {
-        font-size: 1.125em;
+    .field--body {
+      font-size: 1.125em;
+
+      p {
+        margin-left: 5%;
+      }
+
+      ul,
+      ol {
+        margin-left: 6%;
+        padding-left: 1.5em;
       }
     }
   }
