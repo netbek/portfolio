@@ -4,8 +4,8 @@ import TweenMax from 'gsap/TweenMax';
 import picturefill from 'picturefill/dist/picturefill';
 import parseUrl from './utils/parseUrl';
 
-const SPINNER = 0 ;
-const TRANSITION =0;
+const SPINNER = true;
+const TRANSITION = true;
 
 const {hostNorm: localhost} = parseUrl(window.location.href);
 
