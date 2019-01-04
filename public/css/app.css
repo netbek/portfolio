@@ -402,9 +402,9 @@ button .icon {
   display: block;
   position: relative;
   z-index: 10;
-  padding: 1em 0; }
+  padding: 1em 0 0.75em; }
   .region--header .masthead {
-    margin: 0 auto;
+    margin: 0 auto .625em;
     padding: 0; }
     .region--header .masthead .grid {
       display: -webkit-box;
@@ -498,25 +498,27 @@ button .icon {
           text-decoration: underline; }
   .region--header .menu-list {
     display: none;
-    list-style: disc;
-    margin: 1em 0 0;
-    padding-top: 0;
-    padding-bottom: 0; }
+    list-style: none;
+    margin: 0;
+    padding: 0; }
   .region--header .menu-list-item {
-    list-style: disc;
-    margin: 0; }
+    list-style: none;
+    margin: 0;
+    padding: 0 1em; }
     .region--header .menu-list-item a {
       display: block;
-      padding: 0.0625em 0;
+      padding: .375em 0;
+      border-top: 1px dashed transparent;
       text-decoration: none; }
       .region--header .menu-list-item a:hover {
         text-decoration: underline; }
   .region--header .accordion__item-header {
-    padding: 0.125em 0; }
+    padding: .5em 0; }
     .region--header .accordion__item-header:hover {
       text-decoration: underline; }
   .region--header .accordion__item-body {
-    padding: .5em 1em .25em; }
+    margin-top: -.25em;
+    padding: 0 1em .75em; }
   .region--header .accordion__item-button {
     top: 50%;
     margin-top: -.5em;
@@ -567,6 +569,7 @@ button .icon {
     .region--header.dark .masthead .menu-toggle:hover .icon {
       fill: #FFE900; }
     .region--header.dark .menu-list-item a {
+      border-top-color: rgba(255, 255, 255, 0.2);
       color: #FFF; }
       .region--header.dark .menu-list-item a:hover {
         color: #FFE900; }
@@ -592,6 +595,7 @@ button .icon {
     .region--header.light .masthead .menu-toggle:hover .icon {
       fill: #FFE900; }
     .region--header.light .menu-list-item a {
+      border-top-color: rgba(0, 0, 0, 0.2);
       color: #222;
       text-decoration: none; }
       .region--header.light .menu-list-item a:hover {
@@ -609,6 +613,8 @@ button .icon {
 .scene:not(.scene--front) .region--header {
   padding-left: 5%;
   padding-right: 5%; }
+  .scene:not(.scene--front) .region--header .menu-list-item:first-child a {
+    border-top: 0; }
 
 .region--main {
   display: block;
@@ -635,21 +641,24 @@ button .icon {
     margin: 0 .375em;
     padding: 0; }
     .region--footer .contact-list-item a {
-      display: block;
-      width: 2em;
-      height: 2em;
+      display: inline-block;
       padding: .5em;
       -webkit-border-radius: 50%;
               border-radius: 50%;
-      font-size: 1.25em;
+      text-align: center;
       background-color: #222; }
       .region--footer .contact-list-item a .icon {
         display: block;
+        font-size: 1.25em;
         fill: #FFF; }
       .region--footer .contact-list-item a:hover {
         background-color: #FFE900; }
         .region--footer .contact-list-item a:hover .icon {
           fill: #222; }
+    .region--footer .contact-list-item--github a {
+      padding: .3125em; }
+      .region--footer .contact-list-item--github a .icon {
+        font-size: 1.6em; }
 
 #door-wrapper {
   display: none;
@@ -831,7 +840,8 @@ img.mfp-img {
         text-decoration: none;
         color: #222;
         background-color: #FFF;
-        font-size: 1.125em; }
+        font-size: 1.125em;
+        border-top: 0; }
         .scene:not(.scene--front) .region--header .menu-list-item a:hover {
           text-decoration: underline;
           color: #222; }
@@ -901,15 +911,7 @@ img.mfp-img {
             transform: perspective(120px) rotateX(-179.9deg) rotateY(-180deg); } }
 
 .scene--front .region--header .masthead {
-  margin: 0 auto 1em;
   padding: 0 1em; }
-
-.scene--front .region--header .menu-list {
-  margin: 0 0 .75em;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
 
 .scene--front .project-list-wrapper {
   margin: 0 auto; }
@@ -957,9 +959,9 @@ img.mfp-img {
       width: 100%;
       height: auto;
       opacity: 0;
-      -webkit-transition: opacity .150s ease;
-      -o-transition: opacity .150s ease;
-      transition: opacity .150s ease; }
+      -webkit-transition: opacity .20s ease;
+      -o-transition: opacity .20s ease;
+      transition: opacity .20s ease; }
   .scene--front .project__label {
     cursor: pointer;
     display: block;
@@ -1036,11 +1038,14 @@ img.mfp-img {
     position: fixed;
     top: 3.48047em;
     left: 3.48047em;
-    width: 16em; }
-    .scene--front .region--header .masthead {
-      margin: 0 auto 1.25em; }
+    width: 16em;
+    -webkit-border-radius: .25em;
+            border-radius: .25em;
+    opacity: .9; }
+    .scene--front .region--header .menu-toggle {
+      display: none; }
     .scene--front .region--header .menu-list {
-      margin: 0 0 1em; }
+      display: block; }
     .scene--front .region--header .filter-list-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 50%;

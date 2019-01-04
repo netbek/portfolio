@@ -99,27 +99,6 @@
       </div>
 
       <nav role="navigation">
-        <ul class="menu-list">
-          {% if page.isFront %}
-            <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
-              <a href="/info">About</a>
-            </li>
-            <li class="menu-list-item menu-list-item--contact">
-              <a href="mailto:{{ data.settings.contact.email }}">Contact</a>
-            </li>
-          {% else %}
-            <li class="menu-list-item menu-list-item--work {% if page.classNames|includes('work') %}active{% endif %}">
-              <a href="/">Work</a>
-            </li>
-            <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
-              <a href="/info">About</a>
-            </li>
-            <li class="menu-list-item menu-list-item--contact">
-              <a href="mailto:{{ data.settings.contact.email }}">Contact</a>
-            </li>
-          {% endif %}
-        </ul>
-
         {% if page.isFront %}
           {% set accordion_item_filter %}
             <ul class="filter-list">
@@ -139,13 +118,28 @@
               id='accordion-1',
               items=[
                 {
-                  title: 'Work by Category',
+                  title: 'Filter by category',
                   body: accordion_item_filter
                 }
               ]
             )
           }}
         {% endif %}
+
+        <ul class="menu-list">
+          {% if page.isFront %}
+            <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
+              <a href="/info">About</a>
+            </li>
+          {% else %}
+            <li class="menu-list-item menu-list-item--work {% if page.classNames|includes('work') %}active{% endif %}">
+              <a href="/">Work</a>
+            </li>
+            <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
+              <a href="/info">About</a>
+            </li>
+          {% endif %}
+        </ul>
       </nav>
     </header>
 
@@ -155,13 +149,16 @@
 
     <footer class="region--footer">
       <ul class="contact-list">
-        <li class="contact-list-item">
-          <a href="{{ data.settings.contact.twitter }}" target="_blank" title="Twitter">{{ 'logo-twitter'|icon|safe }}</a>
+        <li class="contact-list-item contact-list-item--github">
+          <a href="{{ data.settings.contact.github }}" target="_blank" title="GitHub">{{ 'logo-github'|icon|safe }}</a>
         </li>
-        <li class="contact-list-item">
+        <li class="contact-list-item contact-list-item--linkedin">
           <a href="{{ data.settings.contact.linkedin }}" target="_blank" title="LinkedIn">{{ 'logo-linkedin'|icon|safe }}</a>
         </li>
-        <li class="contact-list-item">
+        <li class="contact-list-item contact-list-item--linkedin">
+          <a href="{{ data.settings.contact.twitter }}" target="_blank" title="Twitter">{{ 'logo-twitter'|icon|safe }}</a>
+        </li>
+        <li class="contact-list-item contact-list-item--email">
           <a href="mailto:{{ data.settings.contact.email }}" title="Email">{{ 'md-mail'|icon|safe }}</a>
         </li>
       </ul>

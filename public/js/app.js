@@ -89,8 +89,8 @@ var _parseUrl4 = _interopRequireDefault(_parseUrl3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SPINNER = true;
-var TRANSITION = true;
+var SPINNER = 0;
+var TRANSITION = 0;
 
 var _parseUrl = (0, _parseUrl4.default)(window.location.href),
     localhost = _parseUrl.hostNorm;

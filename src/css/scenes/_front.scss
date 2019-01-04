@@ -3,16 +3,7 @@
 .scene--front {
   .region--header {
     .masthead {
-      margin: 0 auto 1em;
       padding: 0 1em;
-    }
-
-    .menu-list {
-      margin: 0 0 .75em;
-      padding-top: .5em;
-      padding-bottom: .5em;
-      border-top: 1px solid rgba(white, .15);
-      border-bottom: 1px solid rgba(white, .15);
     }
   }
 
@@ -59,7 +50,7 @@
         width: 100%;
         height: auto;
         opacity: 0;
-        transition: opacity .150s ease;
+        transition: opacity .20s ease;
       }
     }
 
@@ -164,13 +155,15 @@
       top: $region-padding-vert--large;
       left: $region-padding-vert--large;
       width: 16em;
+      border-radius: .25em;
+      opacity: .9;
 
-      .masthead {
-        margin: 0 auto 1.25em;
+      .menu-toggle {
+        display: none;
       }
 
       .menu-list {
-        margin: 0 0 1em;
+        display: block;
       }
 
       .filter-list-item {
