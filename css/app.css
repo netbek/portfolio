@@ -1040,9 +1040,9 @@ img.mfp-img {
     top: 3.48047em;
     left: 3.48047em;
     width: 16em;
-    -webkit-border-radius: .25em;
-            border-radius: .25em;
-    opacity: .9; }
+    -webkit-border-radius: .375em;
+            border-radius: .375em;
+    background-color: rgba(0, 0, 0, 0.85); }
     .scene--front .region--header .menu-toggle {
       display: none; }
     .scene--front .region--header .menu-list {
