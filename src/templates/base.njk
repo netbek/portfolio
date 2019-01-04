@@ -70,77 +70,79 @@
     {% endif %}
 
     <header class="region--header {% if page.isFront %}dark{% else %}light{% endif %}">
-      <div class="masthead">
-        <div class="grid">
-          <div class="cell cell--1">
-            {% if page.isFront %}
-              <span class="mast">
-            {% else %}
-              <a class="mast" href="/" title="Home">
-            {% endif %}
-                <span class="logo">{{ 'logo-netbek'|icon|safe }}</span>
-                <span class="site">
-                  <span class="site__name">{{ data.settings.site.name }}</span>
-                  {# <span class="site__slogan">{{ data.settings.site.slogan }}</span> #}
+      <div class="constraint">
+        <div class="masthead">
+          <div class="grid">
+            <div class="cell cell--1">
+              {% if page.isFront %}
+                <span class="mast">
+              {% else %}
+                <a class="mast" href="/" title="Home">
+              {% endif %}
+                  <span class="logo">{{ 'logo-netbek'|icon|safe }}</span>
+                  <span class="site">
+                    <span class="site__name">{{ data.settings.site.name }}</span>
+                    {# <span class="site__slogan">{{ data.settings.site.slogan }}</span> #}
+                  </span>
+              {% if page.isFront %}
                 </span>
-            {% if page.isFront %}
-              </span>
-            {% else %}
-              </a>
-            {% endif %}
-          </div>
-          <div class="cell cell--2">
-            <label class="menu-toggle" for="menu">
-              {{ 'ios-menu'|icon|safe }}
-              {{ 'ios-close'|icon|safe }}
-            </label>
+              {% else %}
+                </a>
+              {% endif %}
+            </div>
+            <div class="cell cell--2">
+              <label class="menu-toggle" for="menu">
+                {{ 'ios-menu'|icon|safe }}
+                {{ 'ios-close'|icon|safe }}
+              </label>
+            </div>
           </div>
         </div>
-      </div>
 
-      <nav role="navigation">
-        {% if page.isFront %}
-          {% set accordion_item_filter %}
-            <ul class="filter-list">
-              {% for tag in data.tags %}
-                <li class="filter-list-item">
-                  <label class="checkbox" for="filter-{{ tag|slugify }}">
-                    <span class="checkbox__box"></span>
-                    <span class="checkbox__label">{{ tag }}</span>
-                  </label>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endset %}
-
-          {{
-            accordion(
-              id='accordion-1',
-              items=[
-                {
-                  title: 'Work: 2002 – 2015',
-                  body: accordion_item_filter
-                }
-              ]
-            )
-          }}
-        {% endif %}
-
-        <ul class="menu-list">
+        <nav role="navigation">
           {% if page.isFront %}
-            <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
-              <a href="/info">About</a>
-            </li>
-          {% else %}
-            <li class="menu-list-item menu-list-item--work {% if page.classNames|includes('work') %}active{% endif %}">
-              <a href="/">Work</a>
-            </li>
-            <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
-              <a href="/info">About</a>
-            </li>
+            {% set accordion_item_filter %}
+              <ul class="filter-list">
+                {% for tag in data.tags %}
+                  <li class="filter-list-item">
+                    <label class="checkbox" for="filter-{{ tag|slugify }}">
+                      <span class="checkbox__box"></span>
+                      <span class="checkbox__label">{{ tag }}</span>
+                    </label>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endset %}
+
+            {{
+              accordion(
+                id='accordion-1',
+                items=[
+                  {
+                    title: 'Work: 2002 – 2015',
+                    body: accordion_item_filter
+                  }
+                ]
+              )
+            }}
           {% endif %}
-        </ul>
-      </nav>
+
+          <ul class="menu-list">
+            {% if page.isFront %}
+              <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
+                <a href="/info">About</a>
+              </li>
+            {% else %}
+              <li class="menu-list-item menu-list-item--work {% if page.classNames|includes('work') %}active{% endif %}">
+                <a href="/">Work</a>
+              </li>
+              <li class="menu-list-item menu-list-item--info {% if page.classNames|includes('info') %}active{% endif %}">
+                <a href="/info">About</a>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="region--main">
@@ -148,20 +150,22 @@
     </main>
 
     <footer class="region--footer">
-      <ul class="contact-list">
-        <li class="contact-list-item contact-list-item--github">
-          <a href="{{ data.settings.contact.github }}" target="_blank" title="GitHub">{{ 'logo-github'|icon|safe }}</a>
-        </li>
-        <li class="contact-list-item contact-list-item--linkedin">
-          <a href="{{ data.settings.contact.linkedin }}" target="_blank" title="LinkedIn">{{ 'logo-linkedin'|icon|safe }}</a>
-        </li>
-        <li class="contact-list-item contact-list-item--linkedin">
-          <a href="{{ data.settings.contact.twitter }}" target="_blank" title="Twitter">{{ 'logo-twitter'|icon|safe }}</a>
-        </li>
-        <li class="contact-list-item contact-list-item--email">
-          <a href="mailto:{{ data.settings.contact.email }}" title="Email">{{ 'md-mail'|icon|safe }}</a>
-        </li>
-      </ul>
+      <div class="constraint">
+        <ul class="contact-list">
+          <li class="contact-list-item contact-list-item--github">
+            <a href="{{ data.settings.contact.github }}" target="_blank" title="GitHub">{{ 'logo-github'|icon|safe }}</a>
+          </li>
+          <li class="contact-list-item contact-list-item--linkedin">
+            <a href="{{ data.settings.contact.linkedin }}" target="_blank" title="LinkedIn">{{ 'logo-linkedin'|icon|safe }}</a>
+          </li>
+          <li class="contact-list-item contact-list-item--linkedin">
+            <a href="{{ data.settings.contact.twitter }}" target="_blank" title="Twitter">{{ 'logo-twitter'|icon|safe }}</a>
+          </li>
+          <li class="contact-list-item contact-list-item--email">
+            <a href="mailto:{{ data.settings.contact.email }}" title="Email">{{ 'md-mail'|icon|safe }}</a>
+          </li>
+        </ul>
+      </div>
     </footer>
 
     <div id="door-wrapper">

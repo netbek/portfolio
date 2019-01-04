@@ -87,7 +87,13 @@ button {
 }
 
 .constraint {
-  max-width: 48em;
+  margin: 0 auto;
+  max-width: $constraint-page;
+
+  .constraint {
+    margin: 0;
+    max-width: $constraint-text;
+  }
 }
 
 .hidden-checkbox {
@@ -713,12 +719,6 @@ img.mfp-img {
   .region--footer {
     padding: max($region-padding-vert, ($region-padding-vert--medium / 2)) 5% $region-padding-vert--medium;
   }
-
-  .region--footer {
-    .contact-list {
-      text-align: right;
-    }
-  }
 }
 
 @include breakpoint($screen-large) {
@@ -730,11 +730,14 @@ img.mfp-img {
     }
 
     .region--header {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: flex-end;
       padding-top: 0;
       padding-bottom: 0;
+
+      .constraint {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+      }
 
       .masthead {
         flex: 1 1 100%;
@@ -866,7 +869,7 @@ img.mfp-img {
 
       .menu-list-item {
         a {
-          padding: ($header-padding-vert--xlarge * .5) ($header-padding-horz--xlarge * .5 * 2.5);
+          padding: ($header-padding-vert--xlarge * .4) ($header-padding-horz--xlarge * .4 * 2.5);
         }
       }
     }
@@ -890,7 +893,7 @@ img.mfp-img {
 
       .menu-list-item {
         a {
-          padding: ($header-padding-vert--xxlarge * .5) ($header-padding-horz--xxlarge * .5 * 2.5);
+          padding: ($header-padding-vert--xxlarge * .4) ($header-padding-horz--xxlarge * .4 * 2.5);
         }
       }
     }

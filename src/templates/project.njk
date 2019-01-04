@@ -2,13 +2,15 @@
 
 <article>
   <div class="constraint">
-    <header>
-      <h1 class="field--title">{{ page.title }}</h1>
-    </header>
+    <div class="constraint">
+      <header>
+        <h1 class="field--title">{{ page.title }}</h1>
+      </header>
 
-    {% if page.body %}
-      <div class="field--body">{{ page.body|markdown|safe }}</div>
-    {% endif %}
+      {% if page.body %}
+        <div class="field--body">{{ page.body|markdown|safe }}</div>
+      {% endif %}
+    </div>
   </div>
 
   {% if page.media|length %}
