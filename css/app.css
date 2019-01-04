@@ -376,7 +376,7 @@ button .icon {
 
 .constraint {
   margin: 0 auto;
-  max-width: 80em; }
+  max-width: 72em; }
   .constraint .constraint {
     margin: 0;
     max-width: 48em; }
@@ -406,9 +406,9 @@ button .icon {
   display: block;
   position: relative;
   z-index: 10;
-  padding: 1em 0 0.75em; }
+  padding: 1em 0; }
   .region--header .masthead {
-    margin: 0 auto .625em;
+    margin: 0 auto 1em;
     padding: 0; }
     .region--header .masthead .grid {
       display: -webkit-box;
@@ -546,7 +546,8 @@ button .icon {
             flex-flow: row wrap;
     list-style: none;
     margin: -.125em 0;
-    padding: 0; }
+    padding: 0;
+    max-width: 32em; }
   .region--header .filter-list-item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
@@ -617,6 +618,10 @@ button .icon {
 .scene:not(.scene--front) .region--header {
   padding-left: 5%;
   padding-right: 5%; }
+  .scene:not(.scene--front) .region--header .masthead {
+    margin: 0 auto; }
+  .scene:not(.scene--front) .region--header .menu-list {
+    margin: 1em auto 0; }
   .scene:not(.scene--front) .region--header .menu-list-item:first-child a {
     border-top: 0; }
 
