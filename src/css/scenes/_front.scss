@@ -156,8 +156,8 @@
       top: $region-padding-vert--large;
       left: $region-padding-vert--large;
       width: 16em;
-      border-radius: .25em;
-      opacity: .9;
+      border-radius: .375em;
+      background-color: rgba(black, .85);
 
       .menu-toggle {
         display: none;
