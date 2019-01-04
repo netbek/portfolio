@@ -123,10 +123,10 @@ button {
   display: block;
   position: relative;
   z-index: 10;
-  padding: 1em 0 (1em - .25em);
+  padding: 1em 0;
 
   .masthead {
-    margin: 0 auto .625em;
+    margin: 0 auto 1em;
     padding: 0;
 
     .grid {
@@ -290,6 +290,7 @@ button {
     list-style: none;
     margin: -.125em 0;
     padding: 0;
+    max-width: 32em;
   }
 
   .filter-list-item {
@@ -476,6 +477,14 @@ button {
   .region--header {
     padding-left: 5%;
     padding-right: 5%;
+
+    .masthead {
+      margin: 0 auto;
+    }
+
+    .menu-list {
+      margin: 1em auto 0;
+    }
 
     .menu-list-item:first-child {
       a {
