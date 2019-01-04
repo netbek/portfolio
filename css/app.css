@@ -375,7 +375,11 @@ button .icon {
   pointer-events: none; }
 
 .constraint {
-  max-width: 48em; }
+  margin: 0 auto;
+  max-width: 80em; }
+  .constraint .constraint {
+    margin: 0;
+    max-width: 48em; }
 
 .hidden-checkbox {
   border: 0;
@@ -770,9 +774,7 @@ img.mfp-img {
   .region--main {
     padding: 3.09375em 5%; }
   .region--footer {
-    padding: 1.54688em 5% 3.09375em; }
-  .region--footer .contact-list {
-    text-align: right; } }
+    padding: 1.54688em 5% 3.09375em; } }
 
 @media (min-width: 63em) {
   .scene:not(.scene--front) #menu:checked ~ .region--header .menu-list {
@@ -781,21 +783,22 @@ img.mfp-img {
     display: -ms-flexbox;
     display: flex; }
   .scene:not(.scene--front) .region--header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row nowrap;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     padding-top: 0;
     padding-bottom: 0; }
+    .scene:not(.scene--front) .region--header .constraint {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: row nowrap;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
     .scene:not(.scene--front) .region--header .masthead {
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 100%;
@@ -872,7 +875,7 @@ img.mfp-img {
     .scene:not(.scene--front) .region--header .masthead .site__name {
       font-size: 1.25em; }
   .scene:not(.scene--front) .region--header .menu-list-item a {
-    padding: 1.08765em 2.8125em; }
+    padding: 0.87012em 2.25em; }
   .region--main {
     padding: 3.48047em 5%; }
   .region--footer {
@@ -882,7 +885,7 @@ img.mfp-img {
   .scene:not(.scene--front) .region--header .masthead {
     padding: 2.17529em 0; }
   .scene:not(.scene--front) .region--header .menu-list-item a {
-    padding: 1.08765em 3.16406em; }
+    padding: 0.87012em 2.53125em; }
   .region--main {
     padding: 3.48047em 5%; }
   .region--footer {
