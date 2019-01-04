@@ -17,14 +17,19 @@ module.exports = () =>
     .then(files =>
       Promise.mapSeries(files, file =>
         fs.readFileAsync(file, 'utf-8').then(data => {
-          const basename = path.basename(file, path.extname(file));
+          const slug = path.basename(file, path.extname(file));
+          const isFront = ~['front', 'home', 'index'].indexOf(slug);
           const dirname = path.dirname(
             file.substring(gulpConfig.src.data.length)
           );
-          const key = dirname === '.' ? basename : dirname + '.' + basename;
+          const key = dirname === '.' ? slug : dirname + '.' + slug;
           const value = yaml.safeLoad(data);
 
+          value.isFront = isFront;
+
           if (dirname === 'projects') {
+            value.url = '/work/' + slug;
+
             // Normalise media files
             return Promise.mapSeries(value.media, d => {
               const scheme = penrose.getScheme(d.uri);
@@ -75,6 +80,12 @@ module.exports = () =>
             }).then(media => [key, {...value, media}]);
           }
 
+          if (isFront) {
+            value.url = '/';
+          } else {
+            value.url = '/' + slug;
+          }
+
           return [key, value];
         })
       )
@@ -85,8 +96,8 @@ module.exports = () =>
       const {'projects-list': projectsList, projects} = data;
 
       projectsList.forEach((name, i) => {
-        const previous = _.get(projectsList, i - 1);
-        const next = _.get(projectsList, i + 1);
+        const previous = _.get(projects, `${_.get(projectsList, i - 1)}.url`);
+        const next = _.get(projects, `${_.get(projectsList, i + 1)}.url`);
 
         projects[name].pagination = {
           previous,

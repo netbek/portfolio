@@ -88,7 +88,7 @@
     <ul class="pagination-list">
       {% if page.pagination.previous %}
         <li class="pagination-list-item">
-          <a href="/work/{{ page.pagination.previous }}">
+          <a href="{{ page.pagination.previous }}">
             {{ 'ios-arrow-back'|icon|safe }}
             <span>Previous</span>
           </a>
@@ -96,7 +96,7 @@
       {% endif %}
       {% if page.pagination.next %}
         <li class="pagination-list-item">
-          <a href="/work/{{ page.pagination.next }}">
+          <a href="{{ page.pagination.next }}">
             <span>Next</span>
             {{ 'ios-arrow-forward'|icon|safe }}
           </a>

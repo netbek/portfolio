@@ -11,8 +11,10 @@ module.exports = (template, uri, context = {}) => {
   const pageTemplate = path.join('src/templates', 'base.njk');
   const uriSegments = uri.split(path.sep);
   const slug = _.last(uriSegments);
-  const isFront = ~['front', 'home', 'index'].indexOf(slug);
-  const url = '/' + _.trim(slug, '/');
+  const {
+    page: {isFront},
+    page
+  } = context;
 
   let pathSegments = [gulpConfig.dist.base];
   if (uriSegments.length > 1) {
@@ -31,15 +33,14 @@ module.exports = (template, uri, context = {}) => {
   );
 
   const dest = path.join(...pathSegments);
-  const {page} = context;
 
   return renderPromise(template, {
     ...context,
-    page: {...page, slug, url, isFront, classNames}
+    page: {...page, slug, classNames}
   }).then(content =>
     renderPromise(pageTemplate, {
       ...context,
-      page: {...page, slug, url, isFront, classNames, content}
+      page: {...page, slug, classNames, content}
     }).then(html => fs.outputFileAsync(dest, html, 'utf-8'))
   );
 };

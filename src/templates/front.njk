@@ -9,7 +9,7 @@
       >
         <div class="project">
           <div class="project__thumb">
-            <a href="/work/{{ slug }}">
+            <a href="{{ item.url }}">
               <picture>
                 <source srcset="{{ item.header[0].uri|style_url('240-webp') }} 1x, {{ item.header[0].uri|style_url('480-webp') }} 2x" type="image/webp" />
                 <img srcset="{{ item.header[0].uri|style_url('240-png') }} 1x, {{ item.header[0].uri|style_url('480-png') }} 2x" alt="" />
