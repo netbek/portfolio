@@ -4,13 +4,15 @@ body: |
   ## Present
 
   I work as a front-end developer at [Siyavula Education](http://siyavulaeducation.com), helping to
-  create high-quality learning experiences in Mathematics and Physical Sciences.
+  create high-quality learning experiences in Mathematics and Physical Sciences, and monitoring and
+  evaluation tools for teachers.
 
-  As part of a small team, I lead front-end development, create and maintain UI components,
-  and guide and review front-end work by the full-stack team. Sometimes,
-  I design and develop admin and reporting dashboards, and data visualisations, too.
+  Since 2016, I lead front-end development, creating and maintaining UI components, and
+  guiding and reviewing front-end work by our full-stack team. My focus has gradually shifted
+  towards data analysis tools: designing and implementing reports and dashboards for classroom and
+  internal use (full-stack), and reviewing contributions from our data science team.
 
-  _Stack: React, Redux, Vega, Node.js, Python, Pyramid, Pandas_
+  _Stack: React, Redux, Node.js, Python, Pandas, Pyramid, Jupyter, Vega_
 
   ## Past
 
@@ -49,4 +51,4 @@ body: |
   ## Contact
   [Email hein@netbek.co.za](mailto:hein@netbek.co.za).
 metatags:
-  description: Hein Bekker is a web developer with 17 years of experience.
+  description: Hein Bekker is a web developer with 18 years of experience.
