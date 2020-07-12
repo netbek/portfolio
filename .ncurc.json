@@ -1,0 +1,16 @@
+{
+  "reject": [
+    "bluebird",
+    "bourbon",
+    "eslint-scope",
+    "event-stream",
+    "flag-icon-css",
+    "hard-source-webpack-plugin",
+    "json-sass",
+    "marked",
+    "victory"
+  ],
+  "removeRange": true,
+  "semverLevel": "major",
+  "upgrade": true
+}
