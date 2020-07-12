@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. Install NVM and Node 8.x:
+1. Install NVM and Node 10.x:
 
     ```shell
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
