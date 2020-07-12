@@ -7,12 +7,12 @@ body: |
   create high-quality learning experiences in Mathematics and Physical Sciences, and monitoring and
   evaluation tools for teachers.
 
-  Since 2016, I lead front-end development, creating and maintaining UI components, and
-  guiding and reviewing front-end work by our full-stack team. My focus has gradually shifted
-  to include data analysis: designing and implementing reports and dashboards for classroom and
-  internal use (full-stack), and reviewing contributions from our data science team.
+  Since 2016, I lead front-end development, creating and maintaining UI components, guiding and
+  reviewing front-end work by our full-stack team, and QA testing. My focus has expanded to include
+  full-stack development: designing and implementing reports and dashboards for classroom and
+  internal use, and reviewing contributions from our data analysis team.
 
-  _Stack: React, Redux, Node.js, Python, Pandas, Pyramid, Jupyter, Vega_
+  _Stack: JavaScript, React, Redux, Node.js, Python, Pandas, PostgreSQL, Vega_
 
   ## Past
 
