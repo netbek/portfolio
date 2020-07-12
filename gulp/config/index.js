@@ -14,7 +14,7 @@ const livereloadBrowser = _.get(browsers, os.platform(), browsers.default);
 
 module.exports = {
   autoprefixer: {
-    browsers: browserslist
+    overrideBrowserslist: browserslist
   },
   css: {
     params: {
@@ -162,10 +162,10 @@ module.exports = {
   },
   vendor: {
     paths: [
-      'FitVids.js/jquery.fitvids.js',
       'gsap/src/minified/TweenMax.min.js',
       'imagesloaded/imagesloaded.pkgd.min.js',
       'jquery/dist/jquery.slim.min.js',
+      'jquery-fitvids/jquery.fitvids.js',
       'magnific-popup/dist',
       'normalize-css/normalize.css',
       'picturefill/dist/picturefill.min.js'

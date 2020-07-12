@@ -14,13 +14,13 @@
 2. Install global dependencies:
 
     ```shell
-    npm install -g gulp-cli yarn
+    npm i -g gulp-cli
     ```
 
 3. Install local dependencies:
 
     ```shell
-    yarn install --pure-lockfile
+    npm ci
     ```
 
 ## Development
@@ -42,7 +42,7 @@ gulp prod
 Deploy to GitHub Pages:
 
 ```shell
-yarn deploy
+npm run deploy
 ```
 
 ## License
