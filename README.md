@@ -7,8 +7,8 @@
     ```shell
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
     source ~/.bashrc
-    nvm install v8.11.1
-    nvm alias default v8.11.1
+    nvm install v10.19.0
+    nvm alias default v10.19.0
     ```
 
 2. Install global dependencies:
