@@ -11,6 +11,6 @@
     "victory"
   ],
   "removeRange": true,
-  "semverLevel": "major",
+  "target": "minor",
   "upgrade": true
 }
