@@ -40,7 +40,7 @@ let livereloadServer;
 /* ---------------------------------------------------------------------------------------------- */
 
 gulp.task('cname', () =>
-  fs.copyAsync('CNAME', path.join(gulpConfig.dist.base, 'CNAME'), {
+  fs.copy('CNAME', path.join(gulpConfig.dist.base, 'CNAME'), {
     preserveTimestamps: true
   })
 );
@@ -75,14 +75,14 @@ gulp.task('html-build', () =>
 gulp.task('html', gulp.series('html-clean', 'html-build'));
 
 // CSS
-gulp.task('css-clean', () => fs.removeAsync(gulpConfig.dist.css));
+gulp.task('css-clean', () => fs.remove(gulpConfig.dist.css));
 gulp.task('css-build', () =>
   buildCss(path.join(gulpConfig.src.css, '**/*.scss'), gulpConfig.dist.css)
 );
 gulp.task('css', gulp.series('css-clean', 'css-build'));
 
 // JS
-gulp.task('js-clean', () => fs.removeAsync(gulpConfig.dist.js));
+gulp.task('js-clean', () => fs.remove(gulpConfig.dist.js));
 gulp.task('js-build', () =>
   globby([path.join(gulpConfig.src.js, '*.js')]).then((files) =>
     Promise.mapSeries(files, (file) => {
@@ -112,7 +112,7 @@ gulp.task('favicon-build', () =>
     onlyFiles: true
   }).then((files) =>
     Promise.mapSeries(files, (file) =>
-      fs.copyAsync(file, path.join(gulpConfig.dist.base, path.basename(file)), {
+      fs.copy(file, path.join(gulpConfig.dist.base, path.basename(file)), {
         preserveTimestamps: true
       })
     )
@@ -121,17 +121,15 @@ gulp.task('favicon-build', () =>
 gulp.task('favicon', gulp.series('favicon-clean', 'favicon-build'));
 
 // Fonts
-gulp.task('fonts-clean', () => fs.removeAsync(gulpConfig.dist.fonts));
+gulp.task('fonts-clean', () => fs.remove(gulpConfig.dist.fonts));
 gulp.task('fonts-build', () =>
   globby([path.join(gulpConfig.src.fonts, '**/*.{woff,woff2}')], {
     onlyFiles: true
   }).then((files) =>
     Promise.mapSeries(files, (file) =>
-      fs.copyAsync(
-        file,
-        path.join(gulpConfig.dist.fonts, path.basename(file)),
-        {preserveTimestamps: true}
-      )
+      fs.copy(file, path.join(gulpConfig.dist.fonts, path.basename(file)), {
+        preserveTimestamps: true
+      })
     )
   )
 );
@@ -142,7 +140,7 @@ gulp.task('icons', buildIcons);
 
 // Deletes derivate images
 gulp.task('penrose-clean', () =>
-  fs.removeAsync(path.join(gulpConfig.penrose.schemes.public.path, 'styles'))
+  fs.remove(path.join(gulpConfig.penrose.schemes.public.path, 'styles'))
 );
 
 // Creates derivative images
@@ -194,7 +192,7 @@ gulp.task('penrose-build', () =>
 gulp.task('penrose', gulp.series('penrose-clean', 'penrose-build'));
 
 // Build vendor files
-gulp.task('vendor-clean', () => fs.removeAsync(gulpConfig.dist.vendor));
+gulp.task('vendor-clean', () => fs.remove(gulpConfig.dist.vendor));
 gulp.task('vendor-copy', copyVendor);
 gulp.task('vendor-modernizr', buildModernizr);
 gulp.task(

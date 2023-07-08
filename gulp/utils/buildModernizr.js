@@ -15,7 +15,7 @@ module.exports = async () =>
     });
   })
     .then((data) =>
-      fs.outputFileAsync(
+      fs.outputFile(
         path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js'),
         data,
         'utf-8'
@@ -37,7 +37,5 @@ module.exports = async () =>
       })
     )
     .then(() =>
-      fs.removeAsync(
-        path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js')
-      )
+      fs.remove(path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js'))
     );

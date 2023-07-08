@@ -16,7 +16,7 @@ module.exports = async () =>
   globby([path.join(gulpConfig.src.data, '**/*.yaml')])
     .then((files) =>
       Promise.mapSeries(files, (file) =>
-        fs.readFileAsync(file, 'utf-8').then((data) => {
+        fs.readFile(file, 'utf-8').then((data) => {
           const slug = path.basename(file, path.extname(file));
           const isFront = ~['front', 'home', 'index'].indexOf(slug);
           const dirname = path.dirname(

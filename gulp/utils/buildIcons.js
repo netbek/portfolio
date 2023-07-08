@@ -14,7 +14,7 @@ module.exports = async () =>
   globby([path.join(gulpConfig.src.svg, 'icons', '*.svg')]).then((files) =>
     Promise.mapSeries(files, (file) =>
       fs
-        .readFileAsync(file, 'utf-8')
+        .readFile(file, 'utf-8')
         .then((data) => {
           const basename = path.basename(file, path.extname(file));
 
@@ -42,6 +42,6 @@ module.exports = async () =>
 
           return svgo.optimize($.xml());
         })
-        .then((result) => fs.outputFileAsync(file, result.data, 'utf-8'))
+        .then((result) => fs.outputFile(file, result.data, 'utf-8'))
     )
   );

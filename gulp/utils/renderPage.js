@@ -41,6 +41,6 @@ module.exports = async (template, uri, context = {}) => {
     renderPromise(pageTemplate, {
       ...context,
       page: {...page, slug, classNames, content}
-    }).then((html) => fs.outputFileAsync(dest, html, 'utf-8'))
+    }).then((html) => fs.outputFile(dest, html, 'utf-8'))
   );
 };

@@ -40,6 +40,6 @@ module.exports = async () =>
       const src = path.join(moduleDir, pathSegments.slice(1).join(path.sep));
       const dest = path.join(gulpConfig.dist.vendor, vendorPath);
 
-      return fs.copyAsync(src, dest);
+      return fs.copy(src, dest);
     });
   });
