@@ -123,7 +123,7 @@ module.exports = {
   modernizr: {
     classPrefix: '',
     options: ['addTest', 'prefixed', 'setClasses', 'testProp'],
-    'feature-detects': ['img/webp', 'svg/clippaths', 'touchevents']
+    'feature-detects': ['img/webp', 'svg/clippaths']
   },
   penrose: {
     schemes: {
@@ -154,7 +154,8 @@ module.exports = {
     fonts: 'src/fonts/',
     js: 'src/js/',
     svg: 'src/svg/',
-    templates: 'src/templates/'
+    templates: 'src/templates/',
+    vendor: 'src/vendor/'
   },
   vendor: {
     paths: [
