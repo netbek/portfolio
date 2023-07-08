@@ -3,9 +3,9 @@ const re = [
   'vimeo.com/video/(\\d+)',
   'vimeo.com/groups/.+/videos/(\\d+)',
   'vimeo.com/channels/.+#(\\d+)'
-].map(pattern => new RegExp(pattern, 'i'));
+].map((pattern) => new RegExp(pattern, 'i'));
 
-module.exports = uri => {
+module.exports = (uri) => {
   const url = uri.replace('vimeo://', 'https://vimeo.com/');
 
   let matches;

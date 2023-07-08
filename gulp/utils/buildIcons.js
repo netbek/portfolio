@@ -11,11 +11,11 @@ Promise.promisifyAll(fs);
 const svgo = new SVGO();
 
 module.exports = () =>
-  globPromise(path.join(gulpConfig.src.svg, 'icons', '*.svg')).then(files =>
-    Promise.mapSeries(files, file =>
+  globPromise(path.join(gulpConfig.src.svg, 'icons', '*.svg')).then((files) =>
+    Promise.mapSeries(files, (file) =>
       fs
         .readFileAsync(file, 'utf-8')
-        .then(data => {
+        .then((data) => {
           const basename = path.basename(file, path.extname(file));
 
           const $ = cheerio.load(data, {
@@ -35,16 +35,13 @@ module.exports = () =>
           }
 
           // Remove unneeded attributes
-          $('svg')
-            .removeAttr('class')
-            .removeAttr('height')
-            .removeAttr('width');
+          $('svg').removeAttr('class').removeAttr('height').removeAttr('width');
 
           // Add class attribute
           $('svg').attr('class', `icon icon-${basename}`);
 
           return svgo.optimize($.xml());
         })
-        .then(result => fs.outputFileAsync(file, result.data, 'utf-8'))
+        .then((result) => fs.outputFileAsync(file, result.data, 'utf-8'))
     )
   );

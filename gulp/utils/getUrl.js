@@ -3,7 +3,7 @@ const gulpConfig = require('../config');
 
 const penrose = new Penrose(gulpConfig.penrose);
 
-module.exports = uri => {
+module.exports = (uri) => {
   const scheme = penrose.getScheme(uri);
 
   if (scheme === 'vimeo') {

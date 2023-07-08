@@ -16,7 +16,7 @@
   },
   "scripts": {
     "deploy": "gh-pages -d public",
-    "format": "prettier --write \"{gulp,src,test}/**/*{.js,.jsx}\"",
+    "format": "prettier --write \"{gulp,src,test}/**/*{.js,.jsx}\" gulpfile.js",
     "test": "exit 0"
   },
   "author": {

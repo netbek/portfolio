@@ -18,7 +18,7 @@ const gulpConfig = require('../config');
  * @returns {Promise}
  */
 module.exports = (src, dest, destName = 'app.css') =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     gulp
       .src(src)
       .pipe(gulpSourcemaps.init())
@@ -38,7 +38,7 @@ module.exports = (src, dest, destName = 'app.css') =>
       )
       .pipe(gulpSourcemaps.write('.'))
       .pipe(gulp.dest(dest))
-      .on('end', function() {
+      .on('end', function () {
         resolve();
       });
   });

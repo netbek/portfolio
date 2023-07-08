@@ -37,10 +37,10 @@ module.exports = (template, uri, context = {}) => {
   return renderPromise(template, {
     ...context,
     page: {...page, slug, classNames}
-  }).then(content =>
+  }).then((content) =>
     renderPromise(pageTemplate, {
       ...context,
       page: {...page, slug, classNames, content}
-    }).then(html => fs.outputFileAsync(dest, html, 'utf-8'))
+    }).then((html) => fs.outputFileAsync(dest, html, 'utf-8'))
   );
 };

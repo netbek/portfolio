@@ -5,9 +5,9 @@ const re = [
   'youtube.com/?v=([^"& ]+)',
   'youtu.be/([^"&? ]+)',
   'gdata.youtube.com/feeds/api/videos/([^"&? ]+)'
-].map(pattern => new RegExp(pattern, 'i'));
+].map((pattern) => new RegExp(pattern, 'i'));
 
-module.exports = uri => {
+module.exports = (uri) => {
   const url = uri.replace('youtube://', 'https://youtube.com/');
 
   let matches;

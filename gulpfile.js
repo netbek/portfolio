@@ -50,8 +50,8 @@ gulp.task('html-clean', () => Promise.resolve());
 gulp.task('html-build', () =>
   loadData()
     // Build pages
-    .then(data =>
-      Promise.mapSeries(Object.keys(data.pages), slug => {
+    .then((data) =>
+      Promise.mapSeries(Object.keys(data.pages), (slug) => {
         const {[slug]: page} = data.pages;
         const template = path.join(gulpConfig.src.templates, slug + '.njk');
         const uri = path.join(slug);
@@ -61,8 +61,8 @@ gulp.task('html-build', () =>
       }).then(() => data)
     )
     // Build projects
-    .then(data =>
-      Promise.mapSeries(Object.keys(data.projects), slug => {
+    .then((data) =>
+      Promise.mapSeries(Object.keys(data.projects), (slug) => {
         const {[slug]: page} = data.projects;
         const template = path.join(gulpConfig.src.templates, 'project.njk');
         const uri = path.join('work', slug);
@@ -84,8 +84,8 @@ gulp.task('css', gulp.series('css-clean', 'css-build'));
 // JS
 gulp.task('js-clean', () => fs.removeAsync(gulpConfig.dist.js));
 gulp.task('js-build', () =>
-  globPromise(path.join(gulpConfig.src.js, '*.js')).then(files =>
-    Promise.mapSeries(files, file => {
+  globPromise(path.join(gulpConfig.src.js, '*.js')).then((files) =>
+    Promise.mapSeries(files, (file) => {
       const filename = path.basename(file);
       const basename = path.basename(file, path.extname(file));
 
@@ -110,8 +110,8 @@ gulp.task('favicon-clean', () => Promise.resolve());
 gulp.task('favicon-build', () =>
   globPromise(path.join(gulpConfig.src.favicon, '*'), {
     nodir: true
-  }).then(files =>
-    Promise.mapSeries(files, file =>
+  }).then((files) =>
+    Promise.mapSeries(files, (file) =>
       fs.copyAsync(file, path.join(gulpConfig.dist.base, path.basename(file)), {
         preserveTimestamps: true
       })
@@ -125,8 +125,8 @@ gulp.task('fonts-clean', () => fs.removeAsync(gulpConfig.dist.fonts));
 gulp.task('fonts-build', () =>
   globPromise(path.join(gulpConfig.src.fonts, '**/*.{woff,woff2}'), {
     nodir: true
-  }).then(files =>
-    Promise.mapSeries(files, file =>
+  }).then((files) =>
+    Promise.mapSeries(files, (file) =>
       fs.copyAsync(
         file,
         path.join(gulpConfig.dist.fonts, path.basename(file)),
@@ -147,25 +147,28 @@ gulp.task('penrose-clean', () =>
 
 // Creates derivative images
 gulp.task('penrose-build', () =>
-  Promise.mapSeries(Object.values(gulpConfig.penrose.tasks), task =>
-    Promise.mapSeries(task.src.map(src => penrose.resolvePath(src)), src =>
-      globPromise(src)
+  Promise.mapSeries(Object.values(gulpConfig.penrose.tasks), (task) =>
+    Promise.mapSeries(
+      task.src.map((src) => penrose.resolvePath(src)),
+      (src) => globPromise(src)
     )
-      .then(groups =>
+      .then((groups) =>
         groups
           .reduce((result, files) => result.concat(files), [])
           // Include only files inside public directory
-          .filter(file => ~file.indexOf(gulpConfig.penrose.schemes.public.path))
+          .filter(
+            (file) => ~file.indexOf(gulpConfig.penrose.schemes.public.path)
+          )
           // Strip base dir from file path and add scheme
           .map(
-            file =>
+            (file) =>
               'public://' +
               file.substring(gulpConfig.penrose.schemes.public.path.length)
           )
           .reduce(
             (result, src) =>
               result.concat(
-                task.styles.map(styleName => {
+                task.styles.map((styleName) => {
                   const style = gulpConfig.imageStyles[styleName];
                   const dist = penrose.getStylePath(styleName, src);
 
@@ -179,8 +182,8 @@ gulp.task('penrose-build', () =>
             []
           )
       )
-      .then(tasks =>
-        Promise.mapSeries(tasks, task =>
+      .then((tasks) =>
+        Promise.mapSeries(tasks, (task) =>
           penrose.createDerivative(task.style, task.src, task.dist)
         )
       )
@@ -217,7 +220,7 @@ gulp.task(
 );
 
 // Starts the webserver
-gulp.task('webserver-init', cb => {
+gulp.task('webserver-init', (cb) => {
   gulp
     .src(gulpConfig.dist.base)
     .pipe(webserver({...gulpConfig.webserver, open: false}))
@@ -227,7 +230,7 @@ gulp.task('webserver-init', cb => {
 // Starts the LiveReload server
 gulp.task(
   'livereload-init',
-  _.once(cb => {
+  _.once((cb) => {
     livereloadServer = livereload.createServer();
     open(livereloadOpen, gulpConfig.webserver.browser);
     cb();
@@ -235,12 +238,12 @@ gulp.task(
 );
 
 // Refreshes the page
-gulp.task('livereload-reload', cb => {
+gulp.task('livereload-reload', (cb) => {
   livereloadServer.refresh(livereloadOpen);
   cb();
 });
 
-gulp.task('watch:livereload', function() {
+gulp.task('watch:livereload', function () {
   [
     // CSS
     {
@@ -260,7 +263,7 @@ gulp.task('watch:livereload', function() {
       ],
       tasks: ['html']
     }
-  ].forEach(config => {
+  ].forEach((config) => {
     startWatch(config.files, [].concat(config.tasks, ['livereload-reload']));
   });
 });

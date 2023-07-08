@@ -20,7 +20,7 @@ const md = new Remarkable();
 
 env.addFilter(
   'icon',
-  _.memoize(iconName =>
+  _.memoize((iconName) =>
     fs.readFileSync(
       path.join(gulpConfig.src.svg, 'icons', iconName + '.svg'),
       'utf-8'
@@ -29,12 +29,12 @@ env.addFilter(
 );
 
 env.addFilter('includes', (array, value) => array.includes(value));
-env.addFilter('markdown', str => md.render(str));
-env.addFilter('slugify', str => slugify(str));
+env.addFilter('markdown', (str) => md.render(str));
+env.addFilter('slugify', (str) => slugify(str));
 env.addFilter('style_url', (uri, styleName) => getStyleUrl(styleName, uri));
-env.addFilter('url', uri => getUrl(uri));
-env.addFilter('vimeo_id', uri => getVimeoId(uri));
-env.addFilter('youtube_id', uri => getYoutubeId(uri));
+env.addFilter('url', (uri) => getUrl(uri));
+env.addFilter('vimeo_id', (uri) => getVimeoId(uri));
+env.addFilter('youtube_id', (uri) => getYoutubeId(uri));
 
 module.exports = (template, context = {}) =>
   new Promise((resolve, reject) => {

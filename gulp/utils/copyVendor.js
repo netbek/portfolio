@@ -18,7 +18,7 @@ function getModuleDir(moduleName, modulePath) {
     // If package doesn't have a manifest
     return fs
       .exists(path.join(MODULES_PATH, modulePath))
-      .then(exists =>
+      .then((exists) =>
         exists
           ? Promise.resolve(path.join(MODULES_PATH, moduleName))
           : Promise.reject()
@@ -32,11 +32,11 @@ function getModuleDir(moduleName, modulePath) {
  * Copies vendor files from node_modules to public directory
  */
 module.exports = () =>
-  Promise.mapSeries(gulpConfig.vendor.paths, vendorPath => {
+  Promise.mapSeries(gulpConfig.vendor.paths, (vendorPath) => {
     const pathSegments = vendorPath.split(path.sep);
     const moduleName = pathSegments[0];
 
-    return getModuleDir(moduleName, vendorPath).then(moduleDir => {
+    return getModuleDir(moduleName, vendorPath).then((moduleDir) => {
       const src = path.join(moduleDir, pathSegments.slice(1).join(path.sep));
       const dest = path.join(gulpConfig.dist.vendor, vendorPath);
 

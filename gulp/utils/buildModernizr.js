@@ -9,12 +9,12 @@ const webpackConfigProd = require('../../webpack.config.prod');
 Promise.promisifyAll(fs);
 
 module.exports = () =>
-  new Promise(function(resolve) {
-    modernizr.build(gulpConfig.modernizr, result => {
+  new Promise(function (resolve) {
+    modernizr.build(gulpConfig.modernizr, (result) => {
       resolve(result);
     });
   })
-    .then(data =>
+    .then((data) =>
       fs.outputFileAsync(
         path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js'),
         data,
