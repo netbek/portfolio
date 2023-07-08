@@ -2,6 +2,13 @@
   "name": "@netbek/portfolio",
   "private": true,
   "version": "0.0.1",
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.6.7"
+  },
+  "os": [
+    "linux"
+  ],
   "description": "Portfolio",
   "repository": {
     "type": "git",
