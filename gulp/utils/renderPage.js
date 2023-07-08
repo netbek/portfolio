@@ -1,11 +1,8 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
 const path = require('path');
-const Promise = require('bluebird');
 const renderPromise = require('./renderPromise');
 const gulpConfig = require('../config');
-
-Promise.promisifyAll(fs);
 
 module.exports = async (template, uri, context = {}) => {
   const pageTemplate = path.join('src/templates', 'base.njk');

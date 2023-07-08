@@ -4,8 +4,6 @@ const pkgDir = require('pkg-dir');
 const Promise = require('bluebird');
 const gulpConfig = require('../config');
 
-Promise.promisifyAll(fs);
-
 const MODULES_PATH = path.join(__dirname, '../../node_modules');
 
 function getModuleDir(moduleName, modulePath) {

@@ -6,8 +6,6 @@ const buildJs = require('./buildJs');
 const gulpConfig = require('../config');
 const webpackConfigProd = require('../../webpack.config.prod');
 
-Promise.promisifyAll(fs);
-
 module.exports = async () =>
   new Promise(function (resolve) {
     modernizr.build(gulpConfig.modernizr, (result) => {

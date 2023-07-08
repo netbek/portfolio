@@ -6,8 +6,6 @@ const Promise = require('bluebird');
 const SVGO = require('svgo');
 const gulpConfig = require('../config');
 
-Promise.promisifyAll(fs);
-
 const svgo = new SVGO();
 
 module.exports = async () =>

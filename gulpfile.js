@@ -15,14 +15,13 @@ const buildModernizr = require('./gulp/utils/buildModernizr');
 const copyVendor = require('./gulp/utils/copyVendor');
 const loadData = require('./gulp/utils/loadData');
 const renderPage = require('./gulp/utils/renderPage');
+const getPpid = require('./gulp/utils/getPpid');
+const killProcess = require('./gulp/utils/killProcess');
 const startWatch = require('./gulp/utils/startWatch');
-
-Promise.promisifyAll(fs);
 
 /* ---------------------------------------------------------------------------------------------- */
 
 const gulpConfig = require('./gulp/config');
-const webpackConfigDev = require('./webpack.config.dev');
 const webpackConfigProd = require('./webpack.config.prod');
 
 const livereloadOpen =
@@ -241,6 +240,14 @@ gulp.task('livereload-reload', (cb) => {
   cb();
 });
 
+gulp.task('livereload-stop', () => {
+  const ppid = getPpid();
+
+  return Promise.map([/gulp livereload/], (cmd) =>
+    killProcess('name', cmd, 'SIGKILL', ppid ? [ppid] : [])
+  );
+});
+
 gulp.task('watch:livereload', function () {
   [
     // CSS
@@ -268,7 +275,13 @@ gulp.task('watch:livereload', function () {
 
 gulp.task(
   'livereload',
-  gulp.series('dev', 'webserver-init', 'livereload-init', 'watch:livereload')
+  gulp.series(
+    'livereload-stop',
+    'dev',
+    'webserver-init',
+    'livereload-init',
+    'watch:livereload'
+  )
 );
 
 exports.default = gulp.series('prod');
