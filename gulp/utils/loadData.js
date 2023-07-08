@@ -23,7 +23,7 @@ module.exports = async () =>
             file.substring(gulpConfig.src.data.length)
           );
           const key = dirname === '.' ? slug : dirname + '.' + slug;
-          const value = yaml.safeLoad(data);
+          const value = yaml.load(data);
 
           value.isFront = isFront;
 

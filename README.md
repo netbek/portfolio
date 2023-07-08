@@ -36,7 +36,7 @@ gulp livereload
 Build for production:
 
 ```shell
-gulp prod
+npm run build
 ```
 
 Deploy to GitHub Pages:
