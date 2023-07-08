@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
-const globPromise = require('glob-promise');
+const globby = require('globby');
 const path = require('path');
 const {Penrose} = require('penrose');
 const Promise = require('bluebird');
@@ -13,7 +13,7 @@ const penrose = new Penrose(gulpConfig.penrose);
 // const getImageMetadata = _.memoize(filePath => sharp(filePath).metadata());
 
 module.exports = async () =>
-  globPromise(path.join(gulpConfig.src.data, '**/*.yaml'))
+  globby([path.join(gulpConfig.src.data, '**/*.yaml')])
     .then((files) =>
       Promise.mapSeries(files, (file) =>
         fs.readFileAsync(file, 'utf-8').then((data) => {

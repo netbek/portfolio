@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
-const globPromise = require('glob-promise');
+const globby = require('globby');
 const gulp = require('gulp');
 const livereload = require('livereload');
 const open = require('open');
@@ -84,7 +84,7 @@ gulp.task('css', gulp.series('css-clean', 'css-build'));
 // JS
 gulp.task('js-clean', () => fs.removeAsync(gulpConfig.dist.js));
 gulp.task('js-build', () =>
-  globPromise(path.join(gulpConfig.src.js, '*.js')).then((files) =>
+  globby([path.join(gulpConfig.src.js, '*.js')]).then((files) =>
     Promise.mapSeries(files, (file) => {
       const filename = path.basename(file);
       const basename = path.basename(file, path.extname(file));
@@ -108,8 +108,8 @@ gulp.task('js', gulp.series('js-clean', 'js-build'));
 // Favicon
 gulp.task('favicon-clean', () => Promise.resolve());
 gulp.task('favicon-build', () =>
-  globPromise(path.join(gulpConfig.src.favicon, '*'), {
-    nodir: true
+  globby([path.join(gulpConfig.src.favicon, '*')], {
+    onlyFiles: true
   }).then((files) =>
     Promise.mapSeries(files, (file) =>
       fs.copyAsync(file, path.join(gulpConfig.dist.base, path.basename(file)), {
@@ -123,8 +123,8 @@ gulp.task('favicon', gulp.series('favicon-clean', 'favicon-build'));
 // Fonts
 gulp.task('fonts-clean', () => fs.removeAsync(gulpConfig.dist.fonts));
 gulp.task('fonts-build', () =>
-  globPromise(path.join(gulpConfig.src.fonts, '**/*.{woff,woff2}'), {
-    nodir: true
+  globby([path.join(gulpConfig.src.fonts, '**/*.{woff,woff2}')], {
+    onlyFiles: true
   }).then((files) =>
     Promise.mapSeries(files, (file) =>
       fs.copyAsync(
@@ -150,7 +150,7 @@ gulp.task('penrose-build', () =>
   Promise.mapSeries(Object.values(gulpConfig.penrose.tasks), (task) =>
     Promise.mapSeries(
       task.src.map((src) => penrose.resolvePath(src)),
-      (src) => globPromise(src)
+      (src) => globby([src])
     )
       .then((groups) =>
         groups

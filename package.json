@@ -72,7 +72,6 @@
     "fs-extra": "10.1.0",
     "gh-pages": "2.2.0",
     "glob": "7.2.3",
-    "glob-promise": "3.4.0",
     "globby": "9.2.0",
     "gulp": "4.0.2",
     "gulp-webserver": "0.9.1",

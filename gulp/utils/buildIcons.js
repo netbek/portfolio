@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 const fs = require('fs-extra');
-const globPromise = require('glob-promise');
+const globby = require('globby');
 const path = require('path');
 const Promise = require('bluebird');
 const SVGO = require('svgo');
@@ -11,7 +11,7 @@ Promise.promisifyAll(fs);
 const svgo = new SVGO();
 
 module.exports = async () =>
-  globPromise(path.join(gulpConfig.src.svg, 'icons', '*.svg')).then((files) =>
+  globby([path.join(gulpConfig.src.svg, 'icons', '*.svg')]).then((files) =>
     Promise.mapSeries(files, (file) =>
       fs
         .readFileAsync(file, 'utf-8')
