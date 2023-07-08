@@ -36,7 +36,7 @@ env.addFilter('url', (uri) => getUrl(uri));
 env.addFilter('vimeo_id', (uri) => getVimeoId(uri));
 env.addFilter('youtube_id', (uri) => getYoutubeId(uri));
 
-module.exports = (template, context = {}) =>
+module.exports = async (template, context = {}) =>
   new Promise((resolve, reject) => {
     env.render(template, context, (err, result) => {
       if (err) {

@@ -2,7 +2,7 @@ const log = require('fancy-log');
 const Promise = require('bluebird');
 const webpack = require('webpack');
 
-module.exports = (config) =>
+module.exports = async (config) =>
   new Promise((resolve, reject) => {
     webpack(config, function (err, stats) {
       if (err) {

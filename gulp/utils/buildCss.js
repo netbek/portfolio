@@ -1,11 +1,12 @@
 const autoprefixer = require('autoprefixer');
-const gulp = require('gulp');
-const gulpConcat = require('gulp-concat');
-const gulpCssmin = require('gulp-cssmin');
-const gulpPostcss = require('gulp-postcss');
-const gulpRename = require('gulp-rename');
-const gulpSass = require('gulp-sass');
-const gulpSourcemaps = require('gulp-sourcemaps');
+const browserslist = require('browserslist');
+const esbuild = require('esbuild');
+const {resolveToEsbuildTarget} = require('esbuild-plugin-browserslist');
+const fs = require('fs-extra');
+const globby = require('globby');
+const nodeSass = require('node-sass');
+const path = require('path');
+const postcss = require('postcss');
 const Promise = require('bluebird');
 
 const gulpConfig = require('../config');
@@ -17,28 +18,48 @@ const gulpConfig = require('../config');
  * @param   {string} destName
  * @returns {Promise}
  */
-module.exports = (src, dest, destName = 'app.css') =>
-  new Promise((resolve) => {
-    gulp
-      .src(src)
-      .pipe(gulpSourcemaps.init())
-      .pipe(gulpSass(gulpConfig.css.params).on('error', gulpSass.logError))
-      .pipe(gulpPostcss([autoprefixer(gulpConfig.autoprefixer)]))
-      .pipe(gulpConcat(destName))
-      .pipe(gulp.dest(dest))
-      .pipe(
-        gulpCssmin({
-          advanced: false
+module.exports = async (src, dest, destName = 'app.css') => {
+  const browsers = browserslist();
+
+  const files = (await globby([src])).filter(
+    (file) => !path.basename(file).startsWith('_')
+  );
+
+  let css = (
+    await Promise.mapSeries(files, (file) =>
+      nodeSass
+        .renderSync({
+          ...gulpConfig.css.params,
+          file
         })
-      )
-      .pipe(
-        gulpRename({
-          suffix: '.min'
-        })
-      )
-      .pipe(gulpSourcemaps.write('.'))
-      .pipe(gulp.dest(dest))
-      .on('end', function () {
-        resolve();
-      });
-  });
+        .css.toString()
+    )
+  ).join('\n');
+
+  css = (
+    await postcss([autoprefixer({overrideBrowserslist: browsers})]).process(
+      css,
+      {
+        from: undefined,
+        to: dest
+      }
+    )
+  ).css;
+
+  const cssMin = (
+    await esbuild.transform(css, {
+      legalComments: 'none',
+      loader: 'css',
+      minify: true,
+      target: resolveToEsbuildTarget(browsers, {
+        printUnknownTargets: false
+      })
+    })
+  ).code;
+
+  await fs.outputFile(path.join(dest, destName), css, 'utf-8');
+
+  const destNameMin = destName.replace('.css', '.min.css');
+
+  await fs.outputFile(path.join(dest, destNameMin), cssMin, 'utf-8');
+};

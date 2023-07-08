@@ -7,7 +7,7 @@ const gulpConfig = require('../config');
 
 Promise.promisifyAll(fs);
 
-module.exports = (template, uri, context = {}) => {
+module.exports = async (template, uri, context = {}) => {
   const pageTemplate = path.join('src/templates', 'base.njk');
   const uriSegments = uri.split(path.sep);
   const slug = _.last(uriSegments);

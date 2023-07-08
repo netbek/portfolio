@@ -12,7 +12,7 @@ const penrose = new Penrose(gulpConfig.penrose);
 
 // const getImageMetadata = _.memoize(filePath => sharp(filePath).metadata());
 
-module.exports = () =>
+module.exports = async () =>
   globPromise(path.join(gulpConfig.src.data, '**/*.yaml'))
     .then((files) =>
       Promise.mapSeries(files, (file) =>

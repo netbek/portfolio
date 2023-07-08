@@ -31,7 +31,7 @@ function getModuleDir(moduleName, modulePath) {
 /**
  * Copies vendor files from node_modules to public directory
  */
-module.exports = () =>
+module.exports = async () =>
   Promise.mapSeries(gulpConfig.vendor.paths, (vendorPath) => {
     const pathSegments = vendorPath.split(path.sep);
     const moduleName = pathSegments[0];

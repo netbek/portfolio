@@ -10,7 +10,7 @@ Promise.promisifyAll(fs);
 
 const svgo = new SVGO();
 
-module.exports = () =>
+module.exports = async () =>
   globPromise(path.join(gulpConfig.src.svg, 'icons', '*.svg')).then((files) =>
     Promise.mapSeries(files, (file) =>
       fs
