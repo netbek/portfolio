@@ -1,13 +1,10 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
 const path = require('path');
-const Promise = require('bluebird');
 const renderPromise = require('./renderPromise');
 const gulpConfig = require('../config');
 
-Promise.promisifyAll(fs);
-
-module.exports = (template, uri, context = {}) => {
+module.exports = async (template, uri, context = {}) => {
   const pageTemplate = path.join('src/templates', 'base.njk');
   const uriSegments = uri.split(path.sep);
   const slug = _.last(uriSegments);
@@ -37,10 +34,10 @@ module.exports = (template, uri, context = {}) => {
   return renderPromise(template, {
     ...context,
     page: {...page, slug, classNames}
-  }).then(content =>
+  }).then((content) =>
     renderPromise(pageTemplate, {
       ...context,
       page: {...page, slug, classNames, content}
-    }).then(html => fs.outputFileAsync(dest, html, 'utf-8'))
+    }).then((html) => fs.outputFile(dest, html, 'utf-8'))
   );
 };

@@ -6,16 +6,14 @@ const buildJs = require('./buildJs');
 const gulpConfig = require('../config');
 const webpackConfigProd = require('../../webpack.config.prod');
 
-Promise.promisifyAll(fs);
-
-module.exports = () =>
-  new Promise(function(resolve) {
-    modernizr.build(gulpConfig.modernizr, result => {
+module.exports = async () =>
+  new Promise(function (resolve) {
+    modernizr.build(gulpConfig.modernizr, (result) => {
       resolve(result);
     });
   })
-    .then(data =>
-      fs.outputFileAsync(
+    .then((data) =>
+      fs.outputFile(
         path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js'),
         data,
         'utf-8'
@@ -37,7 +35,5 @@ module.exports = () =>
       })
     )
     .then(() =>
-      fs.removeAsync(
-        path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js')
-      )
+      fs.remove(path.join(gulpConfig.dist.vendor, 'modernizr/modernizr.js'))
     );

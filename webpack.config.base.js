@@ -1,4 +1,4 @@
-const {browserslist} = require('./package.json');
+const browserslist = require('browserslist');
 
 module.exports = {
   resolve: {
@@ -9,47 +9,46 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader?cacheDirectory',
+        loader: 'babel-loader',
         options: {
           babelrc: false,
+          cacheDirectory: true,
           comments: false,
           env: {
             development: {
               plugins: [
-                'transform-object-assign',
-                ['transform-object-rest-spread', {useBuiltIns: false}],
-                'transform-remove-strict-mode'
+                [
+                  '@babel/plugin-proposal-object-rest-spread',
+                  {useBuiltIns: false}
+                ], // ES2018
+                ['@babel/plugin-transform-object-assign'], // ES6
+                ['@babel/plugin-transform-strict-mode'] // ???
               ]
             },
             production: {
               plugins: [
-                'transform-object-assign',
-                ['transform-object-rest-spread', {useBuiltIns: false}],
-                'transform-react-remove-prop-types',
-                'transform-remove-strict-mode'
+                [
+                  '@babel/plugin-proposal-object-rest-spread',
+                  {useBuiltIns: false}
+                ], // ES2018
+                ['@babel/plugin-transform-object-assign'], // ES6
+                ['@babel/plugin-transform-strict-mode'] // ???
               ]
             }
           },
-          // plugins: ['babel-plugin-static-fs'],
           plugins: [],
           presets: [
             [
-              'env',
+              '@babel/preset-env',
               {
-                exclude: [
-                  'transform-async-to-generator',
-                  'transform-regenerator'
-                ],
                 loose: true,
                 modules: 'commonjs',
                 targets: {
-                  browsers: browserslist
+                  browsers: browserslist()
                 },
                 useBuiltIns: false
               }
-            ],
-            'stage-2',
-            'react'
+            ]
           ]
         }
       }

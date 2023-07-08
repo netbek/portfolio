@@ -225,7 +225,7 @@ function initAnchors() {
       }
     }
 
-    $a.on('click', function(e) {
+    $a.on('click', function (e) {
       const $this = jQuery(this);
 
       if ($this.data('pageTransition')) {
@@ -249,19 +249,15 @@ onLoad(() => {
   if (sceneName === 'front') {
     if (!window.Modernizr.touchevents) {
       jQuery('.project a, .project__label', $scene)
-        .on('mouseenter.nb focus.nb', function() {
-          jQuery(this)
-            .closest('.project-list-item')
-            .addClass('hover');
+        .on('mouseenter.nb focus.nb', function () {
+          jQuery(this).closest('.project-list-item').addClass('hover');
         })
-        .on('mouseleave.nb blur.nb', function() {
-          jQuery(this)
-            .closest('.project-list-item')
-            .removeClass('hover');
+        .on('mouseleave.nb blur.nb', function () {
+          jQuery(this).closest('.project-list-item').removeClass('hover');
         });
     }
 
-    jQuery('.project__label', $scene).on('click', function() {
+    jQuery('.project__label', $scene).on('click', function () {
       const href = jQuery(this)
         .closest('.project')
         .find('.project__thumb a')
@@ -292,9 +288,9 @@ onLoad(() => {
           const src = $elm.data('mfpSrc');
           const srcset = $elm.data('mfpSrcset');
           const candidates = picturefill._.parseSet({srcset}).filter(
-            s => s.d <= ratio
+            (s) => s.d <= ratio
           );
-          const bestCandidates = candidates.filter(s => s.d >= ratio);
+          const bestCandidates = candidates.filter((s) => s.d >= ratio);
 
           let result;
           if (bestCandidates.length) {
@@ -310,9 +306,7 @@ onLoad(() => {
       }
     });
 
-    jQuery('iframe[src*="youtube"]')
-      .parent()
-      .fitVids();
+    jQuery('iframe[src*="youtube"]').parent().fitVids();
 
     if (SPINNER) {
       randomizeSpinner();

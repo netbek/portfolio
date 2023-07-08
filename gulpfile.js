@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
-const globPromise = require('glob-promise');
+const globby = require('globby');
 const gulp = require('gulp');
 const livereload = require('livereload');
 const open = require('open');
@@ -15,14 +15,13 @@ const buildModernizr = require('./gulp/utils/buildModernizr');
 const copyVendor = require('./gulp/utils/copyVendor');
 const loadData = require('./gulp/utils/loadData');
 const renderPage = require('./gulp/utils/renderPage');
+const getPpid = require('./gulp/utils/getPpid');
+const killProcess = require('./gulp/utils/killProcess');
 const startWatch = require('./gulp/utils/startWatch');
-
-Promise.promisifyAll(fs);
 
 /* ---------------------------------------------------------------------------------------------- */
 
 const gulpConfig = require('./gulp/config');
-const webpackConfigDev = require('./webpack.config.dev');
 const webpackConfigProd = require('./webpack.config.prod');
 
 const livereloadOpen =
@@ -40,7 +39,7 @@ let livereloadServer;
 /* ---------------------------------------------------------------------------------------------- */
 
 gulp.task('cname', () =>
-  fs.copyAsync('CNAME', path.join(gulpConfig.dist.base, 'CNAME'), {
+  fs.copy('CNAME', path.join(gulpConfig.dist.base, 'CNAME'), {
     preserveTimestamps: true
   })
 );
@@ -50,8 +49,8 @@ gulp.task('html-clean', () => Promise.resolve());
 gulp.task('html-build', () =>
   loadData()
     // Build pages
-    .then(data =>
-      Promise.mapSeries(Object.keys(data.pages), slug => {
+    .then((data) =>
+      Promise.mapSeries(Object.keys(data.pages), (slug) => {
         const {[slug]: page} = data.pages;
         const template = path.join(gulpConfig.src.templates, slug + '.njk');
         const uri = path.join(slug);
@@ -61,8 +60,8 @@ gulp.task('html-build', () =>
       }).then(() => data)
     )
     // Build projects
-    .then(data =>
-      Promise.mapSeries(Object.keys(data.projects), slug => {
+    .then((data) =>
+      Promise.mapSeries(Object.keys(data.projects), (slug) => {
         const {[slug]: page} = data.projects;
         const template = path.join(gulpConfig.src.templates, 'project.njk');
         const uri = path.join('work', slug);
@@ -75,17 +74,17 @@ gulp.task('html-build', () =>
 gulp.task('html', gulp.series('html-clean', 'html-build'));
 
 // CSS
-gulp.task('css-clean', () => fs.removeAsync(gulpConfig.dist.css));
+gulp.task('css-clean', () => fs.remove(gulpConfig.dist.css));
 gulp.task('css-build', () =>
   buildCss(path.join(gulpConfig.src.css, '**/*.scss'), gulpConfig.dist.css)
 );
 gulp.task('css', gulp.series('css-clean', 'css-build'));
 
 // JS
-gulp.task('js-clean', () => fs.removeAsync(gulpConfig.dist.js));
+gulp.task('js-clean', () => fs.remove(gulpConfig.dist.js));
 gulp.task('js-build', () =>
-  globPromise(path.join(gulpConfig.src.js, '*.js')).then(files =>
-    Promise.mapSeries(files, file => {
+  globby([path.join(gulpConfig.src.js, '*.js')]).then((files) =>
+    Promise.mapSeries(files, (file) => {
       const filename = path.basename(file);
       const basename = path.basename(file, path.extname(file));
 
@@ -108,11 +107,11 @@ gulp.task('js', gulp.series('js-clean', 'js-build'));
 // Favicon
 gulp.task('favicon-clean', () => Promise.resolve());
 gulp.task('favicon-build', () =>
-  globPromise(path.join(gulpConfig.src.favicon, '*'), {
-    nodir: true
-  }).then(files =>
-    Promise.mapSeries(files, file =>
-      fs.copyAsync(file, path.join(gulpConfig.dist.base, path.basename(file)), {
+  globby([path.join(gulpConfig.src.favicon, '*')], {
+    onlyFiles: true
+  }).then((files) =>
+    Promise.mapSeries(files, (file) =>
+      fs.copy(file, path.join(gulpConfig.dist.base, path.basename(file)), {
         preserveTimestamps: true
       })
     )
@@ -121,17 +120,15 @@ gulp.task('favicon-build', () =>
 gulp.task('favicon', gulp.series('favicon-clean', 'favicon-build'));
 
 // Fonts
-gulp.task('fonts-clean', () => fs.removeAsync(gulpConfig.dist.fonts));
+gulp.task('fonts-clean', () => fs.remove(gulpConfig.dist.fonts));
 gulp.task('fonts-build', () =>
-  globPromise(path.join(gulpConfig.src.fonts, '**/*.{woff,woff2}'), {
-    nodir: true
-  }).then(files =>
-    Promise.mapSeries(files, file =>
-      fs.copyAsync(
-        file,
-        path.join(gulpConfig.dist.fonts, path.basename(file)),
-        {preserveTimestamps: true}
-      )
+  globby([path.join(gulpConfig.src.fonts, '**/*.{woff,woff2}')], {
+    onlyFiles: true
+  }).then((files) =>
+    Promise.mapSeries(files, (file) =>
+      fs.copy(file, path.join(gulpConfig.dist.fonts, path.basename(file)), {
+        preserveTimestamps: true
+      })
     )
   )
 );
@@ -142,30 +139,33 @@ gulp.task('icons', buildIcons);
 
 // Deletes derivate images
 gulp.task('penrose-clean', () =>
-  fs.removeAsync(path.join(gulpConfig.penrose.schemes.public.path, 'styles'))
+  fs.remove(path.join(gulpConfig.penrose.schemes.public.path, 'styles'))
 );
 
 // Creates derivative images
 gulp.task('penrose-build', () =>
-  Promise.mapSeries(Object.values(gulpConfig.penrose.tasks), task =>
-    Promise.mapSeries(task.src.map(src => penrose.resolvePath(src)), src =>
-      globPromise(src)
+  Promise.mapSeries(Object.values(gulpConfig.penrose.tasks), (task) =>
+    Promise.mapSeries(
+      task.src.map((src) => penrose.resolvePath(src)),
+      (src) => globby([src])
     )
-      .then(groups =>
+      .then((groups) =>
         groups
           .reduce((result, files) => result.concat(files), [])
           // Include only files inside public directory
-          .filter(file => ~file.indexOf(gulpConfig.penrose.schemes.public.path))
+          .filter(
+            (file) => ~file.indexOf(gulpConfig.penrose.schemes.public.path)
+          )
           // Strip base dir from file path and add scheme
           .map(
-            file =>
+            (file) =>
               'public://' +
               file.substring(gulpConfig.penrose.schemes.public.path.length)
           )
           .reduce(
             (result, src) =>
               result.concat(
-                task.styles.map(styleName => {
+                task.styles.map((styleName) => {
                   const style = gulpConfig.imageStyles[styleName];
                   const dist = penrose.getStylePath(styleName, src);
 
@@ -179,8 +179,8 @@ gulp.task('penrose-build', () =>
             []
           )
       )
-      .then(tasks =>
-        Promise.mapSeries(tasks, task =>
+      .then((tasks) =>
+        Promise.mapSeries(tasks, (task) =>
           penrose.createDerivative(task.style, task.src, task.dist)
         )
       )
@@ -191,7 +191,7 @@ gulp.task('penrose-build', () =>
 gulp.task('penrose', gulp.series('penrose-clean', 'penrose-build'));
 
 // Build vendor files
-gulp.task('vendor-clean', () => fs.removeAsync(gulpConfig.dist.vendor));
+gulp.task('vendor-clean', () => fs.remove(gulpConfig.dist.vendor));
 gulp.task('vendor-copy', copyVendor);
 gulp.task('vendor-modernizr', buildModernizr);
 gulp.task(
@@ -217,7 +217,7 @@ gulp.task(
 );
 
 // Starts the webserver
-gulp.task('webserver-init', cb => {
+gulp.task('webserver-init', (cb) => {
   gulp
     .src(gulpConfig.dist.base)
     .pipe(webserver({...gulpConfig.webserver, open: false}))
@@ -227,7 +227,7 @@ gulp.task('webserver-init', cb => {
 // Starts the LiveReload server
 gulp.task(
   'livereload-init',
-  _.once(cb => {
+  _.once((cb) => {
     livereloadServer = livereload.createServer();
     open(livereloadOpen, gulpConfig.webserver.browser);
     cb();
@@ -235,12 +235,20 @@ gulp.task(
 );
 
 // Refreshes the page
-gulp.task('livereload-reload', cb => {
+gulp.task('livereload-reload', (cb) => {
   livereloadServer.refresh(livereloadOpen);
   cb();
 });
 
-gulp.task('watch:livereload', function() {
+gulp.task('livereload-stop', () => {
+  const ppid = getPpid();
+
+  return Promise.map([/gulp livereload/], (cmd) =>
+    killProcess('name', cmd, 'SIGKILL', ppid ? [ppid] : [])
+  );
+});
+
+gulp.task('watch:livereload', function () {
   [
     // CSS
     {
@@ -260,14 +268,20 @@ gulp.task('watch:livereload', function() {
       ],
       tasks: ['html']
     }
-  ].forEach(config => {
+  ].forEach((config) => {
     startWatch(config.files, [].concat(config.tasks, ['livereload-reload']));
   });
 });
 
 gulp.task(
   'livereload',
-  gulp.series('dev', 'webserver-init', 'livereload-init', 'watch:livereload')
+  gulp.series(
+    'livereload-stop',
+    'dev',
+    'webserver-init',
+    'livereload-init',
+    'watch:livereload'
+  )
 );
 
 exports.default = gulp.series('prod');

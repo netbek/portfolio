@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
-const globPromise = require('glob-promise');
+const globby = require('globby');
 const path = require('path');
 const {Penrose} = require('penrose');
 const Promise = require('bluebird');
@@ -12,18 +12,18 @@ const penrose = new Penrose(gulpConfig.penrose);
 
 // const getImageMetadata = _.memoize(filePath => sharp(filePath).metadata());
 
-module.exports = () =>
-  globPromise(path.join(gulpConfig.src.data, '**/*.yaml'))
-    .then(files =>
-      Promise.mapSeries(files, file =>
-        fs.readFileAsync(file, 'utf-8').then(data => {
+module.exports = async () =>
+  globby([path.join(gulpConfig.src.data, '**/*.yaml')])
+    .then((files) =>
+      Promise.mapSeries(files, (file) =>
+        fs.readFile(file, 'utf-8').then((data) => {
           const slug = path.basename(file, path.extname(file));
           const isFront = ~['front', 'home', 'index'].indexOf(slug);
           const dirname = path.dirname(
             file.substring(gulpConfig.src.data.length)
           );
           const key = dirname === '.' ? slug : dirname + '.' + slug;
-          const value = yaml.safeLoad(data);
+          const value = yaml.load(data);
 
           value.isFront = isFront;
 
@@ -31,7 +31,7 @@ module.exports = () =>
             value.url = '/work/' + slug;
 
             // Normalise media files
-            return Promise.mapSeries(value.media, d => {
+            return Promise.mapSeries(value.media, (d) => {
               const scheme = penrose.getScheme(d.uri);
               const target = penrose.getTarget(d.uri);
 
@@ -77,7 +77,7 @@ module.exports = () =>
               // }
 
               return norm;
-            }).then(media => [key, {...value, media}]);
+            }).then((media) => [key, {...value, media}]);
           }
 
           if (isFront) {
@@ -90,8 +90,13 @@ module.exports = () =>
         })
       )
     )
-    .then(data => _.zipObjectDeep(data.map(d => d[0]), data.map(d => d[1])))
-    .then(data => {
+    .then((data) =>
+      _.zipObjectDeep(
+        data.map((d) => d[0]),
+        data.map((d) => d[1])
+      )
+    )
+    .then((data) => {
       // Add pagination to projects
       const {'projects-list': projectsList, projects} = data;
 

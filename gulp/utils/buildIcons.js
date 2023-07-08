@@ -1,21 +1,19 @@
 const cheerio = require('cheerio');
 const fs = require('fs-extra');
-const globPromise = require('glob-promise');
+const globby = require('globby');
 const path = require('path');
 const Promise = require('bluebird');
 const SVGO = require('svgo');
 const gulpConfig = require('../config');
 
-Promise.promisifyAll(fs);
-
 const svgo = new SVGO();
 
-module.exports = () =>
-  globPromise(path.join(gulpConfig.src.svg, 'icons', '*.svg')).then(files =>
-    Promise.mapSeries(files, file =>
+module.exports = async () =>
+  globby([path.join(gulpConfig.src.svg, 'icons', '*.svg')]).then((files) =>
+    Promise.mapSeries(files, (file) =>
       fs
-        .readFileAsync(file, 'utf-8')
-        .then(data => {
+        .readFile(file, 'utf-8')
+        .then((data) => {
           const basename = path.basename(file, path.extname(file));
 
           const $ = cheerio.load(data, {
@@ -35,16 +33,13 @@ module.exports = () =>
           }
 
           // Remove unneeded attributes
-          $('svg')
-            .removeAttr('class')
-            .removeAttr('height')
-            .removeAttr('width');
+          $('svg').removeAttr('class').removeAttr('height').removeAttr('width');
 
           // Add class attribute
           $('svg').attr('class', `icon icon-${basename}`);
 
           return svgo.optimize($.xml());
         })
-        .then(result => fs.outputFileAsync(file, result.data, 'utf-8'))
+        .then((result) => fs.outputFile(file, result.data, 'utf-8'))
     )
   );

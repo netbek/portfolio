@@ -1,7 +1,6 @@
 const _ = require('lodash');
 const os = require('os');
 const {PNG, WEBP} = require('penrose');
-const {browserslist} = require('../../package.json');
 
 // Browsers for node-open/livereload
 const browsers = {
@@ -13,9 +12,6 @@ const browsers = {
 const livereloadBrowser = _.get(browsers, os.platform(), browsers.default);
 
 module.exports = {
-  autoprefixer: {
-    overrideBrowserslist: browserslist
-  },
   css: {
     params: {
       includePaths: [
