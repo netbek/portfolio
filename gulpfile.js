@@ -229,7 +229,7 @@ gulp.task(
   'livereload-init',
   _.once((cb) => {
     livereloadServer = livereload.createServer();
-    open(livereloadOpen, gulpConfig.webserver.browser);
+    open(livereloadOpen, {app: {name: gulpConfig.webserver.browser}});
     cb();
   })
 );
