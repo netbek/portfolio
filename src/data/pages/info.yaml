@@ -1,22 +1,24 @@
 title: About
 headline: What I do
 body: |
-  ## Present
+  ## 2016⁠–2023
 
-  I work as a front-end developer at [Siyavula Education](http://siyavulaeducation.com), helping to
-  create high-quality learning experiences in Mathematics and Physical Sciences, and monitoring and
-  evaluation tools for teachers.
+  At [Siyavula Education](http://siyavulaeducation.com), I helped to create high-quality learning experiences in Mathematics and Physical Sciences, and monitoring and evaluation tools for teachers.
 
-  Since 2016, I lead front-end development, creating and maintaining UI components, guiding and
-  reviewing front-end work by our full-stack team, and QA testing. My focus has expanded to include
-  full-stack development: designing and implementing reports and dashboards for classroom and
-  internal use, and reviewing contributions from our data analysis team.
+  As lead front-end developer, I set the technical direction for the front-end stack, provided engineering perspective in high-level product meetings, and explored new approaches and technologies. I created and maintained UI components, guided and reviewed front-end work by the full-stack team, and did QA testing.
 
-  _Stack: JavaScript, React, Redux, Node.js, Python, Pandas, PostgreSQL, Vega_
+  For 5 years, I also did full-stack development, specialising in data analytics. I designed and implemented reports and dashboards for classroom and internal use, and reviewed and productionised contributions by the data analysis team.
 
-  ## Past
+  * Languages: CSS, HTML, JavaScript (browser, Node.js), Python, SQL
+  * Databases: PostgreSQL
+  * Frameworks and libraries: Ionic, jQuery, Pandas, React, Redux, Tailwind, Vega
+  * Design systems and tools: Balsamiq, Figma, Material Design
+  * Version control: Git
+  * Containers: Docker
 
-  Previously, I was a freelance web developer for 14 years, and
+  ## 2002⁠–2015
+
+  I was a freelance web developer and
   [organised creative swapmeets](/work/liquid-fridge-2003-2010) that combined academia, art, and
   free culture.
 
@@ -27,7 +29,11 @@ body: |
   marketing campaigns for PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM, Metro FM, and other
   large brands.
 
-  _Stack: PHP, Drupal, Kohana, AngularJS, Node.js, ActionScript_
+  * Languages: ActionScript, CSS, HTML, JavaScript (browser, Node.js), PHP, SQL
+  * Databases: MySQL
+  * Frameworks and libraries: Adobe Flash, AngularJS, Bootstrap, Drupal, jQuery, Kohana
+  * Design tools: Adobe Fireworks
+  * Version control: Git
 
   ## Open source software
 
@@ -57,4 +63,4 @@ body: |
   ## Contact
   [Email hein@netbek.co.za](mailto:hein@netbek.co.za).
 metatags:
-  description: Hein Bekker is a web developer with 20 years of experience.
+  description: Hein Bekker is a web developer with 21 years of experience.
