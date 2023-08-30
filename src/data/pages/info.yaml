@@ -5,9 +5,9 @@ body: |
 
   At [Siyavula Education](http://siyavulaeducation.com), I helped to create high-quality learning experiences in Mathematics and Physical Sciences, and monitoring and evaluation tools for teachers.
 
-  As lead front-end developer, I set the technical direction of the front-end stack, provided engineering perspective in high-level product meetings, and explored new approaches and technologies. I created and maintained UI components, guided and reviewed front-end work by the full-stack team, and did QA testing.
+  As front-end lead, I was a bridge between designers and developers. I set the technical direction of the front-end stack, worked with the product manager on software requirements and mockups, guided implementation by the full-stack team, and explored new approaches and technologies. I gave engineering perspective in high-level product meetings, created and maintained the UI components and the style guide, set up and maintained the build tooling, and did functional and non-functional testing.
 
-  For 5 years, I also did back-end development, specialising in data analytics. I designed and implemented reports and dashboards for classroom and internal use, and reviewed and productionised contributions by the data analysis team.
+  I branched out into back-end development, specialising in data reporting. I designed and implemented reports and dashboards for classroom and internal use, optimised data models and queries, and reviewed and productionised contributions by the data analysis team.
 
   * Languages: CSS, HTML, JavaScript (browser, Node.js, TypeScript), Python, SQL
   * Databases: PostgreSQL
@@ -20,7 +20,7 @@ body: |
 
   I was a freelance web developer and [organised creative swapmeets](/work/liquid-fridge-2003-2010) that combined academia, art, and free culture.
 
-  I worked solo and in agency teams, and often took on multiple roles as designer, front- and back-end developer, and technical support. I built and maintained websites of online and print magazines, broadcast media consultants, radio stations, an art gallery, an architecture firm, an event agency, guest houses, and various other small businesses. I also worked on integrated marketing campaigns for PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM, Metro FM, and other large brands.
+  I worked solo and in agency teams, and often took on multiple roles as designer, front- and back-end developer, and technical support. I built and maintained websites of online and print magazines, broadcast media consultants, radio stations, an art gallery, an architecture firm, an event agency, guest houses, and various other small businesses. I also worked on marketing campaigns for PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM, Metro FM, and other large brands.
 
   * Languages: ActionScript, CSS, HTML, JavaScript (browser, Node.js), PHP, SQL
   * Databases: MySQL
@@ -44,14 +44,17 @@ body: |
   ## Reading list
 
   * [2ality](https://2ality.com/) (JavaScript)
-  * [A List Apart](http://alistapart.com/) (front-end)
+  * [Addy Osmani](https://addyosmani.com/blog/) (software engineering)
   * [AIGA Eye on Design](https://eyeondesign.aiga.org/) (graphic design)
+  * [A List Apart](http://alistapart.com/) (front-end)
   * [Brand New](http://www.underconsideration.com/brandnew) (identity design)
   * [CSS-Tricks](http://css-tricks.com/) (front-end)
   * [Electronic Frontier Foundation](https://www.eff.org/deeplinks/) (civil liberties)
+  * [Haki Benita](https://hakibenita.com/) (databases)
   * [Nightingale](https://nightingaledvs.com/) (data visualisation)
   * [Open Rights Group](https://www.openrightsgroup.org/blog/) (civil liberties)
   * [UX Collective](https://uxdesign.cc/) (UX)
+  * [web.dev](https://web.dev/) (front-end)
 
   ## Contact
   [Email hein@netbek.co.za](mailto:hein@netbek.co.za).
