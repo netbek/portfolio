@@ -38,6 +38,7 @@ media:
 header:
   - uri: 'public://work/standard-bank-open-the-safe-header.png'
 tags:
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for CSI campaign.

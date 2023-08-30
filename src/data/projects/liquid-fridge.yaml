@@ -49,7 +49,7 @@ header:
   - uri: 'public://work/liquid-fridge-header.png'
 tags:
   - Design
-  - Dev
-  - Kohana
+  - Front-end
+  - Back-end
 metatags:
   description: Logo and website for radio programme.

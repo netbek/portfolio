@@ -24,7 +24,7 @@ header:
   - uri: 'public://work/dandelion-header.png'
 tags:
   - Design
-  - Dev
-  - Drupal
+  - Front-end
+  - Back-end
 metatags:
   description: Imagining a discussion club for concerned citizens.

@@ -58,7 +58,7 @@ header:
   - uri: 'public://work/original-header-2.png'
 tags:
   - Design
-  - Dev
-  - Drupal
+  - Front-end
+  - Back-end
 metatags:
   description: Website for designer furniture rental company.

@@ -31,6 +31,7 @@ media:
 header:
   - uri: 'public://work/isandla-institute-header.png'
 tags:
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for urban-related think-tank.

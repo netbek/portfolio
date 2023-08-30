@@ -31,7 +31,7 @@ media:
 header:
   - uri: 'public://work/plan-b-header.png'
 tags:
-  - Dev
-  - Drupal
+  - Front-end
+  - Back-end
 metatags:
   description: Website for graphic designer.

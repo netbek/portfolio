@@ -39,7 +39,8 @@ header:
   - uri: 'public://work/puma-rocks-the-boat-header.png'
     title: puma-rocks-the-boat-header
 tags:
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: >-
     Website for the Cape Town stopover of PUMA Ocean Racing in the 2008/09 Volvo

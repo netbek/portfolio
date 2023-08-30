@@ -54,6 +54,7 @@ header:
   - uri: 'public://work/african-centre-for-cities-header.png'
 tags:
   - Design
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for urban research and teaching programme.

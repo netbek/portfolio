@@ -62,5 +62,7 @@ header:
   - uri: 'public://work/liquid-fridge-2003-header.png'
 tags:
   - Design
+  - Front-end
+  - Back-end
 metatags:
   description: 'Logo, flyers and posters for the Liquid Fridge.'

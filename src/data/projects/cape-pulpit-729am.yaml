@@ -28,6 +28,6 @@ header:
   - uri: 'public://work/cape-pulpit-header.png'
 tags:
   - Design
-  - Dev
+  - Front-end
 metatags:
   description: Facebook streaming audio player for radio station.

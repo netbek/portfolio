@@ -23,7 +23,7 @@ header:
   - uri: 'public://work/other-work-header.png'
 tags:
   - Design
-  - Dev
-  - Drupal
+  - Front-end
+  - Back-end
 metatags:
   description: Older projects and work yet to be documented.

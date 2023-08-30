@@ -51,7 +51,7 @@ header:
     title: broadcast-my-life-header
 tags:
   - Design
-  - Dev
-  - Kohana
+  - Front-end
+  - Back-end
 metatags:
   description: Website for listener-driven radio campaign.

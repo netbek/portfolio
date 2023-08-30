@@ -41,6 +41,7 @@ header:
   - uri: 'public://work/blue-cow-header.png'
 tags:
   - Design
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Logo and website for broadcast solutions provider.

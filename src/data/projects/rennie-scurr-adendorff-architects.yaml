@@ -38,6 +38,7 @@ header:
   - uri: 'public://work/rennie-scurr-adendorff-architects-header.png'
 tags:
   - Design
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for architecture firm.

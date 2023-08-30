@@ -37,7 +37,7 @@ header:
   - uri: 'public://work/capitec-icreate-magic-photos-header.png'
 tags:
   - Design
-  - Dev
-  - Kohana
+  - Front-end
+  - Back-end
 metatags:
   description: Website for sharing photos taken at corporate events.

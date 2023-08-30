@@ -48,7 +48,7 @@ media:
 header:
   - uri: 'public://work/tmgs-creative-header.png'
 tags:
-  - Dev
-  - Drupal
+  - Front-end
+  - Back-end
 metatags:
   description: Website for radio and media strategist.

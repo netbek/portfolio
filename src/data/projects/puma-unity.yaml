@@ -54,6 +54,7 @@ header:
   - uri: 'public://work/puma-unity-header.png'
     title: puma-unity-header
 tags:
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for PUMA Unity in South Africa during the 2010 FIFA World Cup.

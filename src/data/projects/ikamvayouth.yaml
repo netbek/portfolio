@@ -48,8 +48,8 @@ media:
 header:
   - uri: 'public://work/ikamvayouth-header.png'
 tags:
-  - Dev
-  - Drupal
+  - Front-end
+  - Back-end
 metatags:
   description: >-
     Website for NGO that tutors and mentors high school learners from

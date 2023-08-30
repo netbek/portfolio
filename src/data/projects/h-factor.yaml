@@ -34,6 +34,7 @@ header:
   - uri: 'public://work/hfactor-header.png'
 tags:
   - Design
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for event agency.

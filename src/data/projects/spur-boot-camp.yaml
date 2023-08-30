@@ -50,6 +50,7 @@ header:
     title: spur-boot-camp-2010-header
 tags:
   - Design
-  - Dev
+  - Front-end
+  - Back-end
 metatags:
   description: Website for boot camp of an adventure race.
