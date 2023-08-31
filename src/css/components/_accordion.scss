@@ -60,7 +60,9 @@
 
   &__item-header {
     box-sizing: border-box;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     position: relative;
     cursor: pointer;
   }

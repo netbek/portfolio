@@ -228,7 +228,7 @@ button {
   .menu-list {
     display: none;
     list-style: none;
-    margin: 0;
+    margin: 0 0 -.25em;
     padding: 0;
   }
 
@@ -239,7 +239,7 @@ button {
 
     a {
       display: block;
-      padding: .375em 0;
+      padding: .5em 0;
       border-top: 1px dashed transparent;
       text-decoration: none;
 
@@ -273,7 +273,7 @@ button {
     &:not(.accordion--left),
     &--right {
       .accordion__item-header {
-        padding-right: $accordion-toggle-width + 1em;
+        padding-right: 1em;
         padding-left: 1em;
       }
 
@@ -300,8 +300,6 @@ button {
     padding: 0;
 
     .checkbox {
-      display: block;
-
       &:hover {
         .checkbox__label {
           text-decoration: underline;

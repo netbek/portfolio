@@ -89,7 +89,12 @@
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     cursor: pointer; }
   .accordion a.accordion__item-header, .accordion a.accordion__item-header:focus, .accordion a.accordion__item-header:hover {
@@ -141,6 +146,13 @@
             transform: perspective(120px) rotateX(-179.9deg) rotateY(-180deg); } }
 
 .checkbox {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: .5em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer; }
   .checkbox__box {
     display: -webkit-inline-box;
@@ -149,8 +161,7 @@
     display: inline-flex;
     border: 2px solid #FFE900;
     width: 1em;
-    height: 1em;
-    margin-right: .25em; }
+    height: 1em; }
   .checkbox__label {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -503,7 +514,7 @@ button .icon {
   .region--header .menu-list {
     display: none;
     list-style: none;
-    margin: 0;
+    margin: 0 0 -.25em;
     padding: 0; }
   .region--header .menu-list-item {
     list-style: none;
@@ -511,7 +522,7 @@ button .icon {
     padding: 0; }
     .region--header .menu-list-item a {
       display: block;
-      padding: .375em 0;
+      padding: .5em 0;
       border-top: 1px dashed transparent;
       text-decoration: none; }
       .region--header .menu-list-item a:hover {
@@ -529,7 +540,7 @@ button .icon {
     font-size: 1.25em;
     line-height: 1; }
   .region--header .accordion:not(.accordion--left) .accordion__item-header, .region--header .accordion--right .accordion__item-header {
-    padding-right: 4em;
+    padding-right: 1em;
     padding-left: 1em; }
   .region--header .accordion:not(.accordion--left) .accordion__item-button, .region--header .accordion--right .accordion__item-button {
     right: 1em;
@@ -556,10 +567,8 @@ button .icon {
     list-style: none;
     margin: .125em 0;
     padding: 0; }
-    .region--header .filter-list-item .checkbox {
-      display: block; }
-      .region--header .filter-list-item .checkbox:hover .checkbox__label {
-        text-decoration: underline; }
+    .region--header .filter-list-item .checkbox:hover .checkbox__label {
+      text-decoration: underline; }
   .region--header.dark {
     background-color: #222;
     color: #FFF; }
