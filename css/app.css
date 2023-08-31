@@ -340,22 +340,18 @@ body {
   background-image: radial-gradient(ellipse, #f9f9f9 0%, #eee 50%, #ddd 75%, #ccc 100%); }
 
 h1 {
-  font-size: 1.75em; }
+  font-size: 1.875em; }
 
 h2 {
-  font-size: 1.4em; }
+  font-size: 1.25em; }
 
 h3 {
-  font-size: 1.12em; }
+  font-size: 1.125em; }
 
-h4 {
-  font-size: 0.896em; }
-
-h5 {
-  font-size: 0.7168em; }
-
+h4,
+h5,
 h6 {
-  font-size: 0.57344em; }
+  font-size: 1em; }
 
 h1,
 h2,
