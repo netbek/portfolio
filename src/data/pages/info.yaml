@@ -11,7 +11,7 @@ body: |
 
   * Languages: CSS, HTML, JavaScript (browser, Node.js, TypeScript), Python, SQL
   * Databases: PostgreSQL
-  * Frameworks and libraries: Flask, Ionic, Jinja, jQuery, pandas, Pyramid, React, Redux, Tailwind, Vega, Vite, Webpack
+  * Frameworks and libraries: Flask, Ionic, Jinja, jQuery, pandas, Pyramid, React, Redux, SQLAlchemy, Tailwind, Vega, Vite, Webpack
   * Design systems and tools: Balsamiq, Figma, Material Design
   * Version control: Git
   * Containers: Docker
