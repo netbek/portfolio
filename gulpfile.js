@@ -12,6 +12,7 @@ const buildCss = require('./gulp/utils/buildCss');
 const buildJs = require('./gulp/utils/buildJs');
 const buildIcons = require('./gulp/utils/buildIcons');
 const buildModernizr = require('./gulp/utils/buildModernizr');
+const buildSitemap = require('./gulp/utils/buildSitemap');
 const copyVendor = require('./gulp/utils/copyVendor');
 const loadData = require('./gulp/utils/loadData');
 const renderPage = require('./gulp/utils/renderPage');
@@ -42,6 +43,11 @@ gulp.task('cname', () =>
   fs.copy('CNAME', path.join(gulpConfig.dist.base, 'CNAME'), {
     preserveTimestamps: true
   })
+);
+
+// Sitemap
+gulp.task('sitemap', () =>
+  buildSitemap(path.join(gulpConfig.dist.base, 'sitemap.txt'))
 );
 
 // HTML
@@ -199,7 +205,7 @@ gulp.task(
   gulp.series('vendor-clean', 'vendor-copy', 'vendor-modernizr')
 );
 
-gulp.task('dev', gulp.series('css', 'html', 'js', 'vendor'));
+gulp.task('dev', gulp.series('css', 'html', 'js', 'sitemap', 'vendor'));
 
 gulp.task(
   'prod',
@@ -212,6 +218,7 @@ gulp.task(
     'html',
     'icons',
     'penrose',
+    'sitemap',
     'vendor'
   )
 );
