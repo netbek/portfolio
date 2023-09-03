@@ -1,5 +1,4 @@
 const fs = require('fs-extra');
-const path = require('path');
 const loadData = require('./loadData');
 
 module.exports = async (dest) => {
@@ -7,12 +6,12 @@ module.exports = async (dest) => {
   const urls = [
     ...Object.entries(data.pages).map(([slug, page]) => {
       if (!page.isFront) {
-        return path.join(data.settings.site.url, slug);
+        return data.settings.site.url + '/' + slug;
       }
     }),
     ...Object.entries(data.projects).map(([slug, page]) => {
       if (!page.isFront) {
-        return path.join(data.settings.site.url, 'work', slug);
+        return data.settings.site.url + '/' + 'work' + '/' + slug;
       }
     })
   ]
