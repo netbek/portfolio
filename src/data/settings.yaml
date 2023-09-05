@@ -9,8 +9,10 @@ contact:
   twitter: https://twitter.com/netbek
 metatags:
   copyright: '(cc) Hein Bekker http://creativecommons.org/licenses/by-sa/4.0/'
-  description: Hein Bekker is a web developer with 21 years of experience.
+  description: Hein Bekker is a front-end and back-end web developer with 21 years of experience.
   keywords:
+    - frontend developer
+    - backend developer
     - web developer
     - postgresql
     - python
