@@ -11,8 +11,9 @@ body: |
 
   * Languages: CSS, HTML, JavaScript (browser, Node.js, TypeScript), Python, SQL
   * Databases: PostgreSQL
-  * Frameworks and libraries: Flask, Ionic, Jinja, jQuery, JupyterHub, pandas, Pyramid, React, Redux, SQLAlchemy, Tailwind, Vega
-  * Design systems and tools: Balsamiq, Figma, Material Design
+  * Frameworks and libraries: Flask, Ionic, Jinja, jQuery, pandas, Pyramid, React, Redux, SQLAlchemy, Tailwind, Vega
+  * Design systems: Material Design
+  * Tools: Adobe Illustrator, Balsamiq, Figma, JupyterHub
   * Version control: Git
   * Containers: Docker
 
@@ -24,8 +25,8 @@ body: |
 
   * Languages: ActionScript, CSS, HTML, JavaScript (browser, Node.js), PHP, SQL
   * Databases: MySQL
-  * Frameworks and libraries: Adobe Flash, AngularJS, Bootstrap, Drupal, jQuery, Kohana
-  * Design tools: Adobe Fireworks, Adobe Photoshop, Adobe Illustrator
+  * Frameworks and libraries: AngularJS, Bootstrap, Drupal, jQuery, Kohana
+  * Tools: Adobe Fireworks, Adobe Flash, Adobe Illustrator, Adobe Photoshop
   * Version control: Git
 
   ## Open source software
