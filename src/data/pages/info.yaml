@@ -12,7 +12,7 @@ body: |
   * Languages: CSS, HTML, JavaScript, Jinja, Python, SCSS, SQL, TypeScript
   * Frameworks: Flask, Ionic React, Mocha, nose, React, Pyramid, Tailwind
   * Libraries: Chai, jQuery, Lodash, MathJax, pandas, React Redux, React Router, SQLAlchemy, Vega-Altair, Vega-Lite, Victory
-  * Tools: Adobe Illustrator, Alembic, Babel, Balsamiq, BrowserStack, CircleCI, dbt, ESLint, Figma, Git, Gulp, JupyterHub, Vite, Webpack
+  * Tools: Adobe Illustrator, Alembic, Babel, Balsamiq, BrowserStack, CircleCI, dbt, ESLint, Figma, Git, Gulp, JupyterHub, SQLFluff, Vite, Webpack
   * Storage: PostgreSQL
   * Platforms: Docker, Linux, Node.js
   * Design systems: Material Design
