@@ -10,7 +10,7 @@ body: |
   I also branched out into back-end development and specialised in data reporting. I integrated third-party libraries and services, wrote unit tests for and refactored parts of the application, and conducted peer review of the full-stack team's code. I created and maintained reports and dashboards for classroom and in-house use, reviewed and optimised data models and queries, set up and maintained the data analysis stack, and worked with the data analysis team on integrating their contributions into the back-end.
 
   * Languages: CSS, HTML, JavaScript, Jinja, Markdown, Python, SCSS, SQL, TypeScript
-  * Frameworks: Flask, Ionic React, Mocha, nose, React, Pyramid, Tailwind
+  * Frameworks: Flask, Ionic React, Mocha, nose, Pyramid, React, Tailwind
   * Libraries: Chai, jQuery, Lodash, MathJax, pandas, React Redux, React Router, SQLAlchemy, Vega-Altair, Vega-Lite, Victory
   * Tools: Adobe Illustrator, Alembic, Babel, Balsamiq, BrowserStack, CircleCI, dbt, Figma, Git, Gulp, JupyterHub, Vite, Webpack
   * Storage: PostgreSQL
