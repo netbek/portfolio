@@ -65,7 +65,7 @@ h4 {
   }
 }
 
-.experiences {
+/* .experiences {
   padding-left: 2em;
 
   > li {
@@ -92,15 +92,8 @@ h4 {
       z-index: 0;
       position: absolute;
     }
-
-    /* &::after {
-      content: "●";
-      position: absolute;
-      top: 0;
-      left: 0;
-    } */
   }
-}
+} */
 
 a {
   text-decoration: underline;

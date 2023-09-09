@@ -25,6 +25,8 @@ Build for development:
 npm run serve
 ```
 
+Open http://localhost:8080 in a browser.
+
 ## Deployment
 
 Build for production:
