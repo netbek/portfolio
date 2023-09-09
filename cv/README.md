@@ -19,7 +19,11 @@
 
 ## Development
 
-TODO
+Build for development:
+
+```shell
+npm run serve
+```
 
 ## Deployment
 
