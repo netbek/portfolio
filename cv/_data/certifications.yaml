@@ -1,0 +1,39 @@
+- name: Databricks Lakehouse Fundamentals
+  issuer: Databricks
+  date: Sep 2023
+  url: https://credentials.databricks.com/77190fc2-8b6a-4ddf-83a8-109c55db0b0d
+
+- name: dbt Fundamentals
+  issuer: dbt Labs
+  date: Jan 2022
+  url: https://www.credential.net/c527cf13-540e-4c86-aa59-cc18a2384a2e
+
+- name: Machine Learning Fundamentals with Python Track
+  issuer: DataCamp
+  date: Jul 2020
+  url: https://www.datacamp.com/statement-of-accomplishment/track/9ed9464138f4d7e956ccdbe9f1f89f6db961b353
+
+- name: Data Visualization with Python Track
+  issuer: DataCamp
+  date: Feb 2020
+  url: https://www.datacamp.com/statement-of-accomplishment/track/0ad284ed2b9bff4ea9f9b126cd1c7a86de86491d
+
+- name: Data Manipulation with Python Track
+  issuer: DataCamp
+  date: Jan 2020
+  url: https://www.datacamp.com/statement-of-accomplishment/track/f1d3dd5399ad577667439ed086f917b0b2c03d4c
+
+- name: Importing & Cleaning Data with Python Track
+  issuer: DataCamp
+  date: Jan 2020
+  url: https://www.datacamp.com/statement-of-accomplishment/track/e996244e0f39d4c2d4f8a0a8768cb8910c226b23
+
+- name: Python Programming Track
+  issuer: DataCamp
+  date: Jan 2020
+  url: https://www.datacamp.com/statement-of-accomplishment/track/6a0dbbec4fa7bd2af1a3693c5bcf0e0520bd3302
+
+- name: SQL Fundamentals Track
+  issuer: DataCamp
+  date: Jan 2020
+  url: https://www.datacamp.com/statement-of-accomplishment/track/14e37611851a73e6eb6b4ed99c1a844b541287e2

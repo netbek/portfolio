@@ -15,7 +15,12 @@
     "url": "git://github.com/netbek/portfolio"
   },
   "scripts": {
-    "build": "npx @11ty/eleventy --formats=njk",
+    "build": "npm run build:tailwind && npm run build:eleventy",
+    "build:eleventy": "npx @11ty/eleventy --formats=njk",
+    "build:tailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./_site/tailwind.css",
+    "serve": "npm-run-all --parallel serve:*",
+    "serve:eleventy": "npx @11ty/eleventy --formats=njk --serve",
+    "serve:tailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./_site/tailwind.css --watch --postcss",
     "test": "exit 0"
   },
   "author": {
@@ -44,7 +49,13 @@
   ],
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "autoprefixer": "10.4.15",
     "js-yaml": "4.1.0",
-    "prettier": "3.0.3"
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.29",
+    "postcss-nested": "6.0.1",
+    "prettier": "3.0.3",
+    "tailwindcss": "3.3.3"
   }
 }

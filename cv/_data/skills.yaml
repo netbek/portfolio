@@ -1,0 +1,14 @@
+- key: Languages
+  value: CSS, HTML, JavaScript, Jinja, Markdown, Python, SCSS, SQL, TypeScript
+- key: Frameworks
+  value: Flask, Ionic React, Mocha, nose, Pyramid, React, Tailwind
+- key: Libraries
+  value: Chai, jQuery, Lodash, MathJax, pandas, React Redux, React Router, SQLAlchemy, Vega-Altair, Vega-Lite, Victory
+- key: Tools
+  value: Adobe Fireworks, Adobe Illustrator, Adobe Photoshop, Alembic, Babel, Balsamiq, BrowserStack, CircleCI, dbt, Figma, Git, Gulp, JupyterHub, Vite, Webpack
+- key: Storage
+  value: PostgreSQL
+- key: Platforms
+  value: Docker, Linux, Node.js
+- key: Design systems
+  value: Material Design
