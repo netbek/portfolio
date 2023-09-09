@@ -1,0 +1,24 @@
+- name: Siyavula Education
+  date: Feb 2016 - Jul 2023
+  location: Cape Town, South Africa (hybrid)
+  summary: I helped to create educational software for Mathematics, Physics and Chemistry, and monitoring and evaluation tools for teachers.
+  roles:
+    - summary: As front-end lead, I was a bridge between designers and developers.
+      responsibilities:
+        - Set the technical direction of the front-end stack.
+        - Created and maintained the colour palette, icon sets, UI components, style guide and build tooling.
+        - Worked with the product manager on software requirements and mockups.
+        - Designed responsive UI layouts.
+        - Guided implementation by the full-stack team.
+        - Did functional and non-functional testing.
+        - Gave engineering perspective in high-level product meetings.
+        - Explored new approaches and technologies that improved productivity and modernised the stack.
+    - summary: I also branched out into back-end development and specialised in data reporting.
+      responsibilities:
+        - Integrated third-party libraries and services.
+        - Wrote unit tests for and refactored parts of the application.
+        - Conducted peer review of the full-stack team's code.
+        - Created and maintained reports and dashboards for classroom and in-house use.
+        - Reviewed and optimised data models and queries.
+        - Set up and maintained the data analysis stack.
+        - Worked with the data analysis team on integrating their contributions into the back-end.

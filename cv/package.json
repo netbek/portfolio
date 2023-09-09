@@ -1,0 +1,50 @@
+{
+  "name": "cv",
+  "private": true,
+  "version": "0.0.1",
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.8.0"
+  },
+  "os": [
+    "linux"
+  ],
+  "description": "CV",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/netbek/portfolio"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy --formats=njk",
+    "test": "exit 0"
+  },
+  "author": {
+    "name": "Hein Bekker",
+    "email": "hein@netbek.co.za",
+    "url": "https://www.netbek.co.za"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/netbek/portfolio/issues"
+  },
+  "browserslist": [
+    "last 5 years",
+    "android >= 2",
+    "bb >= 6",
+    "chrome >= 21",
+    "edge >= 12",
+    "firefox >= 28",
+    "ie >= 8",
+    "ios >= 6",
+    "op_mini all",
+    "op_mob >= 12",
+    "opera >= 12",
+    "safari >= 6",
+    "samsung >= 5"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.1",
+    "js-yaml": "4.1.0",
+    "prettier": "3.0.3"
+  }
+}
