@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-sans-v19-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-sans-v19-latin-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/ibm-plex-sans-v19-latin-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/ibm-plex-serif-v19-latin-700.ttf') format('truetype');
+}
+
+@page {
+  size: A4;
+  margin: 0mm 0mm;
+}
+
+@media screen {
+  body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em;
+  }
+
+  .page {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
+@layer components {
+  body {
+    @apply tw-font-sans tw-text-sm;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply tw-font-serif tw-font-bold;
+  }
+
+  h3 {
+    @apply tw-mb-1 tw-text-base tw-leading-5;
+  }
+
+  h4 {
+    @apply tw-font-semibold;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .page {
+    @apply tw-relative tw-break-after-page;
+
+    &__bg {
+      @apply tw-absolute tw-right-0 tw-top-0 tw-z-0 tw-h-[297mm] tw-w-[37.5%] tw-bg-[#ffe900];
+    }
+
+    &__content {
+      @apply tw-relative tw-z-10 tw-grid tw-grid-cols-[10fr_6fr] tw-grid-rows-[auto_1fr] tw-content-stretch;
+    }
+
+    &--1 {
+      main:nth-child(1),
+      aside:nth-child(2) {
+        @apply tw-pb-2;
+      }
+    }
+  }
+
+  main,
+  aside {
+    @apply tw-pb-10 tw-pl-8 tw-pr-8 tw-pt-10;
+  }
+
+  main {
+    section + section {
+      @apply tw-pt-16;
+    }
+  }
+
+  aside {
+    table {
+      td {
+        @apply tw-p-0;
+      }
+
+      td:last-child {
+        @apply tw-pl-3;
+      }
+
+      .icon {
+        @apply tw-fill-slate-700 tw-text-base;
+      }
+    }
+  }
+
+  .section-heading {
+    @apply tw-mb-4 tw-font-sans tw-text-sm tw-font-semibold tw-uppercase tw-text-slate-700;
+  }
+
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    width: 1em;
+    height: 1em; /* Prevents FOUC of SVG */
+    max-width: none;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .tool {
+    p {
+      @apply tw-text-slate-700;
+    }
+
+    + .tool {
+      @apply tw-mt-4;
+    }
+  }
+
+  .experience {
+    &__company_date {
+      @apply tw-grid tw-grid-cols-[10fr_6fr];
+    }
+
+    &__company {
+      @apply tw-font-serif tw-text-base tw-font-bold tw-leading-5;
+    }
+
+    &__date {
+      @apply tw-text-right tw-text-slate-700;
+    }
+
+    &__title {
+      @apply tw-font-serif tw-text-base tw-font-bold tw-leading-5 tw-text-slate-700;
+    }
+
+    &__description {
+      @apply tw-text-slate-700;
+
+      p {
+        @apply tw-mb-4 tw-mt-4;
+      }
+
+      ul {
+        @apply tw-mb-4 tw-mt-4 tw-list-disc tw-pl-6;
+
+        li {
+          &:not(:first-child) {
+            @apply tw-mt-2;
+          }
+
+          &:not(:last-child) {
+            @apply tw-mb-2;
+          }
+
+          &::marker {
+            @apply tw-text-slate-500;
+          }
+        }
+      }
+
+      p,
+      ul {
+        &:last-child {
+          @apply tw-mb-0;
+        }
+      }
+    }
+
+    + .experience {
+      @apply tw-mt-8 tw-border-t-2 tw-border-solid tw-border-slate-400 tw-pt-8;
+    }
+  }
+
+  .certification {
+    &__title_date {
+      @apply tw-grid tw-grid-cols-[12fr_4fr];
+    }
+
+    &__title {
+    }
+
+    &__date {
+      @apply tw-text-right tw-text-slate-700;
+    }
+
+    + .certification {
+      @apply tw-mt-4;
+    }
+  }
+}
