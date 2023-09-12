@@ -1,7 +1,7 @@
 title: About & Contact
 headline: What I do
 body: |
-  I am senior web developer with over 20 years of experience and a passion for building an equitable, inclusive and sustainable society through education in the arts and sciences.
+  I am a front-end and back-end developer with over 20 years of experience and a passion for building an equitable, inclusive and sustainable society through education in the arts and sciences.
 
   Would you like to work with me? [Email hein@netbek.co.za](mailto:hein@netbek.co.za) or [read my CV](/hein-bekker-cv.pdf).
 
@@ -61,7 +61,7 @@ body: |
   * Data handling: Alembic, dbt, pandas, SQLAlchemy
   * Data visualisation: Vega-Altair, Vega-Lite, Victory
   * Platforms: Docker, JupyterHub, Linux, Node.js
-  * Version control: Git, GitHub
+  * Version control: Git
   * UI design & vector graphics: Adobe Illustrator, Balsamiq, Figma
   * Design systems: Material Design
 
