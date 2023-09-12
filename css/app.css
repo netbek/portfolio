@@ -522,7 +522,8 @@ button .icon {
   .region--header .menu-list-item {
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    white-space: nowrap; }
     .region--header .menu-list-item a {
       display: block;
       padding: .5em 0;
