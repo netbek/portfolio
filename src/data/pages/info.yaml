@@ -1,38 +1,69 @@
-title: About
+title: About & Contact
 headline: What I do
 body: |
-  ## 2016⁠–2023
+  I am senior web developer with over 20 years of experience and a passion for building an equitable, inclusive and sustainable society through education in the arts and sciences.
 
-  At [Siyavula Education](https://www.siyavulaeducation.com), I helped to create educational software for Mathematics, Physics and Chemistry, and monitoring and evaluation tools for teachers.
+  Would you like to work with me? [Email hein@netbek.co.za](mailto:hein@netbek.co.za) or [read my CV](/hein-bekker-cv.pdf).
 
-  As front-end lead, I was a bridge between designers and developers, and set the technical direction of the front-end stack. I created and maintained the colour palette, icon sets, UI components, style guide and build tooling. I worked with the product manager on software requirements and mockups, designed responsive UI layouts, guided implementation by the full-stack team, and did functional and non-functional testing. I gave engineering perspective in high-level product meetings, and explored new approaches and technologies that improved productivity and modernised the stack.
+  ## 2016⁠–2023: Siyavula Education
 
-  I also branched out into back-end development and specialised in data reporting. I integrated third-party libraries and services, wrote unit tests for and refactored parts of the application, and conducted peer review of the full-stack team's code. I created and maintained reports and dashboards for classroom and in-house use, reviewed and optimised data models and queries, set up and maintained the data analysis stack, and worked with the data analysis team on integrating their contributions into the back-end.
+  I helped to create educational software for Mathematics, Physics and Chemistry, and monitoring and evaluation tools for teachers.
 
-  * Languages: CSS, HTML, JavaScript, Jinja, Markdown, Python, SCSS, SQL, TypeScript
-  * Frameworks: Flask, Ionic React, Mocha, nose, Pyramid, React, Tailwind
-  * Libraries: Chai, jQuery, Lodash, MathJax, pandas, React Redux, React Router, SQLAlchemy, Vega-Altair, Vega-Lite, Victory
-  * Tools: Adobe Illustrator, Alembic, Babel, Balsamiq, BrowserStack, CircleCI, dbt, Figma, Git, Gulp, JupyterHub, Vite, Webpack
-  * Storage: PostgreSQL
-  * Platforms: Docker, Linux, Node.js
-  * Design systems: Material Design
+  As front-end lead, I was a bridge between designers and developers:
 
-  ## 2002⁠–2015
+  * Set the technical direction of the front-end stack.
+  * Created and maintained the colour palette, icon sets, UI components (Jinja, React), style guide and other documentation, build scripts, and configurations of code quality tools.
+  * Migrated legacy themes into a unified theme in parallel with new feature development.
+  * Worked with the product manager on software requirements and solution design.
+  * Created low-fidelity wireframes and high-fidelity mockups for mobile and desktop devices.
+  * Guided front-end implementation by the full-stack team.
+  * Conducted functional, non-functional and cross-browser testing.
+  * Provided engineering perspective in high-level product meetings.
+  * Explored new approaches and technologies that improved productivity and modernised the stack.
 
-  I was a freelance web developer and [organised events that blended academia and art](/work/liquid-fridge-2003-2010).
+  I also branched out into back-end development and data reporting:
 
-  I worked both independently and within agency teams, and often took on multiple roles as designer, front-end developer, back-end developer and technical support person. I built and maintained websites of online and print magazines, broadcast media consultants, radio stations, an art gallery, an architecture firm, an event agency, guest houses and other small businesses. I also worked on marketing campaigns for PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM, Metro FM and other large brands.
+  * Created and maintained API endpoints for the front-end (REST).
+  * Integrated third-party libraries and services.
+  * Wrote unit tests for and refactored parts of the application.
+  * Peer-reviewed the full-stack team's code.
+  * Created and maintained reports and dashboards for classroom and in-house use.
+  * Reviewed and optimised data models and queries.
+  * Set up and maintained the data analysis stack.
+  * Worked with the data analysis team on integrating their contributions into the back-end.
 
-  * Languages: ActionScript, CSS, HTML, JavaScript, Markdown, PHP, SCSS, SQL
-  * Frameworks: AngularJS, Bootstrap, Drupal, Kohana, Mocha
-  * Libraries: Chai, GSAP, jQuery, Lodash
-  * Tools: Adobe Fireworks, Adobe Illustrator, Adobe Photoshop, Git, Grunt, Gulp
-  * Storage: MySQL
-  * Platforms: Adobe Flash, Linux, Node.js
+  ## 2002⁠–2015: Freelance
+
+  I worked both independently and within agency teams, and often took on multiple roles as designer, front-end developer, back-end developer and technical support person.
+
+  * Designed, built and maintained 25 websites for art magazines, broadcast media consultancies, a radio station, an architecture firm, an art gallery, an event agency, guest houses and other small businesses.
+  * Built 13 marketing websites for PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM, Metro FM and other large brands.
+  * Built and maintained a content management system for 9 years.
+
+  ## 2002⁠–2014: Liquid Fridge
+
+  I was [a co-founder and an organiser of a community](/work/liquid-fridge-2003-2010) that sought to develop South African arts through fostering interaction and mutual support.
+
+  Our work included a blog, a forum, newsletters, workshops, film screenings, radio music programmes and club nights, and featured musicians, artists and technologists from South Africa and abroad.
 
   ## Open source
 
   My profiles on [GitHub](https://github.com/netbek) and [Drupal.org](https://www.drupal.org/user/636644) list a few side projects that anyone is free to use or improve upon.
+
+  ## Tools
+
+  * Languages: CSS, HTML, JavaScript, Jinja, Nunjucks, Python, SCSS, SQL, TypeScript, XML
+  * Frameworks: Flask, Ionic React, Pyramid, React, Tailwind CSS
+  * Libraries: jQuery, Lodash, MathJax, React Hook Form, React Redux, React Router
+  * Automation: Babel, Black, esbuild, ESLint, Flake8, Gulp, Husky, PostCSS, Prettier, SQLFluff, Vite, Webpack
+  * Testing: BrowserStack, CircleCI, Mocha, nose
+  * Data storage: PostgreSQL
+  * Data handling: Alembic, dbt, pandas, SQLAlchemy
+  * Data visualisation: Vega-Altair, Vega-Lite, Victory
+  * Platforms: Docker, JupyterHub, Linux, Node.js
+  * Version control: Git, GitHub
+  * UI design & vector graphics: Adobe Illustrator, Balsamiq, Figma
+  * Design systems: Material Design
 
   ## Listening list
 
@@ -55,8 +86,5 @@ body: |
   * [Open Rights Group](https://www.openrightsgroup.org/blog/) (civil liberties)
   * [UX Collective](https://uxdesign.cc/) (UX)
   * [web.dev](https://web.dev/) (front-end development)
-
-  ## Contact
-  [Email hein@netbek.co.za](mailto:hein@netbek.co.za).
 metatags:
-  description: Hein Bekker is a front-end and back-end web developer with 21 years of experience.
+  description: Senior web developer with over 20 years of experience and a passion for building an equitable, inclusive and sustainable society through education in the arts and sciences.
