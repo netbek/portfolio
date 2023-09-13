@@ -52,7 +52,7 @@ body: |
 
   ## Tools
 
-  * Languages: CSS, HTML, JavaScript, Jinja, Nunjucks, Python, SCSS, SQL, TypeScript, XML
+  * Languages: CSS, HTML, JavaScript, Jinja, Nunjucks, PHP, Python, SCSS, SQL, TypeScript, XML
   * Frameworks: Flask, Ionic React, Pyramid, React, Tailwind CSS
   * Libraries: jQuery, Lodash, MathJax, React Hook Form, React Redux, React Router
   * Automation: Babel, Black, esbuild, ESLint, Flake8, Gulp, Husky, PostCSS, Prettier, SQLFluff, Vite, Webpack
