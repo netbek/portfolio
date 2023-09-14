@@ -13,7 +13,7 @@ body: |
 
   * Set the technical direction of the front-end stack.
   * Created and maintained the colour palette, icon sets, UI components (Jinja, React), style guide and other documentation, build scripts, and configurations of code quality tools.
-  * Migrated legacy themes into a unified theme in parallel with new feature development.
+  * Unified 3 legacy themes and migrated page templates in parallel with new feature development.
   * Worked with the product manager on software requirements and solution design.
   * Created low-fidelity wireframes and high-fidelity mockups for mobile and desktop devices.
   * Guided front-end implementation by the full-stack team.
