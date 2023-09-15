@@ -12,7 +12,7 @@ body: |
   As front-end lead, I was a bridge between designers and developers:
 
   * Set the technical direction of the front-end stack.
-  * Created and maintained the colour palette, icon sets, UI components (Jinja, React), style guide and other documentation, build scripts, and configurations of code quality tools.
+  * Created and maintained the colour palette, icon sets, UI components (both SSR and CSR), style guide, SSG for static pages, build scripts, and configurations of code quality tools.
   * Unified 3 legacy themes and migrated page templates in parallel with new feature development.
   * Worked with the product manager on software requirements and solution design.
   * Created low-fidelity wireframes and high-fidelity mockups for mobile and desktop devices.
@@ -23,7 +23,7 @@ body: |
 
   I also branched out into back-end development and data reporting:
 
-  * Created and maintained API endpoints for the front-end (REST).
+  * Created and maintained API endpoints for the front-end.
   * Integrated third-party libraries and services.
   * Wrote unit tests for and refactored parts of the application.
   * Peer-reviewed the full-stack team's code.
@@ -39,7 +39,7 @@ body: |
   * Built 18 websites for small businesses, including broadcast media consultancies, guest houses, an architecture firm, an art gallery, an event agency and a radio station.
   * Built 12 marketing websites for renowned brands, such as PUMA, BlackBerry, Standard Bank, Castrol, Spur, 5FM and Metro FM.
   * Built 8 websites for magazines and online communities that ranged from creative writing and visual arts to music and urbanism.
-  * Built a content management system and provided maintenance and support to clients for 8 years. Subsequently, switched to Drupal for 5 years.
+  * Built a web framework and content management system, and provided maintenance and support to clients for 8 years. Subsequently, switched to Drupal for 5 years.
 
   ## 2002⁠–2014: Liquid Fridge
 
