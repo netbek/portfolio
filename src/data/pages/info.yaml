@@ -5,6 +5,10 @@ body: |
 
   Would you like to work with me? [Email hein@netbek.co.za](mailto:hein@netbek.co.za) or [read my CV](/hein-bekker-cv.pdf).
 
+  ## 2024⁠–present: Siyavula Foundation
+
+  Front-end lead, full-stack and data engineering.
+
   ## 2016⁠–2023: Siyavula Education
 
   I helped to create educational software for Mathematics, Physics and Chemistry, and monitoring and evaluation tools for teachers.
@@ -58,7 +62,8 @@ body: |
   * Libraries: jQuery, Lodash, MathJax, React Hook Form, React Redux, React Router
   * Automation: Babel, Black, esbuild, ESLint, Flake8, Gulp, Husky, PostCSS, Prettier, SQLFluff, Vite, Webpack
   * Testing: BrowserStack, CircleCI, Mocha, nose
-  * Data storage: PostgreSQL
+  * Orchestration: Prefect
+  * Data storage: ClickHouse, PostgreSQL
   * Data handling: Alembic, dbt, pandas, SQLAlchemy
   * Data visualisation: Vega-Altair, Vega-Lite, Victory
   * Platforms: Docker, JupyterHub, Linux, Node.js
@@ -69,9 +74,17 @@ body: |
   ## Listening list
 
   * [Analytics Engineering](https://roundup.getdbt.com/s/the-analytics-engineering-podcast/) (data engineering)
+  * [The Changelog](https://changelog.com/podcast) (software engineering)
   * [Data Engineering](https://www.dataengineeringpodcast.com/) (data engineering)
   * [Data Skeptic](https://dataskeptic.com/) (data science)
+  * [The Data Stack Show](https://datastackshow.com/) (data engineering)
   * [On The Wind](https://www.59-north.com/podcast/) (sailing)
+  * [Single-Handed](https://www.singlehandedpodcast.com/podcast/) (sailing)
+  * [Tech On The Rocks](https://techontherocks.show/) (software engineering)
+
+  ## Viewing list
+
+  * [CMU Database Group](https://www.youtube.com/@CMUDatabaseGroup) (databases)
 
   ## Reading list
 
