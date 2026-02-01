@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 async function toPdf(src, dest) {
   const browser = await puppeteer.launch({
-    headless: 'new'
+    headless: 'new', args: ['--no-sandbox']
   });
 
   const page = await browser.newPage();
