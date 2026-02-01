@@ -1,8 +1,12 @@
+.devenv*
+.direnv
+.direnv
+*.orig
 bower_components
+devenv.local.nix
 node_modules
 npm-debug.log
 temp/
-*.orig
 
 # IDE files
 nbproject

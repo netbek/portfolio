@@ -2,19 +2,39 @@
 
 ## Installation
 
-1. Install NVM and Node 18.x:
+1. Install Nix:
 
     ```shell
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-    source ~/.bashrc
-    nvm install v18.16.0
-    nvm alias default v18.16.0
+    sh <(curl -L https://nixos.org/nix/install) --daemon
     ```
 
-2. Install local dependencies:
+2. Configure Nix. Edit `/etc/nix/nix.conf` (for a multi-user installation) or `~/.config/nix/nix.conf` (for a single-user installation) to include the following lines:
 
     ```shell
-    npm ci
+    experimental-features = nix-command flakes
+    trusted-users = root <USER>
+    ```
+
+    Replace `<USER>` with your username on your computer.
+
+3. Install direnv:
+
+    ```shell
+    sudo apt install direnv
+    ```
+
+4. Enable direnv in your shell by adding a line to your shell configuration file.
+
+    For Bash, edit `~/.bashrc`:
+
+    ```shell
+    eval "$(direnv hook bash)"
+    ```
+
+5. Allow `.envrc`:
+
+    ```shell
+    direnv allow
     ```
 
 ## Development
