@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://devenv.sh/devenv.schema.json
+inputs:
+  devenv:
+    # This fork runs `npm ci` instead of `npm install`
+    url: github:netbek/devenv?rev=425ccfa34dddd7db03a64004a68a7f78d489f04b
+  nixpkgs:
+    url: github:cachix/devenv-nixpkgs/rolling
